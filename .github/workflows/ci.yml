@@ -44,8 +44,8 @@ jobs:
         run: cargo fmt --all --check
       - name: Clippy
         run: cargo clippy --workspace --all-targets -- -D warnings
-      - name: Build
-        run: cargo build --workspace
+      # No standalone build step: cargo test compiles the whole
+      # workspace anyway, and clippy --all-targets type-checks it.
       - name: Test
         run: cargo test --workspace
 

@@ -63,7 +63,7 @@ with just the elements:
 The gear icon in the toolbar:
 
 | Setting | What it does |
-|---|---|
+| --- | --- |
 | Accidentals | Automatic, prefer sharps, or prefer flats (no key selected) |
 | Roman numerals | Textbook (`I, iii, V7`) or Quality (`I, IIIm, V7`) convention |
 | Pedal-sustained notes | Include or exclude pedal-held notes from analysis |
