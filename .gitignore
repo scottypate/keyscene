@@ -19,3 +19,4 @@ Thumbs.db
 
 # Tauri build-generated schemas
 spikes/tauri-window/gen/
+crates/keyscene-app/gen/

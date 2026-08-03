@@ -1,0 +1,14 @@
+{
+  "name": "keyscene-ui",
+  "private": true,
+  "type": "module",
+  "workspaces": [
+    "shared",
+    "studio"
+  ],
+  "scripts": {
+    "dev": "npm run dev -w studio",
+    "build": "npm run build -w studio",
+    "check": "npm run check -w shared && npm run check -w studio"
+  }
+}

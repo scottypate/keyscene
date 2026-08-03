@@ -1,0 +1,252 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body,
+#app {
+  height: 100%;
+}
+
+body {
+  background: var(--ks-bg);
+  color: var(--ks-ink);
+  font-family: -apple-system, "Segoe UI", system-ui, sans-serif;
+  overflow: hidden;
+  user-select: none;
+}
+
+#app {
+  display: flex;
+  flex-direction: column;
+}
+
+/* ---- toolbar ---- */
+.ks-toolbar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 12px;
+  background: var(--ks-panel);
+  border-bottom: 1px solid #00000055;
+  flex: none;
+}
+
+.ks-logo {
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  margin-right: 4px;
+}
+
+.ks-toolbar select,
+.ks-toolbar button,
+dialog select,
+dialog button,
+dialog input {
+  background: var(--ks-bg);
+  color: var(--ks-ink);
+  border: 1px solid #ffffff22;
+  border-radius: 6px;
+  padding: 5px 9px;
+  font-size: 13px;
+}
+
+.ks-toolbar button:hover,
+dialog button:hover {
+  border-color: var(--ks-accent);
+  cursor: pointer;
+}
+
+.ks-toolbar button.ks-active {
+  border-color: var(--ks-accent);
+  color: var(--ks-accent);
+}
+
+.ks-spacer {
+  flex: 1;
+}
+
+/* ---- main views ---- */
+.ks-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 12px;
+  min-height: 0;
+}
+
+.ks-panel {
+  background: var(--ks-panel);
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.ks-panel[hidden] {
+  display: none;
+}
+
+/* chord card */
+.ks-chordcard {
+  flex: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 130px;
+  text-align: center;
+}
+
+.ks-chordcard-rn {
+  font-size: 20px;
+  color: var(--ks-accent);
+  min-height: 26px;
+  font-weight: 600;
+}
+
+.ks-chordcard-name {
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 1.15;
+}
+
+.ks-chordcard-name.ks-idle {
+  color: var(--ks-muted);
+}
+
+.ks-chordcard-sub {
+  color: var(--ks-muted);
+  font-size: 14px;
+  min-height: 18px;
+}
+
+.ks-chordcard-alts {
+  display: flex;
+  gap: 10px;
+  margin-top: 6px;
+  min-height: 22px;
+}
+
+.ks-chordcard-alt {
+  color: var(--ks-muted);
+  font-size: 16px;
+  border: 1px solid #ffffff1a;
+  border-radius: 6px;
+  padding: 1px 8px;
+}
+
+/* staff + keyboard */
+.ks-staff {
+  flex: 1;
+  min-height: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ks-staff > div,
+.ks-staff svg {
+  max-height: 100%;
+}
+
+.ks-keyboard {
+  flex: none;
+  height: 150px;
+}
+
+/* ---- status bar ---- */
+.ks-status {
+  flex: none;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 6px 12px;
+  background: var(--ks-panel);
+  border-top: 1px solid #00000055;
+  color: var(--ks-muted);
+  font-size: 12px;
+}
+
+.ks-pedals {
+  display: flex;
+  gap: 12px;
+}
+
+.ks-pedal {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.ks-pedal-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: #ffffff22;
+}
+
+.ks-pedal-dot.ks-on {
+  background: var(--ks-accent);
+  box-shadow: 0 0 6px var(--ks-accent);
+}
+
+/* ---- dialogs ---- */
+dialog {
+  background: var(--ks-panel);
+  color: var(--ks-ink);
+  border: 1px solid #ffffff22;
+  border-radius: 12px;
+  padding: 20px;
+  min-width: 380px;
+  max-width: 520px;
+}
+
+dialog::backdrop {
+  background: #000000aa;
+}
+
+dialog h2 {
+  font-size: 16px;
+  margin-bottom: 14px;
+}
+
+dialog h3 {
+  font-size: 13px;
+  margin: 12px 0 6px;
+  color: var(--ks-muted);
+}
+
+.ks-form-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 10px;
+  font-size: 13px;
+}
+
+.ks-dialog-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.ks-help-steps {
+  margin: 10px 0 10px 18px;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.ks-help-code {
+  display: block;
+  background: var(--ks-bg);
+  border-radius: 6px;
+  padding: 8px 10px;
+  font-family: ui-monospace, monospace;
+  font-size: 12px;
+  margin: 8px 0;
+  user-select: text;
+}

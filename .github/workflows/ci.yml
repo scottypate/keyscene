@@ -21,6 +21,22 @@ jobs:
         with:
           components: clippy, rustfmt
       - uses: Swatinem/rust-cache@v2
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: ui/package-lock.json
+      # UI first: tauri::generate_context! embeds ui/studio/dist at compile
+      # time, so keyscene-app does not build without it.
+      - name: UI install
+        run: npm ci
+        working-directory: ui
+      - name: UI typecheck
+        run: npm run check
+        working-directory: ui
+      - name: UI build
+        run: npm run build
+        working-directory: ui
       - name: Format
         run: cargo fmt --all --check
       - name: Clippy

@@ -1,0 +1,28 @@
+{
+  "$schema": "https://schema.tauri.app/config/2",
+  "productName": "Keyscene",
+  "version": "0.1.0",
+  "identifier": "com.keyscene.app",
+  "build": {
+    "devUrl": "http://localhost:1420",
+    "frontendDist": "../../ui/studio/dist"
+  },
+  "app": {
+    "windows": [
+      {
+        "title": "Keyscene",
+        "width": 1040,
+        "height": 760,
+        "minWidth": 720,
+        "minHeight": 520
+      }
+    ],
+    "security": {
+      "csp": null
+    }
+  },
+  "bundle": {
+    "active": false,
+    "icon": ["icons/icon.png", "icons/icon.ico"]
+  }
+}
