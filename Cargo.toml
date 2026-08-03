@@ -1,0 +1,26 @@
+[workspace]
+resolver = "2"
+members = [
+    "crates/keyscene-core",
+    "crates/keyscene-midi",
+    "crates/keyscene-server",
+    "crates/keyscene-app",
+]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2021"
+license = "LicenseRef-Proprietary"
+repository = "https://github.com/scalecraft/keyscene"
+
+[workspace.dependencies]
+keyscene-core = { path = "crates/keyscene-core" }
+keyscene-midi = { path = "crates/keyscene-midi" }
+keyscene-server = { path = "crates/keyscene-server" }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+
+[profile.release]
+lto = true
+codegen-units = 1
+strip = true

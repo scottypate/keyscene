@@ -1,0 +1,103 @@
+<!doctype html>
+<!-- Spike D overlay page: transparent background (OBS browser-source style),
+     an 88-key strip animated by the 60Hz WebSocket tick stream, and live
+     rate/jitter stats exposed on window.__spikeStats for headless checks. -->
+<html>
+<head>
+<meta charset="utf-8">
+<title>keyscene spike D</title>
+<style>
+  html, body { margin: 0; background: transparent; overflow: hidden; }
+  #hud {
+    position: fixed; top: 8px; left: 8px;
+    font: 12px/1.5 ui-monospace, Menlo, monospace;
+    color: #e8e8ec; background: rgba(20, 20, 28, .72);
+    padding: 8px 12px; border-radius: 8px; white-space: pre;
+  }
+  canvas { position: fixed; left: 0; bottom: 0; width: 100vw; height: 18vh; }
+</style>
+</head>
+<body>
+<div id="hud">connecting…</div>
+<canvas id="keys"></canvas>
+<script>
+"use strict";
+const hud = document.getElementById("hud");
+const canvas = document.getElementById("keys");
+const ctx = canvas.getContext("2d");
+
+let latest = null;           // last tick message
+const arrivals = [];         // {seq, at} for the stats window
+let dropped = 0, lastSeq = -1, connected = false;
+
+const ws = new WebSocket(`ws://${location.host}/ws`);
+ws.onopen = () => { connected = true; };
+ws.onclose = () => { connected = false; hud.textContent = "disconnected"; };
+ws.onmessage = (e) => {
+  const m = JSON.parse(e.data);
+  const at = performance.now();
+  if (lastSeq >= 0 && m.seq > lastSeq + 1) dropped += m.seq - lastSeq - 1;
+  lastSeq = m.seq;
+  latest = m;
+  arrivals.push({ seq: m.seq, at });
+  const cutoff = at - 3000;
+  while (arrivals.length && arrivals[0].at < cutoff) arrivals.shift();
+};
+
+function stats() {
+  if (arrivals.length < 10) return null;
+  const spanMs = arrivals[arrivals.length - 1].at - arrivals[0].at;
+  const hz = (arrivals.length - 1) / (spanMs / 1000);
+  const gaps = [];
+  for (let i = 1; i < arrivals.length; i++) gaps.push(arrivals[i].at - arrivals[i - 1].at);
+  const mean = gaps.reduce((a, b) => a + b, 0) / gaps.length;
+  const sd = Math.sqrt(gaps.reduce((a, g) => a + (g - mean) ** 2, 0) / gaps.length);
+  const maxGap = Math.max(...gaps);
+  return {
+    connected, hz: +hz.toFixed(2), meanIntervalMs: +mean.toFixed(3),
+    jitterSdMs: +sd.toFixed(3), maxGapMs: +maxGap.toFixed(2),
+    dropped, samples: arrivals.length, lastSeq,
+  };
+}
+
+// 88-key strip: A0 (21) … C8 (108); the tick sweeps a highlight across it.
+function isBlack(midi) { return [1, 3, 6, 8, 10].includes(midi % 12); }
+function draw() {
+  const w = canvas.width = canvas.clientWidth * devicePixelRatio;
+  const h = canvas.height = canvas.clientHeight * devicePixelRatio;
+  ctx.clearRect(0, 0, w, h);
+  const whites = [];
+  for (let m = 21; m <= 108; m++) if (!isBlack(m)) whites.push(m);
+  const kw = w / whites.length;
+  // 4-second sine sweep across the keyboard, driven by server time.
+  const active = latest
+    ? 21 + Math.round(43.5 + 43.5 * Math.sin((latest.t_us / 1e6) * Math.PI / 2))
+    : -1;
+  whites.forEach((m, i) => {
+    ctx.fillStyle = m === active ? "#4fc3f7" : "rgba(250,250,252,.92)";
+    ctx.fillRect(i * kw + 1, 0, kw - 2, h);
+  });
+  let wi = -1;
+  for (let m = 21; m <= 108; m++) {
+    if (!isBlack(m)) { wi++; continue; }
+    ctx.fillStyle = m === active ? "#0288d1" : "#16161c";
+    ctx.fillRect((wi + 1) * kw - kw * 0.3, 0, kw * 0.6, h * 0.62);
+  }
+}
+
+setInterval(() => {
+  const s = stats();
+  window.__spikeStats = s;
+  if (s) {
+    hud.textContent =
+      `rate      ${s.hz} Hz\n` +
+      `interval  ${s.meanIntervalMs} ms (sd ${s.jitterSdMs})\n` +
+      `max gap   ${s.maxGapMs} ms\n` +
+      `dropped   ${s.dropped}  seq ${s.lastSeq}`;
+  }
+}, 250);
+
+(function loop() { draw(); requestAnimationFrame(loop); })();
+</script>
+</body>
+</html>

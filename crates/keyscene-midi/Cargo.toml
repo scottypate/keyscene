@@ -1,0 +1,11 @@
+[package]
+name = "keyscene-midi"
+description = "MIDI device enumeration, input streams, hot-plug, virtual-port helpers."
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+
+[dependencies]
+keyscene-core = { workspace = true }
+midir = "0.10"

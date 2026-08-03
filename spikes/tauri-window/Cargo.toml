@@ -1,0 +1,17 @@
+# Spike C (PLAN.md Phase 0): Tauri window-quirks probe.
+# Deliberately NOT a member of the root workspace — it is a throwaway probe
+# with a heavy dependency tree; the deliverable is docs/spike-notes.md.
+[package]
+name = "spike-c-tauri-window"
+version = "0.1.0"
+edition = "2021"
+publish = false
+
+[workspace]
+
+[build-dependencies]
+tauri-build = "2"
+
+[dependencies]
+# macos-private-api is REQUIRED for transparent webview windows on macOS.
+tauri = { version = "2", features = ["macos-private-api"] }

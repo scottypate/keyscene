@@ -1,0 +1,12 @@
+[package]
+name = "keyscene-app"
+description = "Desktop shell backend: wires MIDI, overlay server, settings, licensing."
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+
+[dependencies]
+keyscene-core = { workspace = true }
+keyscene-midi = { workspace = true }
+keyscene-server = { workspace = true }

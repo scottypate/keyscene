@@ -1,0 +1,13 @@
+[package]
+name = "keyscene-core"
+description = "Pure chord/spelling/Roman-numeral analysis engine. No I/O, no UI."
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+
+[dependencies]
+serde = { workspace = true }
+
+[dev-dependencies]
+serde_json = { workspace = true }

@@ -1,0 +1,21 @@
+# Rust (root workspace and standalone spike crates)
+target/
+
+# Node / UI
+node_modules/
+dist/
+# ...but the Tauri window spike's static frontend is source, not build output
+!spikes/tauri-window/dist/
+
+# Tauri
+src-tauri/target/
+
+# OS noise
+.DS_Store
+Thumbs.db
+
+# Dropbox conflict artifacts
+*conflicted copy*
+
+# Tauri build-generated schemas
+spikes/tauri-window/gen/
