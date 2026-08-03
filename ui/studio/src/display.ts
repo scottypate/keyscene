@@ -8,7 +8,6 @@ import { listen } from "@tauri-apps/api/event";
 import {
   applyThemeCss,
   ChordCard,
-  darkTheme,
   Keyboard,
   KeyReadout,
   PedalIndicator,
@@ -96,9 +95,10 @@ root.innerHTML = `
 
 // ---------- components ----------
 
+const defaultTheme = THEMES.light.theme;
 const chordCard = new ChordCard(document.getElementById("el-chordcard")!);
-const staff = new Staff(document.getElementById("el-staff")!, darkTheme);
-const keyboard = new Keyboard(document.getElementById("el-keyboard")!, darkTheme);
+const staff = new Staff(document.getElementById("el-staff")!, defaultTheme);
+const keyboard = new Keyboard(document.getElementById("el-keyboard")!, defaultTheme);
 const pedals = new PedalIndicator(document.getElementById("el-pedals")!);
 const keyReadout = new KeyReadout(document.getElementById("el-keyreadout")!);
 
@@ -185,7 +185,7 @@ function renderNotes(s: StatePayload): void {
   if (!elDom.staff.hidden) {
     staff.render(s.analysis.spelledNotes, settings?.key ?? null);
   }
-  keyboard.setNotes(s.held, s.sustained);
+  keyboard.setNotes(s.held, s.sustained, s.analysis.spelledNotes);
   pedals.update(s.pedals);
 }
 

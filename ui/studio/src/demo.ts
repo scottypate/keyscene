@@ -15,7 +15,7 @@ export function demoSettings(): AppSettings {
     showChordCard: true,
     showStaff: true,
     showKeyboard: true,
-    theme: "dark",
+    theme: "light",
     customTheme: {},
     holdMs: 0,
     display: {

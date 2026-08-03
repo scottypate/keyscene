@@ -173,7 +173,7 @@ export function resolveTheme(
   themeId: string,
   customTheme: Record<string, string> | undefined,
 ): Theme {
-  if (themeId !== "custom") return (THEMES[themeId] ?? THEMES.dark).theme;
+  if (themeId !== "custom") return (THEMES[themeId] ?? THEMES.light).theme;
   const theme = { ...darkTheme };
   for (const key of Object.keys(theme) as (keyof Theme)[]) {
     const v = customTheme?.[key];

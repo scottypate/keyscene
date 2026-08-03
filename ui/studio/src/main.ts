@@ -7,7 +7,6 @@ import { listen } from "@tauri-apps/api/event";
 import {
   applyThemeCss,
   ChordCard,
-  darkTheme,
   FONT_CHOICES,
   Keyboard,
   KEY_NAMES,
@@ -28,12 +27,23 @@ import "./style.css";
 
 const hasTauri = "__TAURI_INTERNALS__" in window;
 
+// First-paint theme, before settings arrive from the backend.
+const defaultTheme = THEMES.light.theme;
+
 // ---------- DOM scaffold ----------
 
 const app = document.getElementById("app")!;
 app.innerHTML = `
   <div class="ks-toolbar">
-    <span class="ks-logo">Keyscene</span>
+    <span class="ks-logo" aria-label="Keyscene">
+      <svg class="ks-logo-mark" viewBox="0 0 20 20" aria-hidden="true">
+        <rect x="1" y="3" width="3.2" height="14" rx="1.6" />
+        <rect x="5.6" y="3" width="3.2" height="14" rx="1.6" class="ks-logo-accent" />
+        <rect x="10.2" y="3" width="3.2" height="10" rx="1.6" />
+        <rect x="14.8" y="3" width="3.2" height="14" rx="1.6" />
+      </svg>
+      <span class="ks-logo-word">Keyscene</span>
+    </span>
     <select id="device" title="MIDI input device"></select>
     <select id="key" title="Key context"></select>
     <span class="ks-spacer"></span>
@@ -122,13 +132,13 @@ app.innerHTML = `
   </dialog>
 `;
 
-applyThemeCss(darkTheme);
+applyThemeCss(defaultTheme);
 
 // ---------- components ----------
 
 const chordCard = new ChordCard(document.getElementById("chordcard")!);
-const staff = new Staff(document.getElementById("staff")!, darkTheme);
-const keyboard = new Keyboard(document.getElementById("keyboard")!, darkTheme);
+const staff = new Staff(document.getElementById("staff")!, defaultTheme);
+const keyboard = new Keyboard(document.getElementById("keyboard")!, defaultTheme);
 const pedalIndicator = new PedalIndicator(document.getElementById("pedals")!);
 
 const deviceSel = document.getElementById("device") as HTMLSelectElement;
@@ -276,7 +286,7 @@ function renderNotes(s: StatePayload): void {
   if (!panels.showStaff.hidden) {
     staff.render(s.analysis.spelledNotes, settings?.key ?? null);
   }
-  keyboard.setNotes(s.held, s.sustained);
+  keyboard.setNotes(s.held, s.sustained, s.analysis.spelledNotes);
   pedalIndicator.update(s.pedals);
 }
 
@@ -335,6 +345,9 @@ function renderDevices(d: DevicesPayload): void {
   const current = d.devices.find((dev) => dev.name === d.current);
   deviceSel.value = current ? String(current.index) : "-1";
   deviceStatus.textContent = d.current ? `Connected: ${d.current}` : "No MIDI device connected";
+  // QWERTY is the no-hardware fallback — only pitch its instructions
+  // when there is no device to play.
+  qwertyHint.hidden = Boolean(d.current);
 }
 
 let pushTimer: ReturnType<typeof setTimeout> | null = null;
@@ -477,7 +490,7 @@ const qwerty = new Qwerty({
 
 function updateQwertyHint(base: number): void {
   const octave = Math.floor(base / 12) - 1;
-  qwertyHint.textContent = `QWERTY: A–' play · Z/X octave (C${octave}) · Space sustain`;
+  qwertyHint.textContent = `Type to play: A–' keys · Z/X octave (C${octave}) · Space sustain`;
 }
 updateQwertyHint(qwerty.octaveBase);
 

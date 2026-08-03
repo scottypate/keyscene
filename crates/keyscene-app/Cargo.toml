@@ -6,6 +6,13 @@ edition.workspace = true
 license.workspace = true
 repository.workspace = true
 
+# The binary is what macOS shows in the Dock / App Switcher during dev
+# (no bundle, no Info.plist) — name it like the product, not the crate.
+# Matches tauri.conf.json productName, which the bundler expects anyway.
+[[bin]]
+name = "Keyscene"
+path = "src/main.rs"
+
 [build-dependencies]
 tauri-build = { version = "2", features = [] }
 

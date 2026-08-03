@@ -35,9 +35,27 @@ body {
 }
 
 .ks-logo {
-  font-weight: 700;
-  letter-spacing: 0.04em;
-  margin-right: 4px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-right: 6px;
+  user-select: none;
+}
+
+.ks-logo-mark {
+  width: 18px;
+  height: 18px;
+  fill: var(--ks-muted);
+}
+
+.ks-logo-mark .ks-logo-accent {
+  fill: var(--ks-accent);
+}
+
+.ks-logo-word {
+  font-size: 15px;
+  font-weight: 650;
+  letter-spacing: -0.01em;
 }
 
 .ks-toolbar select,

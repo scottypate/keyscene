@@ -133,7 +133,7 @@ impl Default for AppSettings {
             show_chord_card: true,
             show_staff: true,
             show_keyboard: true,
-            theme: "dark".into(),
+            theme: "light".into(),
             custom_theme: HashMap::new(),
             hold_ms: 0,
             display: DisplaySettings::default(),
