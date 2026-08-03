@@ -13,6 +13,7 @@
 //!                      with inter-arrival times (for real-hardware checks)
 
 use std::error::Error;
+#[cfg(unix)] // only the unix-only loopback path uses a channel
 use std::sync::mpsc;
 use std::time::{Duration, Instant};
 
