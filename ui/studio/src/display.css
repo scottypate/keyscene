@@ -1,0 +1,229 @@
+/* Display mode (§3.4): chrome-free canvas of movable elements. Loaded on
+   top of style.css; the body background is set inline from settings
+   ("transparent" or a chroma-key solid). */
+
+html,
+body {
+  background: transparent;
+}
+
+#display {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+}
+
+/* ---- movable elements ---- */
+
+.ks-el {
+  position: absolute;
+  cursor: grab;
+}
+
+.ks-el.ks-dragging {
+  cursor: grabbing;
+}
+
+.ks-el[hidden] {
+  display: none;
+}
+
+/* Edit affordances only while the toolbar is awake, so nothing extra is
+   ever captured on stream once the mouse settles. */
+body.ks-editing .ks-el:hover {
+  outline: 1.5px dashed #88888899;
+  outline-offset: 3px;
+}
+
+.ks-el-chordcard {
+  width: 420px;
+}
+
+.ks-el-staff {
+  width: 400px;
+  height: 286px;
+  padding: 8px;
+  background: var(--ks-panel);
+  border-radius: 10px;
+}
+
+.ks-el-keyboard {
+  width: 780px;
+  height: 132px;
+  padding: 6px;
+  background: var(--ks-panel);
+  border-radius: 10px;
+}
+
+.ks-el-pedals {
+  padding: 8px 14px;
+  background: var(--ks-panel);
+  border-radius: 10px;
+}
+
+.ks-el-keyreadout {
+  min-width: 200px;
+  padding: 10px 16px;
+  background: var(--ks-panel);
+  border-radius: 10px;
+}
+
+.ks-keyreadout-key {
+  font-size: 15px;
+  color: var(--ks-muted);
+}
+
+.ks-keyreadout-rn {
+  font-size: 34px;
+  font-weight: 700;
+  color: var(--ks-accent);
+  min-height: 42px;
+}
+
+/* ---- floating toolbar ---- */
+
+.ks-display-toolbar {
+  position: fixed;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  max-width: min(96vw, 1100px);
+  padding: 8px 12px;
+  background: #16161ce8;
+  color: #e8e8ee;
+  border: 1px solid #ffffff22;
+  border-radius: 12px;
+  font-family: -apple-system, "Segoe UI", system-ui, sans-serif;
+  font-size: 12px;
+  z-index: 10;
+  transition: opacity 0.25s;
+}
+
+body:not(.ks-editing) .ks-display-toolbar {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.ks-display-toolbar select,
+.ks-display-toolbar button,
+.ks-display-toolbar input[type="text"] {
+  background: #101014;
+  color: #e8e8ee;
+  border: 1px solid #ffffff22;
+  border-radius: 6px;
+  padding: 4px 8px;
+  font-size: 12px;
+}
+
+.ks-display-toolbar button:hover {
+  border-color: #4cc2ff;
+  cursor: pointer;
+}
+
+.ks-display-toolbar label {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  white-space: nowrap;
+}
+
+.ks-display-toolbar .ks-chip.ks-active {
+  border-color: #4cc2ff;
+  color: #4cc2ff;
+}
+
+.ks-toolbar-grip {
+  cursor: move;
+  color: #8b8b98;
+  letter-spacing: 2px;
+  padding: 0 2px;
+  user-select: none;
+}
+
+.ks-toolbar-sep {
+  width: 1px;
+  align-self: stretch;
+  background: #ffffff22;
+}
+
+.ks-swatch {
+  width: 22px;
+  height: 22px;
+  border-radius: 6px;
+  border: 1px solid #ffffff33;
+  padding: 0;
+  flex: none;
+}
+
+.ks-swatch.ks-active {
+  outline: 2px solid #4cc2ff;
+}
+
+.ks-swatch-transparent {
+  background:
+    repeating-conic-gradient(#666 0% 25%, #333 0% 50%) 0 0 / 10px 10px;
+}
+
+input.ks-swatch[type="color"] {
+  background: none;
+  cursor: pointer;
+}
+
+.ks-hold-val {
+  min-width: 46px;
+  color: #8b8b98;
+}
+
+/* ---- first-run guidance / help ---- */
+
+.ks-display-help {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #000000a0;
+  z-index: 20;
+}
+
+.ks-display-help[hidden] {
+  display: none;
+}
+
+.ks-display-help-card {
+  max-width: 480px;
+  background: #16161cf5;
+  color: #e8e8ee;
+  border: 1px solid #ffffff22;
+  border-radius: 14px;
+  padding: 22px 26px;
+  font-family: -apple-system, "Segoe UI", system-ui, sans-serif;
+  font-size: 13px;
+  line-height: 1.55;
+}
+
+.ks-display-help-card h2 {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.ks-display-help-card ol {
+  margin: 0 0 12px 18px;
+}
+
+.ks-display-help-card li {
+  margin-bottom: 8px;
+}
+
+.ks-display-help-card kbd {
+  background: #101014;
+  border: 1px solid #ffffff33;
+  border-radius: 4px;
+  padding: 0 5px;
+  font-family: inherit;
+}

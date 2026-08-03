@@ -52,6 +52,42 @@ export interface EngineSettings {
 
 export type KeyboardSize = 49 | 61 | 76 | 88;
 
+/** One movable/scalable Display-mode element (§3.4). x/y are percent of
+ * the window (top-left corner); scale multiplies the element's base size. */
+export interface ElementLayout {
+  visible: boolean;
+  x: number;
+  y: number;
+  scale: number;
+}
+
+export type DisplayElementId =
+  | "chordCard"
+  | "staff"
+  | "keyboard"
+  | "pedals"
+  | "keyReadout";
+
+export type DisplayElements = Record<DisplayElementId, ElementLayout>;
+
+/** A saved Display-mode layout (§3.4 "Layouts saveable as presets"). */
+export interface LayoutPreset {
+  name: string;
+  /** "transparent" or a CSS color (solid = chroma-key background). */
+  background: string;
+  elements: DisplayElements;
+}
+
+export interface DisplaySettings {
+  /** "transparent" or a CSS color for chroma keying. */
+  background: string;
+  alwaysOnTop: boolean;
+  clickThrough: boolean;
+  elements: DisplayElements;
+  /** User-saved presets (built-ins live in code, not settings). */
+  presets: LayoutPreset[];
+}
+
 export interface AppSettings {
   engine: EngineSettings;
   includeSustained: boolean;
@@ -64,6 +100,15 @@ export interface AppSettings {
   showChordCard: boolean;
   showStaff: boolean;
   showKeyboard: boolean;
+  /** Theme preset id from THEMES, or "custom". */
+  theme: string;
+  /** Token overrides used when theme === "custom" (keys of Theme). */
+  customTheme: Record<string, string>;
+  /** Chord-hold anti-flicker time in ms (§3.4); 0 disables. */
+  holdMs: number;
+  display: DisplaySettings;
+  /** First-run Display-mode guidance has been dismissed. */
+  displayHelpSeen: boolean;
 }
 
 export interface DeviceInfo {
@@ -71,13 +116,16 @@ export interface DeviceInfo {
   name: string;
 }
 
-/** Full UI state emitted by the backend on every change ("state" event). */
+/**
+ * Note-driven state, emitted on every MIDI change ("state" event).
+ * Settings travel on the separate "settings" event (an `AppSettings`
+ * payload) emitted only when they change.
+ */
 export interface StatePayload {
   analysis: Analysis;
   held: number[];
   sustained: number[];
   pedals: Pedals;
-  settings: AppSettings;
 }
 
 export interface DevicesPayload {

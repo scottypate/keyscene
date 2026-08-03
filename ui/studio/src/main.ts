@@ -8,16 +8,21 @@ import {
   applyThemeCss,
   ChordCard,
   darkTheme,
+  FONT_CHOICES,
   Keyboard,
   KEY_NAMES,
   PedalIndicator,
+  resolveTheme,
   Staff,
+  THEMES,
   type AppSettings,
   type DevicesPayload,
   type KeyboardSize,
   type MidiErrorPayload,
   type StatePayload,
+  type Theme,
 } from "@keyscene/shared";
+import { demoSettings, demoState } from "./demo";
 import { Qwerty } from "./qwerty";
 import "./style.css";
 
@@ -35,6 +40,7 @@ app.innerHTML = `
     <button id="toggle-card" title="Show/hide chord card">Chord</button>
     <button id="toggle-staff" title="Show/hide staff">Staff</button>
     <button id="toggle-keys" title="Show/hide keyboard">Keys</button>
+    <button id="display-btn" title="Display mode: chrome-free view for OBS / screen share (Ctrl/Cmd+D)">Display</button>
     <button id="settings-btn" title="Settings">⚙</button>
   </div>
   <div class="ks-main">
@@ -79,6 +85,13 @@ app.innerHTML = `
       </select></div>
     <div class="ks-form-row"><label for="s-channel">MIDI channels</label>
       <select id="s-channel"></select></div>
+    <div class="ks-form-row"><label for="s-theme">Theme</label>
+      <select id="s-theme"></select></div>
+    <div id="s-custom-theme" hidden></div>
+    <div class="ks-form-row">
+      <label for="s-hold" title="How long a chord name stays up when notes drop away, so names don't flicker during arpeggios">Chord hold (anti-flicker)</label>
+      <span><input type="range" id="s-hold" min="0" max="2000" step="50" style="width:130px;vertical-align:middle" />
+        <span id="s-hold-val" style="display:inline-block;min-width:52px;color:var(--ks-muted)"></span></span></div>
     <div class="ks-dialog-actions">
       <button id="settings-close">Done</button>
     </div>
@@ -167,29 +180,144 @@ const toggles = {
   }
 }
 
+// Theme options + custom-theme editor (§3.4: presets + full custom colors
+// and font choice).
+const themeSel = document.getElementById("s-theme") as HTMLSelectElement;
+{
+  for (const [id, { label }] of Object.entries(THEMES)) {
+    const opt = document.createElement("option");
+    opt.value = id;
+    opt.textContent = label;
+    themeSel.appendChild(opt);
+  }
+  const custom = document.createElement("option");
+  custom.value = "custom";
+  custom.textContent = "Custom…";
+  themeSel.appendChild(custom);
+}
+
+const THEME_TOKENS: [keyof Theme, string][] = [
+  ["bg", "Background"],
+  ["panel", "Panels"],
+  ["ink", "Ink"],
+  ["muted", "Muted text"],
+  ["accent", "Accent / held notes"],
+  ["sustain", "Sustained notes"],
+  ["keyWhite", "White keys"],
+  ["keyBlack", "Black keys"],
+  ["keyEdge", "Key outlines"],
+];
+const customEditor = document.getElementById("s-custom-theme")!;
+const customInputs = new Map<keyof Theme, HTMLInputElement>();
+{
+  for (const [token, label] of THEME_TOKENS) {
+    const row = document.createElement("div");
+    row.className = "ks-form-row";
+    const lab = document.createElement("label");
+    lab.textContent = label;
+    const input = document.createElement("input");
+    input.type = "color";
+    input.addEventListener("input", () => {
+      if (!settings) return;
+      pushSettingsSoon({
+        customTheme: { ...settings.customTheme, [token]: input.value },
+      });
+    });
+    customInputs.set(token, input);
+    row.append(lab, input);
+    customEditor.appendChild(row);
+  }
+  const row = document.createElement("div");
+  row.className = "ks-form-row";
+  const lab = document.createElement("label");
+  lab.textContent = "Font";
+  const fontSel = document.createElement("select");
+  fontSel.id = "s-font";
+  for (const [id, { label }] of Object.entries(FONT_CHOICES)) {
+    const opt = document.createElement("option");
+    opt.value = id;
+    opt.textContent = label;
+    fontSel.appendChild(opt);
+  }
+  fontSel.addEventListener("change", () => {
+    if (!settings) return;
+    void pushSettings({
+      customTheme: {
+        ...settings.customTheme,
+        font: FONT_CHOICES[fontSel.value].stack,
+      },
+    });
+  });
+  row.append(lab, fontSel);
+  customEditor.appendChild(row);
+}
+
 // ---------- state ----------
 
 let settings: AppSettings | null = null;
+let lastState: StatePayload | null = null;
+let appliedTheme = "";
+let displayActive = false;
 
-function renderState(s: StatePayload): void {
-  settings = s.settings;
-  chordCard.update(s.analysis);
-  staff.render(s.analysis.spelledNotes, s.settings.key);
-  keyboard.setSize(s.settings.keyboardSize);
+function applyTheme(s: AppSettings): void {
+  const sig = `${s.theme}|${JSON.stringify(s.customTheme)}`;
+  if (sig === appliedTheme) return;
+  appliedTheme = sig;
+  const theme = resolveTheme(s.theme, s.customTheme);
+  applyThemeCss(theme);
+  staff.setTheme(theme);
+  keyboard.setTheme(theme);
+}
+
+/** Per-note path ("state" events): components only, no settings DOM. */
+function renderNotes(s: StatePayload): void {
+  lastState = s;
+  chordCard.update(s.analysis, s.pedals);
+  if (!panels.showStaff.hidden) {
+    staff.render(s.analysis.spelledNotes, settings?.key ?? null);
+  }
   keyboard.setNotes(s.held, s.sustained);
   pedalIndicator.update(s.pedals);
+}
 
-  keySel.value = s.settings.key ?? "";
+/** Settings path ("settings" events): rare, user-initiated. */
+function renderSettings(s: AppSettings): void {
+  // A local edit is being debounced — don't let the (stale) broadcast
+  // revert the control the user is touching; our push re-syncs shortly.
+  if (pushTimer !== null) return;
+  settings = s;
+  applyTheme(s);
+  chordCard.setHoldMs(s.holdMs);
+  keyboard.setSize(s.keyboardSize);
+
+  keySel.value = s.key ?? "";
   for (const k of ["showChordCard", "showStaff", "showKeyboard"] as const) {
-    panels[k].hidden = !s.settings[k];
-    toggles[k].classList.toggle("ks-active", s.settings[k]);
+    panels[k].hidden = !s[k];
+    toggles[k].classList.toggle("ks-active", s[k]);
   }
-  (document.getElementById("s-lang") as HTMLSelectElement).value = s.settings.engine.nameLanguage;
-  (document.getElementById("s-acc") as HTMLSelectElement).value = s.settings.engine.accidentalPref;
-  (document.getElementById("s-rn") as HTMLSelectElement).value = s.settings.engine.rnConvention;
-  (document.getElementById("s-sustained") as HTMLInputElement).checked = s.settings.includeSustained;
-  (document.getElementById("s-kbsize") as HTMLSelectElement).value = String(s.settings.keyboardSize);
-  (document.getElementById("s-channel") as HTMLSelectElement).value = String(s.settings.channelMask);
+  (document.getElementById("s-lang") as HTMLSelectElement).value = s.engine.nameLanguage;
+  (document.getElementById("s-acc") as HTMLSelectElement).value = s.engine.accidentalPref;
+  (document.getElementById("s-rn") as HTMLSelectElement).value = s.engine.rnConvention;
+  (document.getElementById("s-sustained") as HTMLInputElement).checked = s.includeSustained;
+  (document.getElementById("s-kbsize") as HTMLSelectElement).value = String(s.keyboardSize);
+  (document.getElementById("s-channel") as HTMLSelectElement).value = String(s.channelMask);
+
+  themeSel.value = s.theme;
+  customEditor.hidden = s.theme !== "custom";
+  const resolved = resolveTheme(s.theme, s.customTheme);
+  for (const [token, input] of customInputs) {
+    if (input !== document.activeElement) input.value = resolved[token];
+  }
+  const fontSel = document.getElementById("s-font") as HTMLSelectElement;
+  const fontId = Object.entries(FONT_CHOICES).find(([, f]) => f.stack === resolved.font)?.[0];
+  fontSel.value = fontId ?? "system";
+  (document.getElementById("s-hold") as HTMLInputElement).value = String(s.holdMs);
+  document.getElementById("s-hold-val")!.textContent = `${s.holdMs} ms`;
+
+  // Key context or a just-unhidden panel changes what the staff shows.
+  if (!panels.showStaff.hidden && lastState) {
+    staff.render(lastState.analysis.spelledNotes, s.key);
+  }
 }
 
 function renderDevices(d: DevicesPayload): void {
@@ -209,10 +337,28 @@ function renderDevices(d: DevicesPayload): void {
   deviceStatus.textContent = d.current ? `Connected: ${d.current}` : "No MIDI device connected";
 }
 
+let pushTimer: ReturnType<typeof setTimeout> | null = null;
+
 async function pushSettings(patch: Partial<AppSettings>): Promise<void> {
   if (!settings) return;
   settings = { ...settings, ...patch };
-  await invoke("set_settings", { settings });
+  if (pushTimer !== null) {
+    clearTimeout(pushTimer);
+    pushTimer = null;
+  }
+  await invoke("set_settings", { settings }).catch(() => {});
+}
+
+/** Debounced variant for continuous inputs (sliders, color pickers) —
+ *  each raw `input` tick otherwise hits disk + broadcast in the backend. */
+function pushSettingsSoon(patch: Partial<AppSettings>): void {
+  if (!settings) return;
+  settings = { ...settings, ...patch };
+  if (pushTimer !== null) clearTimeout(pushTimer);
+  pushTimer = setTimeout(() => {
+    pushTimer = null;
+    if (settings) void invoke("set_settings", { settings }).catch(() => {});
+  }, 200);
 }
 
 // ---------- wiring ----------
@@ -238,6 +384,28 @@ for (const k of ["showChordCard", "showStaff", "showKeyboard"] as const) {
   toggles[k].addEventListener("click", () => {
     if (settings) void pushSettings({ [k]: !settings[k] } as Partial<AppSettings>);
   });
+}
+
+// Display mode (§3.4): button + Ctrl/Cmd+D. The backend swaps windows and
+// broadcasts "display-mode" so the button label tracks the real state
+// (Studio stays visible as the control surface when click-through is on).
+const displayBtn = document.getElementById("display-btn") as HTMLButtonElement;
+
+function setDisplayMode(on: boolean): void {
+  void invoke("set_display_mode", { on }).catch(() => {});
+}
+displayBtn.addEventListener("click", () => setDisplayMode(!displayActive));
+window.addEventListener("keydown", (e) => {
+  if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === "d") {
+    e.preventDefault();
+    setDisplayMode(!displayActive);
+  }
+});
+
+function onDisplayMode(on: boolean): void {
+  displayActive = on;
+  displayBtn.textContent = on ? "Exit Display" : "Display";
+  displayBtn.classList.toggle("ks-active", on);
 }
 
 document.getElementById("settings-btn")!.addEventListener("click", () => settingsDialog.showModal());
@@ -271,6 +439,23 @@ document.getElementById("s-kbsize")!.addEventListener("change", (e) => {
 document.getElementById("s-channel")!.addEventListener("change", (e) => {
   void pushSettings({ channelMask: Number((e.target as HTMLSelectElement).value) });
 });
+themeSel.addEventListener("change", () => {
+  if (!settings) return;
+  // First switch to Custom: seed the editor from the theme on screen so
+  // the user tweaks what they see instead of starting from scratch.
+  if (themeSel.value === "custom" && Object.keys(settings.customTheme).length === 0) {
+    const current = resolveTheme(settings.theme, settings.customTheme);
+    void pushSettings({ theme: "custom", customTheme: { ...current } });
+  } else {
+    void pushSettings({ theme: themeSel.value });
+  }
+});
+document.getElementById("s-hold")!.addEventListener("input", (e) => {
+  const holdMs = Number((e.target as HTMLInputElement).value);
+  document.getElementById("s-hold-val")!.textContent = `${holdMs} ms`;
+  chordCard.setHoldMs(holdMs);
+  pushSettingsSoon({ holdMs });
+});
 
 function showMidiError(err: MidiErrorPayload): void {
   if (err && err.kind === "deviceBusy") {
@@ -298,58 +483,27 @@ updateQwertyHint(qwerty.octaveBase);
 
 // ---------- startup ----------
 
-// Browser-only dev preview: `vite dev` + ?demo renders a canned state so
-// components can be worked on without the Tauri shell.
-function demoState(): StatePayload {
-  return {
-    analysis: {
-      chordNames: [
-        { text: "C7(#5#9)", kind: "chord", score: 90 },
-        { text: "C7(#9b13)", kind: "chord", score: 80 },
-      ],
-      spelledNotes: [
-        { letter: "C", acc: 0, octave: 3, midi: 48, text: "C3" },
-        { letter: "E", acc: 0, octave: 3, midi: 52, text: "E3" },
-        { letter: "G", acc: 1, octave: 3, midi: 56, text: "G#3" },
-        { letter: "B", acc: -1, octave: 3, midi: 58, text: "Bb3" },
-        { letter: "D", acc: 1, octave: 4, midi: 63, text: "D#4" },
-      ],
-      romanNumeral: "V7(#5#9)/IV",
-      intervals: ["M3", "A5", "m7", "A9"],
-      bassNote: { letter: "C", acc: 0, octave: 3, midi: 48, text: "C3" },
-      inversion: 0,
-      isPartial: false,
-    },
-    held: [48, 52, 56, 58, 63],
-    sustained: [],
-    pedals: { sustain: false, sostenuto: false, soft: false },
-    settings: {
-      engine: { accidentalPref: "auto", rnConvention: "textbook", nameLanguage: "english" },
-      includeSustained: true,
-      channelMask: 0xffff,
-      keyboardSize: 61,
-      lastDevice: null,
-      key: "C",
-      showChordCard: true,
-      showStaff: true,
-      showKeyboard: true,
-    },
-  };
-}
-
 async function start(): Promise<void> {
   if (!hasTauri) {
     deviceStatus.textContent = "Browser preview — run the Keyscene app for MIDI";
     if (new URLSearchParams(location.search).has("demo")) {
-      renderState(demoState());
+      // Canned state (src/demo.ts) so components render without the shell.
+      renderSettings(demoSettings());
+      renderNotes(demoState());
     }
     return;
   }
-  await listen<StatePayload>("state", (e) => renderState(e.payload));
+  await listen<StatePayload>("state", (e) => renderNotes(e.payload));
+  await listen<AppSettings>("settings", (e) => renderSettings(e.payload));
   await listen<DevicesPayload>("devices", (e) => renderDevices(e.payload));
   await listen<MidiErrorPayload>("midi-error", (e) => showMidiError(e.payload));
-  renderState(await invoke<StatePayload>("get_state"));
+  await listen<boolean>("display-mode", (e) => onDisplayMode(e.payload));
+  renderSettings(await invoke<AppSettings>("get_settings"));
+  renderNotes(await invoke<StatePayload>("get_state"));
   renderDevices(await invoke<DevicesPayload>("get_devices"));
 }
 
-void start();
+start().catch((e: unknown) => {
+  // A failed bootstrap must be visible, not a blank window.
+  deviceStatus.textContent = `Startup failed: ${String(e)}`;
+});

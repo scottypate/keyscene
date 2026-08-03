@@ -10,6 +10,9 @@
 //     stave.getModifiers(), use setLedgerLineStyle) — full re-render on
 //     theme change (~0.3 ms, ADR-001)
 
+// vexflow/bravura instead of the default entry: the app only uses the
+// Bravura + Academico fonts; the full entry eagerly embeds four more
+// (~400 KB of base64 font data in the bundle).
 import {
   Accidental,
   Barline,
@@ -19,7 +22,7 @@ import {
   StaveConnector,
   StaveNote,
   Voice,
-} from "vexflow";
+} from "vexflow/bravura";
 import type { SpelledNote } from "./types";
 import type { Theme } from "./theme";
 
@@ -60,6 +63,7 @@ export class Staff {
   private theme: Theme;
   private notes: SpelledNote[] = [];
   private key: string | null = null;
+  private drawnSig = "";
 
   constructor(container: HTMLElement, theme: Theme) {
     this.container = container;
@@ -69,6 +73,7 @@ export class Staff {
 
   setTheme(theme: Theme): void {
     this.theme = theme;
+    this.drawnSig = "";
     this.draw();
   }
 
@@ -78,7 +83,16 @@ export class Staff {
     this.draw();
   }
 
+  /** Skip the full VexFlow rebuild when nothing on the staff changed —
+   *  render() runs on every MIDI event, including pedal-only ones. */
+  private sig(): string {
+    return `${this.key}|${this.notes.map((n) => n.text + n.octave).join(",")}`;
+  }
+
   private draw(): void {
+    const drawSig = this.sig();
+    if (drawSig === this.drawnSig) return;
+    this.drawnSig = drawSig;
     this.container.replaceChildren();
     const renderer = new Renderer(this.container as HTMLDivElement, Renderer.Backends.SVG);
     renderer.resize(WIDTH, HEIGHT);

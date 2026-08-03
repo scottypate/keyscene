@@ -80,7 +80,8 @@ export class Keyboard {
   }
 
   private rebuild(): void {
-    const [lo, hi] = RANGES[this.size];
+    // A hand-edited settings.json can carry any u8 — never throw on it.
+    const [lo, hi] = RANGES[this.size] ?? RANGES[88];
     this.keyEls.clear();
     const svg = document.createElementNS(SVG_NS, "svg");
 
@@ -133,6 +134,23 @@ export class Keyboard {
     // Whites under blacks.
     for (const r of whites) svg.appendChild(r);
     for (const r of blacks) svg.appendChild(r);
+
+    // Octave labels on the C keys (C4 = middle C, MIDI 60).
+    for (let midi = lo; midi <= hi; midi++) {
+      if (midi % 12 !== 0) continue;
+      const label = document.createElementNS(SVG_NS, "text");
+      label.setAttribute(
+        "x",
+        String((whiteUnits(midi) - originUnits) * WHITE_W + WHITE_W / 2),
+      );
+      label.setAttribute("y", String(WHITE_H - 6));
+      label.setAttribute("text-anchor", "middle");
+      label.setAttribute("font-size", "8");
+      label.setAttribute("fill", this.theme.muted);
+      label.setAttribute("pointer-events", "none");
+      label.textContent = `C${Math.floor(midi / 12) - 1}`;
+      svg.appendChild(label);
+    }
 
     this.container.replaceChildren(svg);
     // Re-apply current highlight state onto the fresh elements.

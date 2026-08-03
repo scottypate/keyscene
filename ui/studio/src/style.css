@@ -13,7 +13,7 @@ body,
 body {
   background: var(--ks-bg);
   color: var(--ks-ink);
-  font-family: -apple-system, "Segoe UI", system-ui, sans-serif;
+  font-family: var(--ks-font, -apple-system, "Segoe UI", system-ui, sans-serif);
   overflow: hidden;
   user-select: none;
 }
@@ -30,7 +30,7 @@ body {
   gap: 10px;
   padding: 8px 12px;
   background: var(--ks-panel);
-  border-bottom: 1px solid #00000055;
+  border-bottom: 1px solid color-mix(in srgb, var(--ks-ink) 25%, transparent);
   flex: none;
 }
 
@@ -47,7 +47,7 @@ dialog button,
 dialog input {
   background: var(--ks-bg);
   color: var(--ks-ink);
-  border: 1px solid #ffffff22;
+  border: 1px solid color-mix(in srgb, var(--ks-ink) 14%, transparent);
   border-radius: 6px;
   padding: 5px 9px;
   font-size: 13px;
@@ -116,6 +116,35 @@ dialog button:hover {
   color: var(--ks-muted);
 }
 
+/* A teaching tool's chord name should be copyable. */
+.ks-chordcard-name,
+.ks-chordcard-rn {
+  user-select: text;
+}
+
+/* Lead-sheet typesetting: root full-size, quality tail smaller + raised,
+   slash bass between the two sizes on the baseline. */
+.ks-chordname-tail {
+  font-size: 0.55em;
+  vertical-align: 0.5em;
+  margin-left: 0.04em;
+}
+
+.ks-chordname-bass {
+  font-size: 0.7em;
+}
+
+/* Alternates are already small — soften the scale so tails stay legible. */
+.ks-chordcard-alt .ks-chordname-tail {
+  font-size: 0.85em;
+  vertical-align: 0.12em;
+  margin-left: 0;
+}
+
+.ks-chordcard-alt .ks-chordname-bass {
+  font-size: 0.92em;
+}
+
 .ks-chordcard-sub {
   color: var(--ks-muted);
   font-size: 14px;
@@ -132,7 +161,7 @@ dialog button:hover {
 .ks-chordcard-alt {
   color: var(--ks-muted);
   font-size: 16px;
-  border: 1px solid #ffffff1a;
+  border: 1px solid color-mix(in srgb, var(--ks-ink) 11%, transparent);
   border-radius: 6px;
   padding: 1px 8px;
 }
@@ -164,7 +193,7 @@ dialog button:hover {
   gap: 16px;
   padding: 6px 12px;
   background: var(--ks-panel);
-  border-top: 1px solid #00000055;
+  border-top: 1px solid color-mix(in srgb, var(--ks-ink) 25%, transparent);
   color: var(--ks-muted);
   font-size: 12px;
 }
@@ -184,7 +213,7 @@ dialog button:hover {
   width: 9px;
   height: 9px;
   border-radius: 50%;
-  background: #ffffff22;
+  background: color-mix(in srgb, var(--ks-ink) 14%, transparent);
 }
 
 .ks-pedal-dot.ks-on {
@@ -196,7 +225,7 @@ dialog button:hover {
 dialog {
   background: var(--ks-panel);
   color: var(--ks-ink);
-  border: 1px solid #ffffff22;
+  border: 1px solid color-mix(in srgb, var(--ks-ink) 14%, transparent);
   border-radius: 12px;
   padding: 20px;
   min-width: 380px;
