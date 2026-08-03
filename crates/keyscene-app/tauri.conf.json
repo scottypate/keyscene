@@ -6,7 +6,10 @@
   "build": {
     "devUrl": "http://localhost:1420",
     "frontendDist": "../../ui/studio/dist",
-    "beforeBuildCommand": "npm --prefix ../../ui run build"
+    "beforeBuildCommand": {
+      "script": "npm run build",
+      "cwd": "../../ui"
+    }
   },
   "app": {
     "macOSPrivateApi": true,
@@ -32,9 +35,9 @@
     "targets": "all",
     "category": "Music",
     "publisher": "Scalecraft",
-    "copyright": "© 2026 Scalecraft",
+    "copyright": "\u00a9 2026 Scalecraft",
     "shortDescription": "Live chord identification for MIDI keyboards.",
-    "longDescription": "Keyscene listens to your MIDI keyboard and shows the chord you are playing — name, alternates, Roman numeral, staff notation, and an on-screen keyboard — with a chrome-free Display mode for OBS and screen sharing.",
+    "longDescription": "Keyscene listens to your MIDI keyboard and shows the chord you are playing \u2014 name, alternates, Roman numeral, staff notation, and an on-screen keyboard \u2014 with a chrome-free Display mode for OBS and screen sharing.",
     "icon": [
       "icons/32x32.png",
       "icons/128x128.png",
