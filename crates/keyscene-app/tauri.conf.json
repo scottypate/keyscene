@@ -5,24 +5,42 @@
   "identifier": "com.keyscene.app",
   "build": {
     "devUrl": "http://localhost:1420",
-    "frontendDist": "../../ui/studio/dist"
+    "frontendDist": "../../ui/studio/dist",
+    "beforeBuildCommand": "npm --prefix ../../ui run build"
   },
   "app": {
+    "macOSPrivateApi": true,
     "windows": [
       {
+        "label": "main",
         "title": "Keyscene",
         "width": 1040,
         "height": 760,
         "minWidth": 720,
-        "minHeight": 520
+        "minHeight": 520,
+        "center": true,
+        "dragDropEnabled": false
       }
     ],
     "security": {
-      "csp": null
+      "csp": "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self' data:; connect-src ipc: http://ipc.localhost",
+      "devCsp": null
     }
   },
   "bundle": {
-    "active": false,
-    "icon": ["icons/icon.png", "icons/icon.ico"]
+    "active": true,
+    "targets": "all",
+    "category": "Music",
+    "publisher": "Scalecraft",
+    "copyright": "© 2026 Scalecraft",
+    "shortDescription": "Live chord identification for MIDI keyboards.",
+    "longDescription": "Keyscene listens to your MIDI keyboard and shows the chord you are playing — name, alternates, Roman numeral, staff notation, and an on-screen keyboard — with a chrome-free Display mode for OBS and screen sharing.",
+    "icon": [
+      "icons/32x32.png",
+      "icons/128x128.png",
+      "icons/128x128@2x.png",
+      "icons/icon.icns",
+      "icons/icon.ico"
+    ]
   }
 }

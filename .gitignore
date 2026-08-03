@@ -20,3 +20,6 @@ Thumbs.db
 # Tauri build-generated schemas
 spikes/tauri-window/gen/
 crates/keyscene-app/gen/
+
+# Python (vector generator)
+__pycache__/
