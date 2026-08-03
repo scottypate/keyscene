@@ -29,3 +29,17 @@ jobs:
         run: cargo build --workspace
       - name: Test
         run: cargo test --workspace
+
+  # PLAN.md Phase 1 acceptance: the WASM build of keyscene-core passes the
+  # identical engine test suite (vectors + properties + fuzz).
+  wasm-core:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dtolnay/rust-toolchain@stable
+        with:
+          targets: wasm32-wasip1
+      - uses: Swatinem/rust-cache@v2
+      - uses: bytecodealliance/actions/wasmtime/setup@v1
+      - name: Test on wasm32-wasip1
+        run: cargo test -p keyscene-core --target wasm32-wasip1

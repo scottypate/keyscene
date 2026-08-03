@@ -1,0 +1,5 @@
+# WASM test runner: lets `cargo test -p keyscene-core --target wasm32-wasip1`
+# run the identical engine test suite under wasmtime (PLAN.md Phase 1
+# acceptance: WASM build of core passes the same tests).
+[target.wasm32-wasip1]
+runner = "wasmtime"

@@ -1,0 +1,3699 @@
+[
+ {
+  "id": "sp-001",
+  "notes": [
+   60
+  ],
+  "key": "C",
+  "expect": [
+   "C4"
+  ]
+ },
+ {
+  "id": "sp-002",
+  "notes": [
+   61
+  ],
+  "key": "C",
+  "expect": [
+   "C#4"
+  ]
+ },
+ {
+  "id": "sp-003",
+  "notes": [
+   62
+  ],
+  "key": "C",
+  "expect": [
+   "D4"
+  ]
+ },
+ {
+  "id": "sp-004",
+  "notes": [
+   63
+  ],
+  "key": "C",
+  "expect": [
+   "Eb4"
+  ]
+ },
+ {
+  "id": "sp-005",
+  "notes": [
+   64
+  ],
+  "key": "C",
+  "expect": [
+   "E4"
+  ]
+ },
+ {
+  "id": "sp-006",
+  "notes": [
+   65
+  ],
+  "key": "C",
+  "expect": [
+   "F4"
+  ]
+ },
+ {
+  "id": "sp-007",
+  "notes": [
+   66
+  ],
+  "key": "C",
+  "expect": [
+   "F#4"
+  ]
+ },
+ {
+  "id": "sp-008",
+  "notes": [
+   67
+  ],
+  "key": "C",
+  "expect": [
+   "G4"
+  ]
+ },
+ {
+  "id": "sp-009",
+  "notes": [
+   68
+  ],
+  "key": "C",
+  "expect": [
+   "Ab4"
+  ]
+ },
+ {
+  "id": "sp-010",
+  "notes": [
+   69
+  ],
+  "key": "C",
+  "expect": [
+   "A4"
+  ]
+ },
+ {
+  "id": "sp-011",
+  "notes": [
+   70
+  ],
+  "key": "C",
+  "expect": [
+   "Bb4"
+  ]
+ },
+ {
+  "id": "sp-012",
+  "notes": [
+   71
+  ],
+  "key": "C",
+  "expect": [
+   "B4"
+  ]
+ },
+ {
+  "id": "sp-013",
+  "notes": [
+   60
+  ],
+  "key": "G",
+  "expect": [
+   "C4"
+  ]
+ },
+ {
+  "id": "sp-014",
+  "notes": [
+   61
+  ],
+  "key": "G",
+  "expect": [
+   "C#4"
+  ]
+ },
+ {
+  "id": "sp-015",
+  "notes": [
+   62
+  ],
+  "key": "G",
+  "expect": [
+   "D4"
+  ]
+ },
+ {
+  "id": "sp-016",
+  "notes": [
+   63
+  ],
+  "key": "G",
+  "expect": [
+   "Eb4"
+  ]
+ },
+ {
+  "id": "sp-017",
+  "notes": [
+   64
+  ],
+  "key": "G",
+  "expect": [
+   "E4"
+  ]
+ },
+ {
+  "id": "sp-018",
+  "notes": [
+   65
+  ],
+  "key": "G",
+  "expect": [
+   "F4"
+  ]
+ },
+ {
+  "id": "sp-019",
+  "notes": [
+   66
+  ],
+  "key": "G",
+  "expect": [
+   "F#4"
+  ]
+ },
+ {
+  "id": "sp-020",
+  "notes": [
+   67
+  ],
+  "key": "G",
+  "expect": [
+   "G4"
+  ]
+ },
+ {
+  "id": "sp-021",
+  "notes": [
+   68
+  ],
+  "key": "G",
+  "expect": [
+   "G#4"
+  ]
+ },
+ {
+  "id": "sp-022",
+  "notes": [
+   69
+  ],
+  "key": "G",
+  "expect": [
+   "A4"
+  ]
+ },
+ {
+  "id": "sp-023",
+  "notes": [
+   70
+  ],
+  "key": "G",
+  "expect": [
+   "Bb4"
+  ]
+ },
+ {
+  "id": "sp-024",
+  "notes": [
+   71
+  ],
+  "key": "G",
+  "expect": [
+   "B4"
+  ]
+ },
+ {
+  "id": "sp-025",
+  "notes": [
+   60
+  ],
+  "key": "F",
+  "expect": [
+   "C4"
+  ]
+ },
+ {
+  "id": "sp-026",
+  "notes": [
+   61
+  ],
+  "key": "F",
+  "expect": [
+   "Db4"
+  ]
+ },
+ {
+  "id": "sp-027",
+  "notes": [
+   62
+  ],
+  "key": "F",
+  "expect": [
+   "D4"
+  ]
+ },
+ {
+  "id": "sp-028",
+  "notes": [
+   63
+  ],
+  "key": "F",
+  "expect": [
+   "Eb4"
+  ]
+ },
+ {
+  "id": "sp-029",
+  "notes": [
+   64
+  ],
+  "key": "F",
+  "expect": [
+   "E4"
+  ]
+ },
+ {
+  "id": "sp-030",
+  "notes": [
+   65
+  ],
+  "key": "F",
+  "expect": [
+   "F4"
+  ]
+ },
+ {
+  "id": "sp-031",
+  "notes": [
+   66
+  ],
+  "key": "F",
+  "expect": [
+   "F#4"
+  ]
+ },
+ {
+  "id": "sp-032",
+  "notes": [
+   67
+  ],
+  "key": "F",
+  "expect": [
+   "G4"
+  ]
+ },
+ {
+  "id": "sp-033",
+  "notes": [
+   68
+  ],
+  "key": "F",
+  "expect": [
+   "Ab4"
+  ]
+ },
+ {
+  "id": "sp-034",
+  "notes": [
+   69
+  ],
+  "key": "F",
+  "expect": [
+   "A4"
+  ]
+ },
+ {
+  "id": "sp-035",
+  "notes": [
+   70
+  ],
+  "key": "F",
+  "expect": [
+   "Bb4"
+  ]
+ },
+ {
+  "id": "sp-036",
+  "notes": [
+   71
+  ],
+  "key": "F",
+  "expect": [
+   "B4"
+  ]
+ },
+ {
+  "id": "sp-037",
+  "notes": [
+   60
+  ],
+  "key": "B",
+  "expect": [
+   "B#3"
+  ]
+ },
+ {
+  "id": "sp-038",
+  "notes": [
+   61
+  ],
+  "key": "B",
+  "expect": [
+   "C#4"
+  ]
+ },
+ {
+  "id": "sp-039",
+  "notes": [
+   62
+  ],
+  "key": "B",
+  "expect": [
+   "D4"
+  ]
+ },
+ {
+  "id": "sp-040",
+  "notes": [
+   63
+  ],
+  "key": "B",
+  "expect": [
+   "D#4"
+  ]
+ },
+ {
+  "id": "sp-041",
+  "notes": [
+   64
+  ],
+  "key": "B",
+  "expect": [
+   "E4"
+  ]
+ },
+ {
+  "id": "sp-042",
+  "notes": [
+   65
+  ],
+  "key": "B",
+  "expect": [
+   "E#4"
+  ]
+ },
+ {
+  "id": "sp-043",
+  "notes": [
+   66
+  ],
+  "key": "B",
+  "expect": [
+   "F#4"
+  ]
+ },
+ {
+  "id": "sp-044",
+  "notes": [
+   67
+  ],
+  "key": "B",
+  "expect": [
+   "G4"
+  ]
+ },
+ {
+  "id": "sp-045",
+  "notes": [
+   68
+  ],
+  "key": "B",
+  "expect": [
+   "G#4"
+  ]
+ },
+ {
+  "id": "sp-046",
+  "notes": [
+   69
+  ],
+  "key": "B",
+  "expect": [
+   "A4"
+  ]
+ },
+ {
+  "id": "sp-047",
+  "notes": [
+   70
+  ],
+  "key": "B",
+  "expect": [
+   "A#4"
+  ]
+ },
+ {
+  "id": "sp-048",
+  "notes": [
+   71
+  ],
+  "key": "B",
+  "expect": [
+   "B4"
+  ]
+ },
+ {
+  "id": "sp-049",
+  "notes": [
+   60
+  ],
+  "key": "Db",
+  "expect": [
+   "C4"
+  ]
+ },
+ {
+  "id": "sp-050",
+  "notes": [
+   61
+  ],
+  "key": "Db",
+  "expect": [
+   "Db4"
+  ]
+ },
+ {
+  "id": "sp-051",
+  "notes": [
+   62
+  ],
+  "key": "Db",
+  "expect": [
+   "D4"
+  ]
+ },
+ {
+  "id": "sp-052",
+  "notes": [
+   63
+  ],
+  "key": "Db",
+  "expect": [
+   "Eb4"
+  ]
+ },
+ {
+  "id": "sp-053",
+  "notes": [
+   64
+  ],
+  "key": "Db",
+  "expect": [
+   "Fb4"
+  ]
+ },
+ {
+  "id": "sp-054",
+  "notes": [
+   65
+  ],
+  "key": "Db",
+  "expect": [
+   "F4"
+  ]
+ },
+ {
+  "id": "sp-055",
+  "notes": [
+   66
+  ],
+  "key": "Db",
+  "expect": [
+   "Gb4"
+  ]
+ },
+ {
+  "id": "sp-056",
+  "notes": [
+   67
+  ],
+  "key": "Db",
+  "expect": [
+   "G4"
+  ]
+ },
+ {
+  "id": "sp-057",
+  "notes": [
+   68
+  ],
+  "key": "Db",
+  "expect": [
+   "Ab4"
+  ]
+ },
+ {
+  "id": "sp-058",
+  "notes": [
+   69
+  ],
+  "key": "Db",
+  "expect": [
+   "A4"
+  ]
+ },
+ {
+  "id": "sp-059",
+  "notes": [
+   70
+  ],
+  "key": "Db",
+  "expect": [
+   "Bb4"
+  ]
+ },
+ {
+  "id": "sp-060",
+  "notes": [
+   71
+  ],
+  "key": "Db",
+  "expect": [
+   "Cb5"
+  ]
+ },
+ {
+  "id": "sp-061",
+  "notes": [
+   60
+  ],
+  "key": "F#",
+  "expect": [
+   "B#3"
+  ]
+ },
+ {
+  "id": "sp-062",
+  "notes": [
+   61
+  ],
+  "key": "F#",
+  "expect": [
+   "C#4"
+  ]
+ },
+ {
+  "id": "sp-063",
+  "notes": [
+   62
+  ],
+  "key": "F#",
+  "expect": [
+   "D4"
+  ]
+ },
+ {
+  "id": "sp-064",
+  "notes": [
+   63
+  ],
+  "key": "F#",
+  "expect": [
+   "D#4"
+  ]
+ },
+ {
+  "id": "sp-065",
+  "notes": [
+   64
+  ],
+  "key": "F#",
+  "expect": [
+   "E4"
+  ]
+ },
+ {
+  "id": "sp-066",
+  "notes": [
+   65
+  ],
+  "key": "F#",
+  "expect": [
+   "E#4"
+  ]
+ },
+ {
+  "id": "sp-067",
+  "notes": [
+   66
+  ],
+  "key": "F#",
+  "expect": [
+   "F#4"
+  ]
+ },
+ {
+  "id": "sp-068",
+  "notes": [
+   67
+  ],
+  "key": "F#",
+  "expect": [
+   "G4"
+  ]
+ },
+ {
+  "id": "sp-069",
+  "notes": [
+   68
+  ],
+  "key": "F#",
+  "expect": [
+   "G#4"
+  ]
+ },
+ {
+  "id": "sp-070",
+  "notes": [
+   69
+  ],
+  "key": "F#",
+  "expect": [
+   "A4"
+  ]
+ },
+ {
+  "id": "sp-071",
+  "notes": [
+   70
+  ],
+  "key": "F#",
+  "expect": [
+   "A#4"
+  ]
+ },
+ {
+  "id": "sp-072",
+  "notes": [
+   71
+  ],
+  "key": "F#",
+  "expect": [
+   "B4"
+  ]
+ },
+ {
+  "id": "sp-073",
+  "notes": [
+   60
+  ],
+  "key": "Am",
+  "expect": [
+   "C4"
+  ]
+ },
+ {
+  "id": "sp-074",
+  "notes": [
+   61
+  ],
+  "key": "Am",
+  "expect": [
+   "C#4"
+  ]
+ },
+ {
+  "id": "sp-075",
+  "notes": [
+   62
+  ],
+  "key": "Am",
+  "expect": [
+   "D4"
+  ]
+ },
+ {
+  "id": "sp-076",
+  "notes": [
+   63
+  ],
+  "key": "Am",
+  "expect": [
+   "Eb4"
+  ]
+ },
+ {
+  "id": "sp-077",
+  "notes": [
+   64
+  ],
+  "key": "Am",
+  "expect": [
+   "E4"
+  ]
+ },
+ {
+  "id": "sp-078",
+  "notes": [
+   65
+  ],
+  "key": "Am",
+  "expect": [
+   "F4"
+  ]
+ },
+ {
+  "id": "sp-079",
+  "notes": [
+   66
+  ],
+  "key": "Am",
+  "expect": [
+   "F#4"
+  ]
+ },
+ {
+  "id": "sp-080",
+  "notes": [
+   67
+  ],
+  "key": "Am",
+  "expect": [
+   "G4"
+  ]
+ },
+ {
+  "id": "sp-081",
+  "notes": [
+   68
+  ],
+  "key": "Am",
+  "expect": [
+   "G#4"
+  ]
+ },
+ {
+  "id": "sp-082",
+  "notes": [
+   69
+  ],
+  "key": "Am",
+  "expect": [
+   "A4"
+  ]
+ },
+ {
+  "id": "sp-083",
+  "notes": [
+   70
+  ],
+  "key": "Am",
+  "expect": [
+   "Bb4"
+  ]
+ },
+ {
+  "id": "sp-084",
+  "notes": [
+   71
+  ],
+  "key": "Am",
+  "expect": [
+   "B4"
+  ]
+ },
+ {
+  "id": "sp-085",
+  "notes": [
+   60
+  ],
+  "key": "Ebm",
+  "expect": [
+   "C4"
+  ]
+ },
+ {
+  "id": "sp-086",
+  "notes": [
+   61
+  ],
+  "key": "Ebm",
+  "expect": [
+   "Db4"
+  ]
+ },
+ {
+  "id": "sp-087",
+  "notes": [
+   62
+  ],
+  "key": "Ebm",
+  "expect": [
+   "D4"
+  ]
+ },
+ {
+  "id": "sp-088",
+  "notes": [
+   63
+  ],
+  "key": "Ebm",
+  "expect": [
+   "Eb4"
+  ]
+ },
+ {
+  "id": "sp-089",
+  "notes": [
+   64
+  ],
+  "key": "Ebm",
+  "expect": [
+   "Fb4"
+  ]
+ },
+ {
+  "id": "sp-090",
+  "notes": [
+   65
+  ],
+  "key": "Ebm",
+  "expect": [
+   "F4"
+  ]
+ },
+ {
+  "id": "sp-091",
+  "notes": [
+   66
+  ],
+  "key": "Ebm",
+  "expect": [
+   "Gb4"
+  ]
+ },
+ {
+  "id": "sp-092",
+  "notes": [
+   67
+  ],
+  "key": "Ebm",
+  "expect": [
+   "G4"
+  ]
+ },
+ {
+  "id": "sp-093",
+  "notes": [
+   68
+  ],
+  "key": "Ebm",
+  "expect": [
+   "Ab4"
+  ]
+ },
+ {
+  "id": "sp-094",
+  "notes": [
+   69
+  ],
+  "key": "Ebm",
+  "expect": [
+   "A4"
+  ]
+ },
+ {
+  "id": "sp-095",
+  "notes": [
+   70
+  ],
+  "key": "Ebm",
+  "expect": [
+   "Bb4"
+  ]
+ },
+ {
+  "id": "sp-096",
+  "notes": [
+   71
+  ],
+  "key": "Ebm",
+  "expect": [
+   "Cb5"
+  ]
+ },
+ {
+  "id": "sp-097",
+  "notes": [
+   60
+  ],
+  "key": "Bbm",
+  "expect": [
+   "C4"
+  ]
+ },
+ {
+  "id": "sp-098",
+  "notes": [
+   61
+  ],
+  "key": "Bbm",
+  "expect": [
+   "Db4"
+  ]
+ },
+ {
+  "id": "sp-099",
+  "notes": [
+   62
+  ],
+  "key": "Bbm",
+  "expect": [
+   "D4"
+  ]
+ },
+ {
+  "id": "sp-100",
+  "notes": [
+   63
+  ],
+  "key": "Bbm",
+  "expect": [
+   "Eb4"
+  ]
+ },
+ {
+  "id": "sp-101",
+  "notes": [
+   64
+  ],
+  "key": "Bbm",
+  "expect": [
+   "Fb4"
+  ]
+ },
+ {
+  "id": "sp-102",
+  "notes": [
+   65
+  ],
+  "key": "Bbm",
+  "expect": [
+   "F4"
+  ]
+ },
+ {
+  "id": "sp-103",
+  "notes": [
+   66
+  ],
+  "key": "Bbm",
+  "expect": [
+   "Gb4"
+  ]
+ },
+ {
+  "id": "sp-104",
+  "notes": [
+   67
+  ],
+  "key": "Bbm",
+  "expect": [
+   "G4"
+  ]
+ },
+ {
+  "id": "sp-105",
+  "notes": [
+   68
+  ],
+  "key": "Bbm",
+  "expect": [
+   "Ab4"
+  ]
+ },
+ {
+  "id": "sp-106",
+  "notes": [
+   69
+  ],
+  "key": "Bbm",
+  "expect": [
+   "A4"
+  ]
+ },
+ {
+  "id": "sp-107",
+  "notes": [
+   70
+  ],
+  "key": "Bbm",
+  "expect": [
+   "Bb4"
+  ]
+ },
+ {
+  "id": "sp-108",
+  "notes": [
+   71
+  ],
+  "key": "Bbm",
+  "expect": [
+   "Cb5"
+  ]
+ },
+ {
+  "id": "sp-109",
+  "notes": [
+   48,
+   52,
+   55
+  ],
+  "key": null,
+  "expect": [
+   "C3",
+   "E3",
+   "G3"
+  ]
+ },
+ {
+  "id": "sp-110",
+  "notes": [
+   49,
+   53,
+   56
+  ],
+  "key": null,
+  "expect": [
+   "Db3",
+   "F3",
+   "Ab3"
+  ]
+ },
+ {
+  "id": "sp-111",
+  "notes": [
+   50,
+   54,
+   57
+  ],
+  "key": null,
+  "expect": [
+   "D3",
+   "F#3",
+   "A3"
+  ]
+ },
+ {
+  "id": "sp-112",
+  "notes": [
+   51,
+   55,
+   58
+  ],
+  "key": null,
+  "expect": [
+   "Eb3",
+   "G3",
+   "Bb3"
+  ]
+ },
+ {
+  "id": "sp-113",
+  "notes": [
+   52,
+   56,
+   59
+  ],
+  "key": null,
+  "expect": [
+   "E3",
+   "G#3",
+   "B3"
+  ]
+ },
+ {
+  "id": "sp-114",
+  "notes": [
+   53,
+   57,
+   60
+  ],
+  "key": null,
+  "expect": [
+   "F3",
+   "A3",
+   "C4"
+  ]
+ },
+ {
+  "id": "sp-115",
+  "notes": [
+   54,
+   58,
+   61
+  ],
+  "key": null,
+  "expect": [
+   "F#3",
+   "A#3",
+   "C#4"
+  ]
+ },
+ {
+  "id": "sp-116",
+  "notes": [
+   55,
+   59,
+   62
+  ],
+  "key": null,
+  "expect": [
+   "G3",
+   "B3",
+   "D4"
+  ]
+ },
+ {
+  "id": "sp-117",
+  "notes": [
+   56,
+   60,
+   63
+  ],
+  "key": null,
+  "expect": [
+   "Ab3",
+   "C4",
+   "Eb4"
+  ]
+ },
+ {
+  "id": "sp-118",
+  "notes": [
+   57,
+   61,
+   64
+  ],
+  "key": null,
+  "expect": [
+   "A3",
+   "C#4",
+   "E4"
+  ]
+ },
+ {
+  "id": "sp-119",
+  "notes": [
+   58,
+   62,
+   65
+  ],
+  "key": null,
+  "expect": [
+   "Bb3",
+   "D4",
+   "F4"
+  ]
+ },
+ {
+  "id": "sp-120",
+  "notes": [
+   59,
+   63,
+   66
+  ],
+  "key": null,
+  "expect": [
+   "B3",
+   "D#4",
+   "F#4"
+  ]
+ },
+ {
+  "id": "sp-121",
+  "notes": [
+   48,
+   51,
+   55
+  ],
+  "key": null,
+  "expect": [
+   "C3",
+   "Eb3",
+   "G3"
+  ]
+ },
+ {
+  "id": "sp-122",
+  "notes": [
+   49,
+   52,
+   56
+  ],
+  "key": null,
+  "expect": [
+   "C#3",
+   "E3",
+   "G#3"
+  ]
+ },
+ {
+  "id": "sp-123",
+  "notes": [
+   50,
+   53,
+   57
+  ],
+  "key": null,
+  "expect": [
+   "D3",
+   "F3",
+   "A3"
+  ]
+ },
+ {
+  "id": "sp-124",
+  "notes": [
+   51,
+   54,
+   58
+  ],
+  "key": null,
+  "expect": [
+   "Eb3",
+   "Gb3",
+   "Bb3"
+  ]
+ },
+ {
+  "id": "sp-125",
+  "notes": [
+   52,
+   55,
+   59
+  ],
+  "key": null,
+  "expect": [
+   "E3",
+   "G3",
+   "B3"
+  ]
+ },
+ {
+  "id": "sp-126",
+  "notes": [
+   53,
+   56,
+   60
+  ],
+  "key": null,
+  "expect": [
+   "F3",
+   "Ab3",
+   "C4"
+  ]
+ },
+ {
+  "id": "sp-127",
+  "notes": [
+   54,
+   57,
+   61
+  ],
+  "key": null,
+  "expect": [
+   "F#3",
+   "A3",
+   "C#4"
+  ]
+ },
+ {
+  "id": "sp-128",
+  "notes": [
+   55,
+   58,
+   62
+  ],
+  "key": null,
+  "expect": [
+   "G3",
+   "Bb3",
+   "D4"
+  ]
+ },
+ {
+  "id": "sp-129",
+  "notes": [
+   56,
+   59,
+   63
+  ],
+  "key": null,
+  "expect": [
+   "G#3",
+   "B3",
+   "D#4"
+  ]
+ },
+ {
+  "id": "sp-130",
+  "notes": [
+   57,
+   60,
+   64
+  ],
+  "key": null,
+  "expect": [
+   "A3",
+   "C4",
+   "E4"
+  ]
+ },
+ {
+  "id": "sp-131",
+  "notes": [
+   58,
+   61,
+   65
+  ],
+  "key": null,
+  "expect": [
+   "Bb3",
+   "Db4",
+   "F4"
+  ]
+ },
+ {
+  "id": "sp-132",
+  "notes": [
+   59,
+   62,
+   66
+  ],
+  "key": null,
+  "expect": [
+   "B3",
+   "D4",
+   "F#4"
+  ]
+ },
+ {
+  "id": "sp-133",
+  "notes": [
+   48,
+   51,
+   54
+  ],
+  "key": null,
+  "expect": [
+   "C3",
+   "Eb3",
+   "Gb3"
+  ]
+ },
+ {
+  "id": "sp-134",
+  "notes": [
+   49,
+   52,
+   55
+  ],
+  "key": null,
+  "expect": [
+   "C#3",
+   "E3",
+   "G3"
+  ]
+ },
+ {
+  "id": "sp-135",
+  "notes": [
+   50,
+   53,
+   56
+  ],
+  "key": null,
+  "expect": [
+   "D3",
+   "F3",
+   "Ab3"
+  ]
+ },
+ {
+  "id": "sp-136",
+  "notes": [
+   51,
+   54,
+   57
+  ],
+  "key": null,
+  "expect": [
+   "D#3",
+   "F#3",
+   "A3"
+  ]
+ },
+ {
+  "id": "sp-137",
+  "notes": [
+   52,
+   55,
+   58
+  ],
+  "key": null,
+  "expect": [
+   "E3",
+   "G3",
+   "Bb3"
+  ]
+ },
+ {
+  "id": "sp-138",
+  "notes": [
+   53,
+   56,
+   59
+  ],
+  "key": null,
+  "expect": [
+   "F3",
+   "Ab3",
+   "Cb4"
+  ]
+ },
+ {
+  "id": "sp-139",
+  "notes": [
+   54,
+   57,
+   60
+  ],
+  "key": null,
+  "expect": [
+   "F#3",
+   "A3",
+   "C4"
+  ]
+ },
+ {
+  "id": "sp-140",
+  "notes": [
+   55,
+   58,
+   61
+  ],
+  "key": null,
+  "expect": [
+   "G3",
+   "Bb3",
+   "Db4"
+  ]
+ },
+ {
+  "id": "sp-141",
+  "notes": [
+   56,
+   59,
+   62
+  ],
+  "key": null,
+  "expect": [
+   "G#3",
+   "B3",
+   "D4"
+  ]
+ },
+ {
+  "id": "sp-142",
+  "notes": [
+   57,
+   60,
+   63
+  ],
+  "key": null,
+  "expect": [
+   "A3",
+   "C4",
+   "Eb4"
+  ]
+ },
+ {
+  "id": "sp-143",
+  "notes": [
+   58,
+   61,
+   64
+  ],
+  "key": null,
+  "expect": [
+   "A#3",
+   "C#4",
+   "E4"
+  ]
+ },
+ {
+  "id": "sp-144",
+  "notes": [
+   59,
+   62,
+   65
+  ],
+  "key": null,
+  "expect": [
+   "B3",
+   "D4",
+   "F4"
+  ]
+ },
+ {
+  "id": "sp-145",
+  "notes": [
+   48,
+   52,
+   56
+  ],
+  "key": null,
+  "expect": [
+   "C3",
+   "E3",
+   "G#3"
+  ]
+ },
+ {
+  "id": "sp-146",
+  "notes": [
+   49,
+   53,
+   57
+  ],
+  "key": null,
+  "expect": [
+   "Db3",
+   "F3",
+   "A3"
+  ]
+ },
+ {
+  "id": "sp-147",
+  "notes": [
+   50,
+   54,
+   58
+  ],
+  "key": null,
+  "expect": [
+   "D3",
+   "F#3",
+   "A#3"
+  ]
+ },
+ {
+  "id": "sp-148",
+  "notes": [
+   51,
+   55,
+   59
+  ],
+  "key": null,
+  "expect": [
+   "Eb3",
+   "G3",
+   "B3"
+  ]
+ },
+ {
+  "id": "sp-149",
+  "notes": [
+   52,
+   56,
+   60
+  ],
+  "key": null,
+  "expect": [
+   "E3",
+   "G#3",
+   "B#3"
+  ]
+ },
+ {
+  "id": "sp-150",
+  "notes": [
+   53,
+   57,
+   61
+  ],
+  "key": null,
+  "expect": [
+   "F3",
+   "A3",
+   "C#4"
+  ]
+ },
+ {
+  "id": "sp-151",
+  "notes": [
+   54,
+   58,
+   62
+  ],
+  "key": null,
+  "expect": [
+   "F#3",
+   "A#3",
+   "C##4"
+  ]
+ },
+ {
+  "id": "sp-152",
+  "notes": [
+   55,
+   59,
+   63
+  ],
+  "key": null,
+  "expect": [
+   "G3",
+   "B3",
+   "D#4"
+  ]
+ },
+ {
+  "id": "sp-153",
+  "notes": [
+   56,
+   60,
+   64
+  ],
+  "key": null,
+  "expect": [
+   "Ab3",
+   "C4",
+   "E4"
+  ]
+ },
+ {
+  "id": "sp-154",
+  "notes": [
+   57,
+   61,
+   65
+  ],
+  "key": null,
+  "expect": [
+   "A3",
+   "C#4",
+   "E#4"
+  ]
+ },
+ {
+  "id": "sp-155",
+  "notes": [
+   58,
+   62,
+   66
+  ],
+  "key": null,
+  "expect": [
+   "Bb3",
+   "D4",
+   "F#4"
+  ]
+ },
+ {
+  "id": "sp-156",
+  "notes": [
+   59,
+   63,
+   67
+  ],
+  "key": null,
+  "expect": [
+   "B3",
+   "D#4",
+   "F##4"
+  ]
+ },
+ {
+  "id": "sp-157",
+  "notes": [
+   48,
+   52,
+   55,
+   59
+  ],
+  "key": null,
+  "expect": [
+   "C3",
+   "E3",
+   "G3",
+   "B3"
+  ]
+ },
+ {
+  "id": "sp-158",
+  "notes": [
+   49,
+   53,
+   56,
+   60
+  ],
+  "key": null,
+  "expect": [
+   "Db3",
+   "F3",
+   "Ab3",
+   "C4"
+  ]
+ },
+ {
+  "id": "sp-159",
+  "notes": [
+   50,
+   54,
+   57,
+   61
+  ],
+  "key": null,
+  "expect": [
+   "D3",
+   "F#3",
+   "A3",
+   "C#4"
+  ]
+ },
+ {
+  "id": "sp-160",
+  "notes": [
+   51,
+   55,
+   58,
+   62
+  ],
+  "key": null,
+  "expect": [
+   "Eb3",
+   "G3",
+   "Bb3",
+   "D4"
+  ]
+ },
+ {
+  "id": "sp-161",
+  "notes": [
+   52,
+   56,
+   59,
+   63
+  ],
+  "key": null,
+  "expect": [
+   "E3",
+   "G#3",
+   "B3",
+   "D#4"
+  ]
+ },
+ {
+  "id": "sp-162",
+  "notes": [
+   53,
+   57,
+   60,
+   64
+  ],
+  "key": null,
+  "expect": [
+   "F3",
+   "A3",
+   "C4",
+   "E4"
+  ]
+ },
+ {
+  "id": "sp-163",
+  "notes": [
+   54,
+   58,
+   61,
+   65
+  ],
+  "key": null,
+  "expect": [
+   "F#3",
+   "A#3",
+   "C#4",
+   "E#4"
+  ]
+ },
+ {
+  "id": "sp-164",
+  "notes": [
+   55,
+   59,
+   62,
+   66
+  ],
+  "key": null,
+  "expect": [
+   "G3",
+   "B3",
+   "D4",
+   "F#4"
+  ]
+ },
+ {
+  "id": "sp-165",
+  "notes": [
+   56,
+   60,
+   63,
+   67
+  ],
+  "key": null,
+  "expect": [
+   "Ab3",
+   "C4",
+   "Eb4",
+   "G4"
+  ]
+ },
+ {
+  "id": "sp-166",
+  "notes": [
+   57,
+   61,
+   64,
+   68
+  ],
+  "key": null,
+  "expect": [
+   "A3",
+   "C#4",
+   "E4",
+   "G#4"
+  ]
+ },
+ {
+  "id": "sp-167",
+  "notes": [
+   58,
+   62,
+   65,
+   69
+  ],
+  "key": null,
+  "expect": [
+   "Bb3",
+   "D4",
+   "F4",
+   "A4"
+  ]
+ },
+ {
+  "id": "sp-168",
+  "notes": [
+   59,
+   63,
+   66,
+   70
+  ],
+  "key": null,
+  "expect": [
+   "B3",
+   "D#4",
+   "F#4",
+   "A#4"
+  ]
+ },
+ {
+  "id": "sp-169",
+  "notes": [
+   48,
+   52,
+   55,
+   58
+  ],
+  "key": null,
+  "expect": [
+   "C3",
+   "E3",
+   "G3",
+   "Bb3"
+  ]
+ },
+ {
+  "id": "sp-170",
+  "notes": [
+   49,
+   53,
+   56,
+   59
+  ],
+  "key": null,
+  "expect": [
+   "Db3",
+   "F3",
+   "Ab3",
+   "Cb4"
+  ]
+ },
+ {
+  "id": "sp-171",
+  "notes": [
+   50,
+   54,
+   57,
+   60
+  ],
+  "key": null,
+  "expect": [
+   "D3",
+   "F#3",
+   "A3",
+   "C4"
+  ]
+ },
+ {
+  "id": "sp-172",
+  "notes": [
+   51,
+   55,
+   58,
+   61
+  ],
+  "key": null,
+  "expect": [
+   "Eb3",
+   "G3",
+   "Bb3",
+   "Db4"
+  ]
+ },
+ {
+  "id": "sp-173",
+  "notes": [
+   52,
+   56,
+   59,
+   62
+  ],
+  "key": null,
+  "expect": [
+   "E3",
+   "G#3",
+   "B3",
+   "D4"
+  ]
+ },
+ {
+  "id": "sp-174",
+  "notes": [
+   53,
+   57,
+   60,
+   63
+  ],
+  "key": null,
+  "expect": [
+   "F3",
+   "A3",
+   "C4",
+   "Eb4"
+  ]
+ },
+ {
+  "id": "sp-175",
+  "notes": [
+   54,
+   58,
+   61,
+   64
+  ],
+  "key": null,
+  "expect": [
+   "F#3",
+   "A#3",
+   "C#4",
+   "E4"
+  ]
+ },
+ {
+  "id": "sp-176",
+  "notes": [
+   55,
+   59,
+   62,
+   65
+  ],
+  "key": null,
+  "expect": [
+   "G3",
+   "B3",
+   "D4",
+   "F4"
+  ]
+ },
+ {
+  "id": "sp-177",
+  "notes": [
+   56,
+   60,
+   63,
+   66
+  ],
+  "key": null,
+  "expect": [
+   "Ab3",
+   "C4",
+   "Eb4",
+   "Gb4"
+  ]
+ },
+ {
+  "id": "sp-178",
+  "notes": [
+   57,
+   61,
+   64,
+   67
+  ],
+  "key": null,
+  "expect": [
+   "A3",
+   "C#4",
+   "E4",
+   "G4"
+  ]
+ },
+ {
+  "id": "sp-179",
+  "notes": [
+   58,
+   62,
+   65,
+   68
+  ],
+  "key": null,
+  "expect": [
+   "Bb3",
+   "D4",
+   "F4",
+   "Ab4"
+  ]
+ },
+ {
+  "id": "sp-180",
+  "notes": [
+   59,
+   63,
+   66,
+   69
+  ],
+  "key": null,
+  "expect": [
+   "B3",
+   "D#4",
+   "F#4",
+   "A4"
+  ]
+ },
+ {
+  "id": "sp-181",
+  "notes": [
+   48,
+   51,
+   55,
+   58
+  ],
+  "key": null,
+  "expect": [
+   "C3",
+   "Eb3",
+   "G3",
+   "Bb3"
+  ]
+ },
+ {
+  "id": "sp-182",
+  "notes": [
+   49,
+   52,
+   56,
+   59
+  ],
+  "key": null,
+  "expect": [
+   "C#3",
+   "E3",
+   "G#3",
+   "B3"
+  ]
+ },
+ {
+  "id": "sp-183",
+  "notes": [
+   50,
+   53,
+   57,
+   60
+  ],
+  "key": null,
+  "expect": [
+   "D3",
+   "F3",
+   "A3",
+   "C4"
+  ]
+ },
+ {
+  "id": "sp-184",
+  "notes": [
+   51,
+   54,
+   58,
+   61
+  ],
+  "key": null,
+  "expect": [
+   "Eb3",
+   "Gb3",
+   "Bb3",
+   "Db4"
+  ]
+ },
+ {
+  "id": "sp-185",
+  "notes": [
+   52,
+   55,
+   59,
+   62
+  ],
+  "key": null,
+  "expect": [
+   "E3",
+   "G3",
+   "B3",
+   "D4"
+  ]
+ },
+ {
+  "id": "sp-186",
+  "notes": [
+   53,
+   56,
+   60,
+   63
+  ],
+  "key": null,
+  "expect": [
+   "F3",
+   "Ab3",
+   "C4",
+   "Eb4"
+  ]
+ },
+ {
+  "id": "sp-187",
+  "notes": [
+   54,
+   57,
+   61,
+   64
+  ],
+  "key": null,
+  "expect": [
+   "F#3",
+   "A3",
+   "C#4",
+   "E4"
+  ]
+ },
+ {
+  "id": "sp-188",
+  "notes": [
+   55,
+   58,
+   62,
+   65
+  ],
+  "key": null,
+  "expect": [
+   "G3",
+   "Bb3",
+   "D4",
+   "F4"
+  ]
+ },
+ {
+  "id": "sp-189",
+  "notes": [
+   56,
+   59,
+   63,
+   66
+  ],
+  "key": null,
+  "expect": [
+   "G#3",
+   "B3",
+   "D#4",
+   "F#4"
+  ]
+ },
+ {
+  "id": "sp-190",
+  "notes": [
+   57,
+   60,
+   64,
+   67
+  ],
+  "key": null,
+  "expect": [
+   "A3",
+   "C4",
+   "E4",
+   "G4"
+  ]
+ },
+ {
+  "id": "sp-191",
+  "notes": [
+   58,
+   61,
+   65,
+   68
+  ],
+  "key": null,
+  "expect": [
+   "Bb3",
+   "Db4",
+   "F4",
+   "Ab4"
+  ]
+ },
+ {
+  "id": "sp-192",
+  "notes": [
+   59,
+   62,
+   66,
+   69
+  ],
+  "key": null,
+  "expect": [
+   "B3",
+   "D4",
+   "F#4",
+   "A4"
+  ]
+ },
+ {
+  "id": "sp-193",
+  "notes": [
+   48,
+   51,
+   54,
+   58
+  ],
+  "key": null,
+  "expect": [
+   "C3",
+   "Eb3",
+   "Gb3",
+   "Bb3"
+  ]
+ },
+ {
+  "id": "sp-194",
+  "notes": [
+   49,
+   52,
+   55,
+   59
+  ],
+  "key": null,
+  "expect": [
+   "C#3",
+   "E3",
+   "G3",
+   "B3"
+  ]
+ },
+ {
+  "id": "sp-195",
+  "notes": [
+   50,
+   53,
+   56,
+   60
+  ],
+  "key": null,
+  "expect": [
+   "D3",
+   "F3",
+   "Ab3",
+   "C4"
+  ]
+ },
+ {
+  "id": "sp-196",
+  "notes": [
+   51,
+   54,
+   57,
+   61
+  ],
+  "key": null,
+  "expect": [
+   "D#3",
+   "F#3",
+   "A3",
+   "C#4"
+  ]
+ },
+ {
+  "id": "sp-197",
+  "notes": [
+   52,
+   55,
+   58,
+   62
+  ],
+  "key": null,
+  "expect": [
+   "E3",
+   "G3",
+   "Bb3",
+   "D4"
+  ]
+ },
+ {
+  "id": "sp-198",
+  "notes": [
+   53,
+   56,
+   59,
+   63
+  ],
+  "key": null,
+  "expect": [
+   "F3",
+   "Ab3",
+   "Cb4",
+   "Eb4"
+  ]
+ },
+ {
+  "id": "sp-199",
+  "notes": [
+   54,
+   57,
+   60,
+   64
+  ],
+  "key": null,
+  "expect": [
+   "F#3",
+   "A3",
+   "C4",
+   "E4"
+  ]
+ },
+ {
+  "id": "sp-200",
+  "notes": [
+   55,
+   58,
+   61,
+   65
+  ],
+  "key": null,
+  "expect": [
+   "G3",
+   "Bb3",
+   "Db4",
+   "F4"
+  ]
+ },
+ {
+  "id": "sp-201",
+  "notes": [
+   56,
+   59,
+   62,
+   66
+  ],
+  "key": null,
+  "expect": [
+   "G#3",
+   "B3",
+   "D4",
+   "F#4"
+  ]
+ },
+ {
+  "id": "sp-202",
+  "notes": [
+   57,
+   60,
+   63,
+   67
+  ],
+  "key": null,
+  "expect": [
+   "A3",
+   "C4",
+   "Eb4",
+   "G4"
+  ]
+ },
+ {
+  "id": "sp-203",
+  "notes": [
+   58,
+   61,
+   64,
+   68
+  ],
+  "key": null,
+  "expect": [
+   "A#3",
+   "C#4",
+   "E4",
+   "G#4"
+  ]
+ },
+ {
+  "id": "sp-204",
+  "notes": [
+   59,
+   62,
+   65,
+   69
+  ],
+  "key": null,
+  "expect": [
+   "B3",
+   "D4",
+   "F4",
+   "A4"
+  ]
+ },
+ {
+  "id": "sp-205",
+  "notes": [
+   48,
+   51,
+   54,
+   57
+  ],
+  "key": null,
+  "expect": [
+   "C3",
+   "Eb3",
+   "Gb3",
+   "Bbb3"
+  ]
+ },
+ {
+  "id": "sp-206",
+  "notes": [
+   49,
+   52,
+   55,
+   58
+  ],
+  "key": null,
+  "expect": [
+   "C#3",
+   "E3",
+   "G3",
+   "Bb3"
+  ]
+ },
+ {
+  "id": "sp-207",
+  "notes": [
+   50,
+   53,
+   56,
+   59
+  ],
+  "key": null,
+  "expect": [
+   "D3",
+   "F3",
+   "Ab3",
+   "Cb4"
+  ]
+ },
+ {
+  "id": "sp-208",
+  "notes": [
+   51,
+   54,
+   57,
+   60
+  ],
+  "key": null,
+  "expect": [
+   "D#3",
+   "F#3",
+   "A3",
+   "C4"
+  ]
+ },
+ {
+  "id": "sp-209",
+  "notes": [
+   52,
+   55,
+   58,
+   61
+  ],
+  "key": null,
+  "expect": [
+   "E3",
+   "G3",
+   "Bb3",
+   "Db4"
+  ]
+ },
+ {
+  "id": "sp-210",
+  "notes": [
+   53,
+   56,
+   59,
+   62
+  ],
+  "key": null,
+  "expect": [
+   "F3",
+   "Ab3",
+   "Cb4",
+   "Ebb4"
+  ]
+ },
+ {
+  "id": "sp-211",
+  "notes": [
+   54,
+   57,
+   60,
+   63
+  ],
+  "key": null,
+  "expect": [
+   "F#3",
+   "A3",
+   "C4",
+   "Eb4"
+  ]
+ },
+ {
+  "id": "sp-212",
+  "notes": [
+   55,
+   58,
+   61,
+   64
+  ],
+  "key": null,
+  "expect": [
+   "G3",
+   "Bb3",
+   "Db4",
+   "Fb4"
+  ]
+ },
+ {
+  "id": "sp-213",
+  "notes": [
+   56,
+   59,
+   62,
+   65
+  ],
+  "key": null,
+  "expect": [
+   "G#3",
+   "B3",
+   "D4",
+   "F4"
+  ]
+ },
+ {
+  "id": "sp-214",
+  "notes": [
+   57,
+   60,
+   63,
+   66
+  ],
+  "key": null,
+  "expect": [
+   "A3",
+   "C4",
+   "Eb4",
+   "Gb4"
+  ]
+ },
+ {
+  "id": "sp-215",
+  "notes": [
+   58,
+   61,
+   64,
+   67
+  ],
+  "key": null,
+  "expect": [
+   "A#3",
+   "C#4",
+   "E4",
+   "G4"
+  ]
+ },
+ {
+  "id": "sp-216",
+  "notes": [
+   59,
+   62,
+   65,
+   68
+  ],
+  "key": null,
+  "expect": [
+   "B3",
+   "D4",
+   "F4",
+   "Ab4"
+  ]
+ },
+ {
+  "id": "sp-217",
+  "notes": [
+   48,
+   51,
+   55,
+   59
+  ],
+  "key": null,
+  "expect": [
+   "C3",
+   "Eb3",
+   "G3",
+   "B3"
+  ]
+ },
+ {
+  "id": "sp-218",
+  "notes": [
+   49,
+   52,
+   56,
+   60
+  ],
+  "key": null,
+  "expect": [
+   "C#3",
+   "E3",
+   "G#3",
+   "B#3"
+  ]
+ },
+ {
+  "id": "sp-219",
+  "notes": [
+   50,
+   53,
+   57,
+   61
+  ],
+  "key": null,
+  "expect": [
+   "D3",
+   "F3",
+   "A3",
+   "C#4"
+  ]
+ },
+ {
+  "id": "sp-220",
+  "notes": [
+   51,
+   54,
+   58,
+   62
+  ],
+  "key": null,
+  "expect": [
+   "Eb3",
+   "Gb3",
+   "Bb3",
+   "D4"
+  ]
+ },
+ {
+  "id": "sp-221",
+  "notes": [
+   52,
+   55,
+   59,
+   63
+  ],
+  "key": null,
+  "expect": [
+   "E3",
+   "G3",
+   "B3",
+   "D#4"
+  ]
+ },
+ {
+  "id": "sp-222",
+  "notes": [
+   53,
+   56,
+   60,
+   64
+  ],
+  "key": null,
+  "expect": [
+   "F3",
+   "Ab3",
+   "C4",
+   "E4"
+  ]
+ },
+ {
+  "id": "sp-223",
+  "notes": [
+   54,
+   57,
+   61,
+   65
+  ],
+  "key": null,
+  "expect": [
+   "F#3",
+   "A3",
+   "C#4",
+   "E#4"
+  ]
+ },
+ {
+  "id": "sp-224",
+  "notes": [
+   55,
+   58,
+   62,
+   66
+  ],
+  "key": null,
+  "expect": [
+   "G3",
+   "Bb3",
+   "D4",
+   "F#4"
+  ]
+ },
+ {
+  "id": "sp-225",
+  "notes": [
+   56,
+   59,
+   63,
+   67
+  ],
+  "key": null,
+  "expect": [
+   "G#3",
+   "B3",
+   "D#4",
+   "F##4"
+  ]
+ },
+ {
+  "id": "sp-226",
+  "notes": [
+   57,
+   60,
+   64,
+   68
+  ],
+  "key": null,
+  "expect": [
+   "A3",
+   "C4",
+   "E4",
+   "G#4"
+  ]
+ },
+ {
+  "id": "sp-227",
+  "notes": [
+   58,
+   61,
+   65,
+   69
+  ],
+  "key": null,
+  "expect": [
+   "Bb3",
+   "Db4",
+   "F4",
+   "A4"
+  ]
+ },
+ {
+  "id": "sp-228",
+  "notes": [
+   59,
+   62,
+   66,
+   70
+  ],
+  "key": null,
+  "expect": [
+   "B3",
+   "D4",
+   "F#4",
+   "A#4"
+  ]
+ },
+ {
+  "id": "sp-229",
+  "notes": [
+   48,
+   52,
+   56,
+   58
+  ],
+  "key": null,
+  "expect": [
+   "C3",
+   "E3",
+   "G#3",
+   "Bb3"
+  ]
+ },
+ {
+  "id": "sp-230",
+  "notes": [
+   49,
+   53,
+   57,
+   59
+  ],
+  "key": null,
+  "expect": [
+   "Db3",
+   "F3",
+   "A3",
+   "Cb4"
+  ]
+ },
+ {
+  "id": "sp-231",
+  "notes": [
+   50,
+   54,
+   58,
+   60
+  ],
+  "key": null,
+  "expect": [
+   "D3",
+   "F#3",
+   "A#3",
+   "C4"
+  ]
+ },
+ {
+  "id": "sp-232",
+  "notes": [
+   51,
+   55,
+   59,
+   61
+  ],
+  "key": null,
+  "expect": [
+   "Eb3",
+   "G3",
+   "B3",
+   "Db4"
+  ]
+ },
+ {
+  "id": "sp-233",
+  "notes": [
+   52,
+   56,
+   60,
+   62
+  ],
+  "key": null,
+  "expect": [
+   "E3",
+   "G#3",
+   "B#3",
+   "D4"
+  ]
+ },
+ {
+  "id": "sp-234",
+  "notes": [
+   53,
+   57,
+   61,
+   63
+  ],
+  "key": null,
+  "expect": [
+   "F3",
+   "A3",
+   "C#4",
+   "Eb4"
+  ]
+ },
+ {
+  "id": "sp-235",
+  "notes": [
+   54,
+   58,
+   62,
+   64
+  ],
+  "key": null,
+  "expect": [
+   "F#3",
+   "A#3",
+   "C##4",
+   "E4"
+  ]
+ },
+ {
+  "id": "sp-236",
+  "notes": [
+   55,
+   59,
+   63,
+   65
+  ],
+  "key": null,
+  "expect": [
+   "G3",
+   "B3",
+   "D#4",
+   "F4"
+  ]
+ },
+ {
+  "id": "sp-237",
+  "notes": [
+   56,
+   60,
+   64,
+   66
+  ],
+  "key": null,
+  "expect": [
+   "Ab3",
+   "C4",
+   "E4",
+   "Gb4"
+  ]
+ },
+ {
+  "id": "sp-238",
+  "notes": [
+   57,
+   61,
+   65,
+   67
+  ],
+  "key": null,
+  "expect": [
+   "A3",
+   "C#4",
+   "E#4",
+   "G4"
+  ]
+ },
+ {
+  "id": "sp-239",
+  "notes": [
+   58,
+   62,
+   66,
+   68
+  ],
+  "key": null,
+  "expect": [
+   "Bb3",
+   "D4",
+   "F#4",
+   "Ab4"
+  ]
+ },
+ {
+  "id": "sp-240",
+  "notes": [
+   59,
+   63,
+   67,
+   69
+  ],
+  "key": null,
+  "expect": [
+   "B3",
+   "D#4",
+   "F##4",
+   "A4"
+  ]
+ },
+ {
+  "id": "sp-241",
+  "notes": [
+   48,
+   52,
+   55,
+   57
+  ],
+  "key": null,
+  "expect": [
+   "C3",
+   "E3",
+   "G3",
+   "A3"
+  ]
+ },
+ {
+  "id": "sp-242",
+  "notes": [
+   49,
+   53,
+   56,
+   58
+  ],
+  "key": null,
+  "expect": [
+   "Db3",
+   "F3",
+   "Ab3",
+   "Bb3"
+  ]
+ },
+ {
+  "id": "sp-243",
+  "notes": [
+   50,
+   54,
+   57,
+   59
+  ],
+  "key": null,
+  "expect": [
+   "D3",
+   "F#3",
+   "A3",
+   "B3"
+  ]
+ },
+ {
+  "id": "sp-244",
+  "notes": [
+   51,
+   55,
+   58,
+   60
+  ],
+  "key": null,
+  "expect": [
+   "Eb3",
+   "G3",
+   "Bb3",
+   "C4"
+  ]
+ },
+ {
+  "id": "sp-245",
+  "notes": [
+   52,
+   56,
+   59,
+   61
+  ],
+  "key": null,
+  "expect": [
+   "E3",
+   "G#3",
+   "B3",
+   "C#4"
+  ]
+ },
+ {
+  "id": "sp-246",
+  "notes": [
+   53,
+   57,
+   60,
+   62
+  ],
+  "key": null,
+  "expect": [
+   "F3",
+   "A3",
+   "C4",
+   "D4"
+  ]
+ },
+ {
+  "id": "sp-247",
+  "notes": [
+   54,
+   58,
+   61,
+   63
+  ],
+  "key": null,
+  "expect": [
+   "F#3",
+   "A#3",
+   "C#4",
+   "D#4"
+  ]
+ },
+ {
+  "id": "sp-248",
+  "notes": [
+   55,
+   59,
+   62,
+   64
+  ],
+  "key": null,
+  "expect": [
+   "G3",
+   "B3",
+   "D4",
+   "E4"
+  ]
+ },
+ {
+  "id": "sp-249",
+  "notes": [
+   56,
+   60,
+   63,
+   65
+  ],
+  "key": null,
+  "expect": [
+   "Ab3",
+   "C4",
+   "Eb4",
+   "F4"
+  ]
+ },
+ {
+  "id": "sp-250",
+  "notes": [
+   57,
+   61,
+   64,
+   66
+  ],
+  "key": null,
+  "expect": [
+   "A3",
+   "C#4",
+   "E4",
+   "F#4"
+  ]
+ },
+ {
+  "id": "sp-251",
+  "notes": [
+   58,
+   62,
+   65,
+   67
+  ],
+  "key": null,
+  "expect": [
+   "Bb3",
+   "D4",
+   "F4",
+   "G4"
+  ]
+ },
+ {
+  "id": "sp-252",
+  "notes": [
+   59,
+   63,
+   66,
+   68
+  ],
+  "key": null,
+  "expect": [
+   "B3",
+   "D#4",
+   "F#4",
+   "G#4"
+  ]
+ },
+ {
+  "id": "sp-253",
+  "notes": [
+   52,
+   56,
+   59
+  ],
+  "key": "C",
+  "expect": [
+   "E3",
+   "G#3",
+   "B3"
+  ],
+  "why": "E major triad in C key spells G#, never Ab (PLAN §1.3)"
+ },
+ {
+  "id": "sp-254",
+  "notes": [
+   52,
+   56,
+   59,
+   62
+  ],
+  "key": "Am",
+  "expect": [
+   "E3",
+   "G#3",
+   "B3",
+   "D4"
+  ],
+  "why": "V7 of Am: E G# B D"
+ },
+ {
+  "id": "sp-255",
+  "notes": [
+   56,
+   60,
+   63
+  ],
+  "key": "C",
+  "expect": [
+   "Ab3",
+   "C4",
+   "Eb4"
+  ],
+  "why": "bVI in C: Ab C Eb"
+ },
+ {
+  "id": "sp-256",
+  "notes": [
+   49,
+   52,
+   55,
+   58
+  ],
+  "key": "C",
+  "expect": [
+   "C#3",
+   "E3",
+   "G3",
+   "Bb3"
+  ],
+  "why": "C#dim7 = C# E G Bb (corrected PLAN §3.2 example)"
+ },
+ {
+  "id": "sp-257",
+  "notes": [
+   51,
+   54,
+   57,
+   60
+  ],
+  "key": "Ebm",
+  "expect": [
+   "Eb3",
+   "Gb3",
+   "Bbb3",
+   "Dbb4"
+  ],
+  "why": "Ebdim7 in Ebm = Eb Gb Bbb Dbb, double flats by interval rule"
+ },
+ {
+  "id": "sp-258",
+  "notes": [
+   59,
+   63,
+   66,
+   69
+  ],
+  "key": "Ebm",
+  "expect": [
+   "Cb4",
+   "Eb4",
+   "Gb4",
+   "Bbb4"
+  ],
+  "why": "pc11 dominant in Ebm spells Cb7: Cb Eb Gb Bbb (chord-aware root)"
+ },
+ {
+  "id": "sp-259",
+  "notes": [
+   54,
+   58,
+   61,
+   64
+  ],
+  "key": "B",
+  "expect": [
+   "F#3",
+   "A#3",
+   "C#4",
+   "E4"
+  ],
+  "why": "F#7 in B: A# not Bb"
+ },
+ {
+  "id": "sp-260",
+  "notes": [
+   58,
+   61,
+   65
+  ],
+  "key": "Db",
+  "expect": [
+   "Bb3",
+   "Db4",
+   "F4"
+  ],
+  "why": "Bbm in Db"
+ },
+ {
+  "id": "sp-261",
+  "notes": [
+   49,
+   53,
+   56
+  ],
+  "key": "Ebm",
+  "expect": [
+   "Db3",
+   "F3",
+   "Ab3"
+  ],
+  "why": "bVII of Ebm major triad: Db F Ab"
+ },
+ {
+  "id": "sp-262",
+  "notes": [
+   57,
+   61,
+   64,
+   67
+  ],
+  "key": "G",
+  "expect": [
+   "A3",
+   "C#4",
+   "E4",
+   "G4"
+  ]
+ },
+ {
+  "id": "sp-263",
+  "notes": [
+   55,
+   59,
+   62,
+   65
+  ],
+  "key": "F",
+  "expect": [
+   "G3",
+   "B3",
+   "D4",
+   "F4"
+  ]
+ },
+ {
+  "id": "sp-264",
+  "notes": [
+   51,
+   54,
+   58,
+   61
+  ],
+  "key": "Db",
+  "expect": [
+   "Eb3",
+   "Gb3",
+   "Bb3",
+   "Db4"
+  ]
+ },
+ {
+  "id": "sp-265",
+  "notes": [
+   56,
+   59,
+   63,
+   66
+  ],
+  "key": "F#",
+  "expect": [
+   "G#3",
+   "B3",
+   "D#4",
+   "F#4"
+  ]
+ },
+ {
+  "id": "sp-266",
+  "notes": [
+   53,
+   57,
+   60,
+   63
+  ],
+  "key": "Bbm",
+  "expect": [
+   "F3",
+   "A3",
+   "C4",
+   "Eb4"
+  ]
+ },
+ {
+  "id": "sp-267",
+  "notes": [
+   50,
+   53,
+   57,
+   59
+  ],
+  "key": "Am",
+  "expect": [
+   "D3",
+   "F3",
+   "A3",
+   "B3"
+  ]
+ },
+ {
+  "id": "sp-268",
+  "notes": [
+   49,
+   52,
+   56,
+   59
+  ],
+  "key": "B",
+  "expect": [
+   "C#3",
+   "E3",
+   "G#3",
+   "B3"
+  ]
+ },
+ {
+  "id": "sp-269",
+  "notes": [
+   53,
+   56,
+   60,
+   63,
+   67
+  ],
+  "key": "Eb",
+  "expect": [
+   "F3",
+   "Ab3",
+   "C4",
+   "Eb4",
+   "G4"
+  ]
+ },
+ {
+  "id": "sp-270",
+  "notes": [
+   50,
+   54,
+   57,
+   60,
+   64
+  ],
+  "key": "C",
+  "expect": [
+   "D3",
+   "F#3",
+   "A3",
+   "C4",
+   "E4"
+  ]
+ },
+ {
+  "id": "sp-271",
+  "notes": [
+   59,
+   63,
+   66,
+   69
+  ],
+  "key": "Ebm",
+  "expect": [
+   "Cb4",
+   "Eb4",
+   "Gb4",
+   "Bbb4"
+  ]
+ },
+ {
+  "id": "sp-272",
+  "notes": [
+   61,
+   63,
+   66,
+   68,
+   70
+  ],
+  "key": null,
+  "expect": [
+   "C#4",
+   "D#4",
+   "F#4",
+   "G#4",
+   "A#4"
+  ],
+  "accidental_pref": "sharps",
+  "why": "bare black keys, pref=sharps"
+ },
+ {
+  "id": "sp-273",
+  "notes": [
+   54,
+   58,
+   61
+  ],
+  "key": null,
+  "expect": [
+   "F#3",
+   "A#3",
+   "C#4"
+  ],
+  "accidental_pref": "sharps"
+ },
+ {
+  "id": "sp-274",
+  "notes": [
+   49,
+   52,
+   56
+  ],
+  "key": null,
+  "expect": [
+   "C#3",
+   "E3",
+   "G#3"
+  ],
+  "accidental_pref": "sharps"
+ },
+ {
+  "id": "sp-275",
+  "notes": [
+   61,
+   63,
+   66,
+   68,
+   70
+  ],
+  "key": null,
+  "expect": [
+   "Db4",
+   "Eb4",
+   "Gb4",
+   "Ab4",
+   "Bb4"
+  ],
+  "accidental_pref": "flats",
+  "why": "bare black keys, pref=flats"
+ },
+ {
+  "id": "sp-276",
+  "notes": [
+   54,
+   58,
+   61
+  ],
+  "key": null,
+  "expect": [
+   "Gb3",
+   "Bb3",
+   "Db4"
+  ],
+  "accidental_pref": "flats"
+ },
+ {
+  "id": "sp-277",
+  "notes": [
+   49,
+   52,
+   56
+  ],
+  "key": null,
+  "expect": [
+   "Db3",
+   "Fb3",
+   "Ab3"
+  ],
+  "accidental_pref": "flats"
+ }
+]

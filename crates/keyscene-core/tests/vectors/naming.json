@@ -1,0 +1,3971 @@
+[
+ {
+  "id": "nm-001",
+  "notes": [
+   48,
+   52,
+   55
+  ],
+  "key": null,
+  "expect_top": "C"
+ },
+ {
+  "id": "nm-002",
+  "notes": [
+   51,
+   55,
+   58
+  ],
+  "key": null,
+  "expect_top": "Eb"
+ },
+ {
+  "id": "nm-003",
+  "notes": [
+   54,
+   58,
+   61
+  ],
+  "key": null,
+  "expect_top": "F#"
+ },
+ {
+  "id": "nm-004",
+  "notes": [
+   57,
+   61,
+   64
+  ],
+  "key": null,
+  "expect_top": "A"
+ },
+ {
+  "id": "nm-005",
+  "notes": [
+   48,
+   51,
+   55
+  ],
+  "key": null,
+  "expect_top": "Cm"
+ },
+ {
+  "id": "nm-006",
+  "notes": [
+   51,
+   54,
+   58
+  ],
+  "key": null,
+  "expect_top": "Ebm"
+ },
+ {
+  "id": "nm-007",
+  "notes": [
+   54,
+   57,
+   61
+  ],
+  "key": null,
+  "expect_top": "F#m"
+ },
+ {
+  "id": "nm-008",
+  "notes": [
+   57,
+   60,
+   64
+  ],
+  "key": null,
+  "expect_top": "Am"
+ },
+ {
+  "id": "nm-009",
+  "notes": [
+   48,
+   51,
+   54
+  ],
+  "key": null,
+  "expect_top": "Cdim"
+ },
+ {
+  "id": "nm-010",
+  "notes": [
+   51,
+   54,
+   57
+  ],
+  "key": null,
+  "expect_top": "D#dim"
+ },
+ {
+  "id": "nm-011",
+  "notes": [
+   54,
+   57,
+   60
+  ],
+  "key": null,
+  "expect_top": "F#dim"
+ },
+ {
+  "id": "nm-012",
+  "notes": [
+   57,
+   60,
+   63
+  ],
+  "key": null,
+  "expect_top": "Adim"
+ },
+ {
+  "id": "nm-013",
+  "notes": [
+   48,
+   52,
+   56
+  ],
+  "key": null,
+  "expect_top": "Caug"
+ },
+ {
+  "id": "nm-014",
+  "notes": [
+   51,
+   55,
+   59
+  ],
+  "key": null,
+  "expect_top": "Ebaug"
+ },
+ {
+  "id": "nm-015",
+  "notes": [
+   54,
+   58,
+   62
+  ],
+  "key": null,
+  "expect_top": "F#aug"
+ },
+ {
+  "id": "nm-016",
+  "notes": [
+   57,
+   61,
+   65
+  ],
+  "key": null,
+  "expect_top": "Aaug"
+ },
+ {
+  "id": "nm-017",
+  "notes": [
+   48,
+   53,
+   55
+  ],
+  "key": null,
+  "expect_top": "Csus4"
+ },
+ {
+  "id": "nm-018",
+  "notes": [
+   51,
+   56,
+   58
+  ],
+  "key": null,
+  "expect_top": "Ebsus4"
+ },
+ {
+  "id": "nm-019",
+  "notes": [
+   54,
+   59,
+   61
+  ],
+  "key": null,
+  "expect_top": "F#sus4"
+ },
+ {
+  "id": "nm-020",
+  "notes": [
+   57,
+   62,
+   64
+  ],
+  "key": null,
+  "expect_top": "Asus4"
+ },
+ {
+  "id": "nm-021",
+  "notes": [
+   48,
+   50,
+   55
+  ],
+  "key": null,
+  "expect_top": "Csus2"
+ },
+ {
+  "id": "nm-022",
+  "notes": [
+   51,
+   53,
+   58
+  ],
+  "key": null,
+  "expect_top": "Ebsus2"
+ },
+ {
+  "id": "nm-023",
+  "notes": [
+   54,
+   56,
+   61
+  ],
+  "key": null,
+  "expect_top": "F#sus2"
+ },
+ {
+  "id": "nm-024",
+  "notes": [
+   57,
+   59,
+   64
+  ],
+  "key": null,
+  "expect_top": "Asus2"
+ },
+ {
+  "id": "nm-025",
+  "notes": [
+   48,
+   52,
+   55,
+   57
+  ],
+  "key": null,
+  "expect_top": "C6"
+ },
+ {
+  "id": "nm-026",
+  "notes": [
+   51,
+   55,
+   58,
+   60
+  ],
+  "key": null,
+  "expect_top": "Eb6"
+ },
+ {
+  "id": "nm-027",
+  "notes": [
+   54,
+   58,
+   61,
+   63
+  ],
+  "key": null,
+  "expect_top": "F#6"
+ },
+ {
+  "id": "nm-028",
+  "notes": [
+   57,
+   61,
+   64,
+   66
+  ],
+  "key": null,
+  "expect_top": "A6"
+ },
+ {
+  "id": "nm-029",
+  "notes": [
+   48,
+   51,
+   55,
+   57
+  ],
+  "key": null,
+  "expect_top": "Cm6"
+ },
+ {
+  "id": "nm-030",
+  "notes": [
+   51,
+   54,
+   58,
+   60
+  ],
+  "key": null,
+  "expect_top": "Ebm6"
+ },
+ {
+  "id": "nm-031",
+  "notes": [
+   54,
+   57,
+   61,
+   63
+  ],
+  "key": null,
+  "expect_top": "F#m6"
+ },
+ {
+  "id": "nm-032",
+  "notes": [
+   57,
+   60,
+   64,
+   66
+  ],
+  "key": null,
+  "expect_top": "Am6"
+ },
+ {
+  "id": "nm-033",
+  "notes": [
+   48,
+   52,
+   55,
+   57,
+   62
+  ],
+  "key": null,
+  "expect_top": "C6/9"
+ },
+ {
+  "id": "nm-034",
+  "notes": [
+   51,
+   55,
+   58,
+   60,
+   65
+  ],
+  "key": null,
+  "expect_top": "Eb6/9"
+ },
+ {
+  "id": "nm-035",
+  "notes": [
+   54,
+   58,
+   61,
+   63,
+   68
+  ],
+  "key": null,
+  "expect_top": "F#6/9"
+ },
+ {
+  "id": "nm-036",
+  "notes": [
+   57,
+   61,
+   64,
+   66,
+   71
+  ],
+  "key": null,
+  "expect_top": "A6/9"
+ },
+ {
+  "id": "nm-037",
+  "notes": [
+   48,
+   51,
+   55,
+   57,
+   62
+  ],
+  "key": null,
+  "expect_top": "Cm6/9"
+ },
+ {
+  "id": "nm-038",
+  "notes": [
+   51,
+   54,
+   58,
+   60,
+   65
+  ],
+  "key": null,
+  "expect_top": "Ebm6/9"
+ },
+ {
+  "id": "nm-039",
+  "notes": [
+   54,
+   57,
+   61,
+   63,
+   68
+  ],
+  "key": null,
+  "expect_top": "F#m6/9"
+ },
+ {
+  "id": "nm-040",
+  "notes": [
+   57,
+   60,
+   64,
+   66,
+   71
+  ],
+  "key": null,
+  "expect_top": "Am6/9"
+ },
+ {
+  "id": "nm-041",
+  "notes": [
+   48,
+   52,
+   55,
+   59
+  ],
+  "key": null,
+  "expect_top": "Cmaj7"
+ },
+ {
+  "id": "nm-042",
+  "notes": [
+   51,
+   55,
+   58,
+   62
+  ],
+  "key": null,
+  "expect_top": "Ebmaj7"
+ },
+ {
+  "id": "nm-043",
+  "notes": [
+   54,
+   58,
+   61,
+   65
+  ],
+  "key": null,
+  "expect_top": "F#maj7"
+ },
+ {
+  "id": "nm-044",
+  "notes": [
+   57,
+   61,
+   64,
+   68
+  ],
+  "key": null,
+  "expect_top": "Amaj7"
+ },
+ {
+  "id": "nm-045",
+  "notes": [
+   48,
+   52,
+   55,
+   58
+  ],
+  "key": null,
+  "expect_top": "C7"
+ },
+ {
+  "id": "nm-046",
+  "notes": [
+   51,
+   55,
+   58,
+   61
+  ],
+  "key": null,
+  "expect_top": "Eb7"
+ },
+ {
+  "id": "nm-047",
+  "notes": [
+   54,
+   58,
+   61,
+   64
+  ],
+  "key": null,
+  "expect_top": "F#7"
+ },
+ {
+  "id": "nm-048",
+  "notes": [
+   57,
+   61,
+   64,
+   67
+  ],
+  "key": null,
+  "expect_top": "A7"
+ },
+ {
+  "id": "nm-049",
+  "notes": [
+   48,
+   51,
+   55,
+   58
+  ],
+  "key": null,
+  "expect_top": "Cm7"
+ },
+ {
+  "id": "nm-050",
+  "notes": [
+   51,
+   54,
+   58,
+   61
+  ],
+  "key": null,
+  "expect_top": "Ebm7"
+ },
+ {
+  "id": "nm-051",
+  "notes": [
+   54,
+   57,
+   61,
+   64
+  ],
+  "key": null,
+  "expect_top": "F#m7"
+ },
+ {
+  "id": "nm-052",
+  "notes": [
+   57,
+   60,
+   64,
+   67
+  ],
+  "key": null,
+  "expect_top": "Am7"
+ },
+ {
+  "id": "nm-053",
+  "notes": [
+   48,
+   51,
+   55,
+   59
+  ],
+  "key": null,
+  "expect_top": "Cm(maj7)"
+ },
+ {
+  "id": "nm-054",
+  "notes": [
+   51,
+   54,
+   58,
+   62
+  ],
+  "key": null,
+  "expect_top": "Ebm(maj7)"
+ },
+ {
+  "id": "nm-055",
+  "notes": [
+   54,
+   57,
+   61,
+   65
+  ],
+  "key": null,
+  "expect_top": "F#m(maj7)"
+ },
+ {
+  "id": "nm-056",
+  "notes": [
+   57,
+   60,
+   64,
+   68
+  ],
+  "key": null,
+  "expect_top": "Am(maj7)"
+ },
+ {
+  "id": "nm-057",
+  "notes": [
+   48,
+   51,
+   54,
+   58
+  ],
+  "key": null,
+  "expect_top": "Cm7b5"
+ },
+ {
+  "id": "nm-058",
+  "notes": [
+   51,
+   54,
+   57,
+   61
+  ],
+  "key": null,
+  "expect_top": "D#m7b5"
+ },
+ {
+  "id": "nm-059",
+  "notes": [
+   54,
+   57,
+   60,
+   64
+  ],
+  "key": null,
+  "expect_top": "F#m7b5"
+ },
+ {
+  "id": "nm-060",
+  "notes": [
+   57,
+   60,
+   63,
+   67
+  ],
+  "key": null,
+  "expect_top": "Am7b5"
+ },
+ {
+  "id": "nm-061",
+  "notes": [
+   48,
+   51,
+   54,
+   57
+  ],
+  "key": null,
+  "expect_top": "Cdim7"
+ },
+ {
+  "id": "nm-062",
+  "notes": [
+   51,
+   54,
+   57,
+   60
+  ],
+  "key": null,
+  "expect_top": "D#dim7"
+ },
+ {
+  "id": "nm-063",
+  "notes": [
+   54,
+   57,
+   60,
+   63
+  ],
+  "key": null,
+  "expect_top": "F#dim7"
+ },
+ {
+  "id": "nm-064",
+  "notes": [
+   57,
+   60,
+   63,
+   66
+  ],
+  "key": null,
+  "expect_top": "Adim7"
+ },
+ {
+  "id": "nm-065",
+  "notes": [
+   48,
+   53,
+   55,
+   58
+  ],
+  "key": null,
+  "expect_top": "C7sus4"
+ },
+ {
+  "id": "nm-066",
+  "notes": [
+   51,
+   56,
+   58,
+   61
+  ],
+  "key": null,
+  "expect_top": "Eb7sus4"
+ },
+ {
+  "id": "nm-067",
+  "notes": [
+   54,
+   59,
+   61,
+   64
+  ],
+  "key": null,
+  "expect_top": "F#7sus4"
+ },
+ {
+  "id": "nm-068",
+  "notes": [
+   57,
+   62,
+   64,
+   67
+  ],
+  "key": null,
+  "expect_top": "A7sus4"
+ },
+ {
+  "id": "nm-069",
+  "notes": [
+   48,
+   52,
+   56,
+   58
+  ],
+  "key": null,
+  "expect_top": "C7(#5)"
+ },
+ {
+  "id": "nm-070",
+  "notes": [
+   51,
+   55,
+   59,
+   61
+  ],
+  "key": null,
+  "expect_top": "Eb7(#5)"
+ },
+ {
+  "id": "nm-071",
+  "notes": [
+   54,
+   58,
+   62,
+   64
+  ],
+  "key": null,
+  "expect_top": "F#7(#5)"
+ },
+ {
+  "id": "nm-072",
+  "notes": [
+   57,
+   61,
+   65,
+   67
+  ],
+  "key": null,
+  "expect_top": "A7(#5)"
+ },
+ {
+  "id": "nm-073",
+  "notes": [
+   48,
+   52,
+   56,
+   59
+  ],
+  "key": null,
+  "expect_top": "Cmaj7(#5)"
+ },
+ {
+  "id": "nm-074",
+  "notes": [
+   51,
+   55,
+   59,
+   62
+  ],
+  "key": null,
+  "expect_top": "Ebmaj7(#5)"
+ },
+ {
+  "id": "nm-075",
+  "notes": [
+   54,
+   58,
+   62,
+   65
+  ],
+  "key": null,
+  "expect_top": "F#maj7(#5)"
+ },
+ {
+  "id": "nm-076",
+  "notes": [
+   57,
+   61,
+   65,
+   68
+  ],
+  "key": null,
+  "expect_top": "Amaj7(#5)"
+ },
+ {
+  "id": "nm-077",
+  "notes": [
+   48,
+   52,
+   54,
+   58
+  ],
+  "key": null,
+  "expect_top": "C7(b5)"
+ },
+ {
+  "id": "nm-078",
+  "notes": [
+   51,
+   55,
+   57,
+   61
+  ],
+  "key": null,
+  "expect_top": "Eb7(b5)"
+ },
+ {
+  "id": "nm-079",
+  "notes": [
+   54,
+   58,
+   60,
+   64
+  ],
+  "key": null,
+  "expect_top": "F#7(b5)"
+ },
+ {
+  "id": "nm-080",
+  "notes": [
+   57,
+   61,
+   63,
+   67
+  ],
+  "key": null,
+  "expect_top": "A7(b5)"
+ },
+ {
+  "id": "nm-081",
+  "notes": [
+   48,
+   52,
+   54,
+   59
+  ],
+  "key": null,
+  "expect_top": "Cmaj7(#11)"
+ },
+ {
+  "id": "nm-082",
+  "notes": [
+   51,
+   55,
+   57,
+   62
+  ],
+  "key": null,
+  "expect_top": "Ebmaj7(#11)"
+ },
+ {
+  "id": "nm-083",
+  "notes": [
+   54,
+   58,
+   60,
+   65
+  ],
+  "key": null,
+  "expect_top": "F#maj7(#11)"
+ },
+ {
+  "id": "nm-084",
+  "notes": [
+   57,
+   61,
+   63,
+   68
+  ],
+  "key": null,
+  "expect_top": "Amaj7(#11)"
+ },
+ {
+  "id": "nm-085",
+  "notes": [
+   48,
+   52,
+   55,
+   58,
+   62
+  ],
+  "key": null,
+  "expect_top": "C9"
+ },
+ {
+  "id": "nm-086",
+  "notes": [
+   51,
+   55,
+   58,
+   61,
+   65
+  ],
+  "key": null,
+  "expect_top": "Eb9"
+ },
+ {
+  "id": "nm-087",
+  "notes": [
+   54,
+   58,
+   61,
+   64,
+   68
+  ],
+  "key": null,
+  "expect_top": "F#9"
+ },
+ {
+  "id": "nm-088",
+  "notes": [
+   57,
+   61,
+   64,
+   67,
+   71
+  ],
+  "key": null,
+  "expect_top": "A9"
+ },
+ {
+  "id": "nm-089",
+  "notes": [
+   48,
+   52,
+   55,
+   59,
+   62
+  ],
+  "key": null,
+  "expect_top": "Cmaj9"
+ },
+ {
+  "id": "nm-090",
+  "notes": [
+   51,
+   55,
+   58,
+   62,
+   65
+  ],
+  "key": null,
+  "expect_top": "Ebmaj9"
+ },
+ {
+  "id": "nm-091",
+  "notes": [
+   54,
+   58,
+   61,
+   65,
+   68
+  ],
+  "key": null,
+  "expect_top": "F#maj9"
+ },
+ {
+  "id": "nm-092",
+  "notes": [
+   57,
+   61,
+   64,
+   68,
+   71
+  ],
+  "key": null,
+  "expect_top": "Amaj9"
+ },
+ {
+  "id": "nm-093",
+  "notes": [
+   48,
+   51,
+   55,
+   58,
+   62
+  ],
+  "key": null,
+  "expect_top": "Cm9"
+ },
+ {
+  "id": "nm-094",
+  "notes": [
+   51,
+   54,
+   58,
+   61,
+   65
+  ],
+  "key": null,
+  "expect_top": "Ebm9"
+ },
+ {
+  "id": "nm-095",
+  "notes": [
+   54,
+   57,
+   61,
+   64,
+   68
+  ],
+  "key": null,
+  "expect_top": "F#m9"
+ },
+ {
+  "id": "nm-096",
+  "notes": [
+   57,
+   60,
+   64,
+   67,
+   71
+  ],
+  "key": null,
+  "expect_top": "Am9"
+ },
+ {
+  "id": "nm-097",
+  "notes": [
+   48,
+   51,
+   55,
+   59,
+   62
+  ],
+  "key": null,
+  "expect_top": "Cm(maj9)"
+ },
+ {
+  "id": "nm-098",
+  "notes": [
+   51,
+   54,
+   58,
+   62,
+   65
+  ],
+  "key": null,
+  "expect_top": "Ebm(maj9)"
+ },
+ {
+  "id": "nm-099",
+  "notes": [
+   54,
+   57,
+   61,
+   65,
+   68
+  ],
+  "key": null,
+  "expect_top": "F#m(maj9)"
+ },
+ {
+  "id": "nm-100",
+  "notes": [
+   57,
+   60,
+   64,
+   68,
+   71
+  ],
+  "key": null,
+  "expect_top": "Am(maj9)"
+ },
+ {
+  "id": "nm-101",
+  "notes": [
+   48,
+   52,
+   55,
+   62
+  ],
+  "key": null,
+  "expect_top": "Cadd9"
+ },
+ {
+  "id": "nm-102",
+  "notes": [
+   51,
+   55,
+   58,
+   65
+  ],
+  "key": null,
+  "expect_top": "Ebadd9"
+ },
+ {
+  "id": "nm-103",
+  "notes": [
+   54,
+   58,
+   61,
+   68
+  ],
+  "key": null,
+  "expect_top": "F#add9"
+ },
+ {
+  "id": "nm-104",
+  "notes": [
+   57,
+   61,
+   64,
+   71
+  ],
+  "key": null,
+  "expect_top": "Aadd9"
+ },
+ {
+  "id": "nm-105",
+  "notes": [
+   48,
+   51,
+   55,
+   62
+  ],
+  "key": null,
+  "expect_top": "Cm(add9)"
+ },
+ {
+  "id": "nm-106",
+  "notes": [
+   51,
+   54,
+   58,
+   65
+  ],
+  "key": null,
+  "expect_top": "Ebm(add9)"
+ },
+ {
+  "id": "nm-107",
+  "notes": [
+   54,
+   57,
+   61,
+   68
+  ],
+  "key": null,
+  "expect_top": "F#m(add9)"
+ },
+ {
+  "id": "nm-108",
+  "notes": [
+   57,
+   60,
+   64,
+   71
+  ],
+  "key": null,
+  "expect_top": "Am(add9)"
+ },
+ {
+  "id": "nm-109",
+  "notes": [
+   48,
+   53,
+   55,
+   58,
+   62
+  ],
+  "key": null,
+  "expect_top": "C9sus4"
+ },
+ {
+  "id": "nm-110",
+  "notes": [
+   51,
+   56,
+   58,
+   61,
+   65
+  ],
+  "key": null,
+  "expect_top": "Eb9sus4"
+ },
+ {
+  "id": "nm-111",
+  "notes": [
+   54,
+   59,
+   61,
+   64,
+   68
+  ],
+  "key": null,
+  "expect_top": "F#9sus4"
+ },
+ {
+  "id": "nm-112",
+  "notes": [
+   57,
+   62,
+   64,
+   67,
+   71
+  ],
+  "key": null,
+  "expect_top": "A9sus4"
+ },
+ {
+  "id": "nm-113",
+  "notes": [
+   48,
+   52,
+   55,
+   58,
+   61
+  ],
+  "key": null,
+  "expect_top": "C7(b9)"
+ },
+ {
+  "id": "nm-114",
+  "notes": [
+   51,
+   55,
+   58,
+   61,
+   64
+  ],
+  "key": null,
+  "expect_top": "Eb7(b9)"
+ },
+ {
+  "id": "nm-115",
+  "notes": [
+   54,
+   58,
+   61,
+   64,
+   67
+  ],
+  "key": null,
+  "expect_top": "F#7(b9)"
+ },
+ {
+  "id": "nm-116",
+  "notes": [
+   57,
+   61,
+   64,
+   67,
+   70
+  ],
+  "key": null,
+  "expect_top": "A7(b9)"
+ },
+ {
+  "id": "nm-117",
+  "notes": [
+   48,
+   52,
+   55,
+   58,
+   63
+  ],
+  "key": null,
+  "expect_top": "C7(#9)"
+ },
+ {
+  "id": "nm-118",
+  "notes": [
+   51,
+   55,
+   58,
+   61,
+   66
+  ],
+  "key": null,
+  "expect_top": "Eb7(#9)"
+ },
+ {
+  "id": "nm-119",
+  "notes": [
+   54,
+   58,
+   61,
+   64,
+   69
+  ],
+  "key": null,
+  "expect_top": "F#7(#9)"
+ },
+ {
+  "id": "nm-120",
+  "notes": [
+   57,
+   61,
+   64,
+   67,
+   72
+  ],
+  "key": null,
+  "expect_top": "A7(#9)"
+ },
+ {
+  "id": "nm-121",
+  "notes": [
+   48,
+   52,
+   56,
+   58,
+   63
+  ],
+  "key": null,
+  "expect_top": "C7(#5#9)"
+ },
+ {
+  "id": "nm-122",
+  "notes": [
+   51,
+   55,
+   59,
+   61,
+   66
+  ],
+  "key": null,
+  "expect_top": "Eb7(#5#9)"
+ },
+ {
+  "id": "nm-123",
+  "notes": [
+   54,
+   58,
+   62,
+   64,
+   69
+  ],
+  "key": null,
+  "expect_top": "F#7(#5#9)"
+ },
+ {
+  "id": "nm-124",
+  "notes": [
+   57,
+   61,
+   65,
+   67,
+   72
+  ],
+  "key": null,
+  "expect_top": "A7(#5#9)"
+ },
+ {
+  "id": "nm-125",
+  "notes": [
+   48,
+   52,
+   56,
+   58,
+   61
+  ],
+  "key": null,
+  "expect_top": "C7(#5b9)"
+ },
+ {
+  "id": "nm-126",
+  "notes": [
+   51,
+   55,
+   59,
+   61,
+   64
+  ],
+  "key": null,
+  "expect_top": "Eb7(#5b9)"
+ },
+ {
+  "id": "nm-127",
+  "notes": [
+   54,
+   58,
+   62,
+   64,
+   67
+  ],
+  "key": null,
+  "expect_top": "F#7(#5b9)"
+ },
+ {
+  "id": "nm-128",
+  "notes": [
+   57,
+   61,
+   65,
+   67,
+   70
+  ],
+  "key": null,
+  "expect_top": "A7(#5b9)"
+ },
+ {
+  "id": "nm-129",
+  "notes": [
+   48,
+   52,
+   55,
+   58,
+   62,
+   65
+  ],
+  "key": null,
+  "expect_top": "C11"
+ },
+ {
+  "id": "nm-130",
+  "notes": [
+   51,
+   55,
+   58,
+   61,
+   65,
+   68
+  ],
+  "key": null,
+  "expect_top": "Eb11"
+ },
+ {
+  "id": "nm-131",
+  "notes": [
+   54,
+   58,
+   61,
+   64,
+   68,
+   71
+  ],
+  "key": null,
+  "expect_top": "F#11"
+ },
+ {
+  "id": "nm-132",
+  "notes": [
+   57,
+   61,
+   64,
+   67,
+   71,
+   74
+  ],
+  "key": null,
+  "expect_top": "A11"
+ },
+ {
+  "id": "nm-133",
+  "notes": [
+   48,
+   51,
+   55,
+   58,
+   62,
+   65
+  ],
+  "key": null,
+  "expect_top": "Cm11"
+ },
+ {
+  "id": "nm-134",
+  "notes": [
+   51,
+   54,
+   58,
+   61,
+   65,
+   68
+  ],
+  "key": null,
+  "expect_top": "Ebm11"
+ },
+ {
+  "id": "nm-135",
+  "notes": [
+   54,
+   57,
+   61,
+   64,
+   68,
+   71
+  ],
+  "key": null,
+  "expect_top": "F#m11"
+ },
+ {
+  "id": "nm-136",
+  "notes": [
+   57,
+   60,
+   64,
+   67,
+   71,
+   74
+  ],
+  "key": null,
+  "expect_top": "Am11"
+ },
+ {
+  "id": "nm-137",
+  "notes": [
+   48,
+   52,
+   55,
+   58,
+   62,
+   66
+  ],
+  "key": null,
+  "expect_top": "C7(#11)"
+ },
+ {
+  "id": "nm-138",
+  "notes": [
+   51,
+   55,
+   58,
+   61,
+   65,
+   69
+  ],
+  "key": null,
+  "expect_top": "Eb7(#11)"
+ },
+ {
+  "id": "nm-139",
+  "notes": [
+   54,
+   58,
+   61,
+   64,
+   68,
+   72
+  ],
+  "key": null,
+  "expect_top": "F#7(#11)"
+ },
+ {
+  "id": "nm-140",
+  "notes": [
+   57,
+   61,
+   64,
+   67,
+   71,
+   75
+  ],
+  "key": null,
+  "expect_top": "A7(#11)"
+ },
+ {
+  "id": "nm-141",
+  "notes": [
+   48,
+   52,
+   55,
+   59,
+   66
+  ],
+  "key": null,
+  "expect_top": "Cmaj7(#11)"
+ },
+ {
+  "id": "nm-142",
+  "notes": [
+   51,
+   55,
+   58,
+   62,
+   69
+  ],
+  "key": null,
+  "expect_top": "Ebmaj7(#11)"
+ },
+ {
+  "id": "nm-143",
+  "notes": [
+   54,
+   58,
+   61,
+   65,
+   72
+  ],
+  "key": null,
+  "expect_top": "F#maj7(#11)"
+ },
+ {
+  "id": "nm-144",
+  "notes": [
+   57,
+   61,
+   64,
+   68,
+   75
+  ],
+  "key": null,
+  "expect_top": "Amaj7(#11)"
+ },
+ {
+  "id": "nm-145",
+  "notes": [
+   48,
+   52,
+   55,
+   59,
+   62,
+   66
+  ],
+  "key": null,
+  "expect_top": "Cmaj9(#11)"
+ },
+ {
+  "id": "nm-146",
+  "notes": [
+   51,
+   55,
+   58,
+   62,
+   65,
+   69
+  ],
+  "key": null,
+  "expect_top": "Ebmaj9(#11)"
+ },
+ {
+  "id": "nm-147",
+  "notes": [
+   54,
+   58,
+   61,
+   65,
+   68,
+   72
+  ],
+  "key": null,
+  "expect_top": "F#maj9(#11)"
+ },
+ {
+  "id": "nm-148",
+  "notes": [
+   57,
+   61,
+   64,
+   68,
+   71,
+   75
+  ],
+  "key": null,
+  "expect_top": "Amaj9(#11)"
+ },
+ {
+  "id": "nm-149",
+  "notes": [
+   48,
+   52,
+   55,
+   58,
+   62,
+   69
+  ],
+  "key": null,
+  "expect_top": "C13"
+ },
+ {
+  "id": "nm-150",
+  "notes": [
+   51,
+   55,
+   58,
+   61,
+   65,
+   72
+  ],
+  "key": null,
+  "expect_top": "Eb13"
+ },
+ {
+  "id": "nm-151",
+  "notes": [
+   54,
+   58,
+   61,
+   64,
+   68,
+   75
+  ],
+  "key": null,
+  "expect_top": "F#13"
+ },
+ {
+  "id": "nm-152",
+  "notes": [
+   57,
+   61,
+   64,
+   67,
+   71,
+   78
+  ],
+  "key": null,
+  "expect_top": "A13"
+ },
+ {
+  "id": "nm-153",
+  "notes": [
+   48,
+   51,
+   55,
+   58,
+   62,
+   65,
+   69
+  ],
+  "key": null,
+  "expect_top": "Cm13"
+ },
+ {
+  "id": "nm-154",
+  "notes": [
+   51,
+   54,
+   58,
+   61,
+   65,
+   68,
+   72
+  ],
+  "key": null,
+  "expect_top": "Ebm13"
+ },
+ {
+  "id": "nm-155",
+  "notes": [
+   54,
+   57,
+   61,
+   64,
+   68,
+   71,
+   75
+  ],
+  "key": null,
+  "expect_top": "F#m13"
+ },
+ {
+  "id": "nm-156",
+  "notes": [
+   57,
+   60,
+   64,
+   67,
+   71,
+   74,
+   78
+  ],
+  "key": null,
+  "expect_top": "Am13"
+ },
+ {
+  "id": "nm-157",
+  "notes": [
+   48,
+   52,
+   55,
+   59,
+   62,
+   69
+  ],
+  "key": null,
+  "expect_top": "Cmaj13"
+ },
+ {
+  "id": "nm-158",
+  "notes": [
+   51,
+   55,
+   58,
+   62,
+   65,
+   72
+  ],
+  "key": null,
+  "expect_top": "Ebmaj13"
+ },
+ {
+  "id": "nm-159",
+  "notes": [
+   54,
+   58,
+   61,
+   65,
+   68,
+   75
+  ],
+  "key": null,
+  "expect_top": "F#maj13"
+ },
+ {
+  "id": "nm-160",
+  "notes": [
+   57,
+   61,
+   64,
+   68,
+   71,
+   78
+  ],
+  "key": null,
+  "expect_top": "Amaj13"
+ },
+ {
+  "id": "nm-161",
+  "notes": [
+   48,
+   52,
+   55,
+   58,
+   61,
+   69
+  ],
+  "key": null,
+  "expect_top": "C13(b9)"
+ },
+ {
+  "id": "nm-162",
+  "notes": [
+   51,
+   55,
+   58,
+   61,
+   64,
+   72
+  ],
+  "key": null,
+  "expect_top": "Eb13(b9)"
+ },
+ {
+  "id": "nm-163",
+  "notes": [
+   54,
+   58,
+   61,
+   64,
+   67,
+   75
+  ],
+  "key": null,
+  "expect_top": "F#13(b9)"
+ },
+ {
+  "id": "nm-164",
+  "notes": [
+   57,
+   61,
+   64,
+   67,
+   70,
+   78
+  ],
+  "key": null,
+  "expect_top": "A13(b9)"
+ },
+ {
+  "id": "nm-165",
+  "notes": [
+   48,
+   52,
+   55,
+   58,
+   62,
+   66,
+   69
+  ],
+  "key": null,
+  "expect_top": "C13(#11)"
+ },
+ {
+  "id": "nm-166",
+  "notes": [
+   51,
+   55,
+   58,
+   61,
+   65,
+   69,
+   72
+  ],
+  "key": null,
+  "expect_top": "Eb13(#11)"
+ },
+ {
+  "id": "nm-167",
+  "notes": [
+   54,
+   58,
+   61,
+   64,
+   68,
+   72,
+   75
+  ],
+  "key": null,
+  "expect_top": "F#13(#11)"
+ },
+ {
+  "id": "nm-168",
+  "notes": [
+   57,
+   61,
+   64,
+   67,
+   71,
+   75,
+   78
+  ],
+  "key": null,
+  "expect_top": "A13(#11)"
+ },
+ {
+  "id": "nm-169",
+  "notes": [
+   48,
+   52,
+   58,
+   68
+  ],
+  "key": null,
+  "expect_top": "C7(#5)"
+ },
+ {
+  "id": "nm-170",
+  "notes": [
+   51,
+   55,
+   61,
+   71
+  ],
+  "key": null,
+  "expect_top": "Eb7(#5)"
+ },
+ {
+  "id": "nm-171",
+  "notes": [
+   54,
+   58,
+   64,
+   74
+  ],
+  "key": null,
+  "expect_top": "F#7(#5)"
+ },
+ {
+  "id": "nm-172",
+  "notes": [
+   57,
+   61,
+   67,
+   77
+  ],
+  "key": null,
+  "expect_top": "A7(#5)"
+ },
+ {
+  "id": "nm-173",
+  "notes": [
+   48,
+   52,
+   58,
+   63,
+   68
+  ],
+  "key": null,
+  "expect_top": "C7(#5#9)"
+ },
+ {
+  "id": "nm-174",
+  "notes": [
+   51,
+   55,
+   61,
+   66,
+   71
+  ],
+  "key": null,
+  "expect_top": "Eb7(#5#9)"
+ },
+ {
+  "id": "nm-175",
+  "notes": [
+   54,
+   58,
+   64,
+   69,
+   74
+  ],
+  "key": null,
+  "expect_top": "F#7(#5#9)"
+ },
+ {
+  "id": "nm-176",
+  "notes": [
+   57,
+   61,
+   67,
+   72,
+   77
+  ],
+  "key": null,
+  "expect_top": "A7(#5#9)"
+ },
+ {
+  "id": "nm-177",
+  "notes": [
+   48,
+   52,
+   58,
+   61,
+   68
+  ],
+  "key": null,
+  "expect_top": "C7(#5b9)"
+ },
+ {
+  "id": "nm-178",
+  "notes": [
+   51,
+   55,
+   61,
+   64,
+   71
+  ],
+  "key": null,
+  "expect_top": "Eb7(#5b9)"
+ },
+ {
+  "id": "nm-179",
+  "notes": [
+   54,
+   58,
+   64,
+   67,
+   74
+  ],
+  "key": null,
+  "expect_top": "F#7(#5b9)"
+ },
+ {
+  "id": "nm-180",
+  "notes": [
+   57,
+   61,
+   67,
+   70,
+   77
+  ],
+  "key": null,
+  "expect_top": "A7(#5b9)"
+ },
+ {
+  "id": "nm-181",
+  "notes": [
+   48,
+   52,
+   55
+  ],
+  "key": null,
+  "expect_top": "C"
+ },
+ {
+  "id": "nm-182",
+  "notes": [
+   49,
+   53,
+   56
+  ],
+  "key": null,
+  "expect_top": "Db"
+ },
+ {
+  "id": "nm-183",
+  "notes": [
+   50,
+   54,
+   57
+  ],
+  "key": null,
+  "expect_top": "D"
+ },
+ {
+  "id": "nm-184",
+  "notes": [
+   51,
+   55,
+   58
+  ],
+  "key": null,
+  "expect_top": "Eb"
+ },
+ {
+  "id": "nm-185",
+  "notes": [
+   52,
+   56,
+   59
+  ],
+  "key": null,
+  "expect_top": "E"
+ },
+ {
+  "id": "nm-186",
+  "notes": [
+   53,
+   57,
+   60
+  ],
+  "key": null,
+  "expect_top": "F"
+ },
+ {
+  "id": "nm-187",
+  "notes": [
+   54,
+   58,
+   61
+  ],
+  "key": null,
+  "expect_top": "F#"
+ },
+ {
+  "id": "nm-188",
+  "notes": [
+   55,
+   59,
+   62
+  ],
+  "key": null,
+  "expect_top": "G"
+ },
+ {
+  "id": "nm-189",
+  "notes": [
+   56,
+   60,
+   63
+  ],
+  "key": null,
+  "expect_top": "Ab"
+ },
+ {
+  "id": "nm-190",
+  "notes": [
+   57,
+   61,
+   64
+  ],
+  "key": null,
+  "expect_top": "A"
+ },
+ {
+  "id": "nm-191",
+  "notes": [
+   58,
+   62,
+   65
+  ],
+  "key": null,
+  "expect_top": "Bb"
+ },
+ {
+  "id": "nm-192",
+  "notes": [
+   59,
+   63,
+   66
+  ],
+  "key": null,
+  "expect_top": "B"
+ },
+ {
+  "id": "nm-193",
+  "notes": [
+   48,
+   51,
+   55
+  ],
+  "key": null,
+  "expect_top": "Cm"
+ },
+ {
+  "id": "nm-194",
+  "notes": [
+   49,
+   52,
+   56
+  ],
+  "key": null,
+  "expect_top": "C#m"
+ },
+ {
+  "id": "nm-195",
+  "notes": [
+   50,
+   53,
+   57
+  ],
+  "key": null,
+  "expect_top": "Dm"
+ },
+ {
+  "id": "nm-196",
+  "notes": [
+   51,
+   54,
+   58
+  ],
+  "key": null,
+  "expect_top": "Ebm"
+ },
+ {
+  "id": "nm-197",
+  "notes": [
+   52,
+   55,
+   59
+  ],
+  "key": null,
+  "expect_top": "Em"
+ },
+ {
+  "id": "nm-198",
+  "notes": [
+   53,
+   56,
+   60
+  ],
+  "key": null,
+  "expect_top": "Fm"
+ },
+ {
+  "id": "nm-199",
+  "notes": [
+   54,
+   57,
+   61
+  ],
+  "key": null,
+  "expect_top": "F#m"
+ },
+ {
+  "id": "nm-200",
+  "notes": [
+   55,
+   58,
+   62
+  ],
+  "key": null,
+  "expect_top": "Gm"
+ },
+ {
+  "id": "nm-201",
+  "notes": [
+   56,
+   59,
+   63
+  ],
+  "key": null,
+  "expect_top": "G#m"
+ },
+ {
+  "id": "nm-202",
+  "notes": [
+   57,
+   60,
+   64
+  ],
+  "key": null,
+  "expect_top": "Am"
+ },
+ {
+  "id": "nm-203",
+  "notes": [
+   58,
+   61,
+   65
+  ],
+  "key": null,
+  "expect_top": "Bbm"
+ },
+ {
+  "id": "nm-204",
+  "notes": [
+   59,
+   62,
+   66
+  ],
+  "key": null,
+  "expect_top": "Bm"
+ },
+ {
+  "id": "nm-205",
+  "notes": [
+   48,
+   52,
+   55,
+   58
+  ],
+  "key": null,
+  "expect_top": "C7"
+ },
+ {
+  "id": "nm-206",
+  "notes": [
+   49,
+   53,
+   56,
+   59
+  ],
+  "key": null,
+  "expect_top": "Db7"
+ },
+ {
+  "id": "nm-207",
+  "notes": [
+   50,
+   54,
+   57,
+   60
+  ],
+  "key": null,
+  "expect_top": "D7"
+ },
+ {
+  "id": "nm-208",
+  "notes": [
+   51,
+   55,
+   58,
+   61
+  ],
+  "key": null,
+  "expect_top": "Eb7"
+ },
+ {
+  "id": "nm-209",
+  "notes": [
+   52,
+   56,
+   59,
+   62
+  ],
+  "key": null,
+  "expect_top": "E7"
+ },
+ {
+  "id": "nm-210",
+  "notes": [
+   53,
+   57,
+   60,
+   63
+  ],
+  "key": null,
+  "expect_top": "F7"
+ },
+ {
+  "id": "nm-211",
+  "notes": [
+   54,
+   58,
+   61,
+   64
+  ],
+  "key": null,
+  "expect_top": "F#7"
+ },
+ {
+  "id": "nm-212",
+  "notes": [
+   55,
+   59,
+   62,
+   65
+  ],
+  "key": null,
+  "expect_top": "G7"
+ },
+ {
+  "id": "nm-213",
+  "notes": [
+   56,
+   60,
+   63,
+   66
+  ],
+  "key": null,
+  "expect_top": "Ab7"
+ },
+ {
+  "id": "nm-214",
+  "notes": [
+   57,
+   61,
+   64,
+   67
+  ],
+  "key": null,
+  "expect_top": "A7"
+ },
+ {
+  "id": "nm-215",
+  "notes": [
+   58,
+   62,
+   65,
+   68
+  ],
+  "key": null,
+  "expect_top": "Bb7"
+ },
+ {
+  "id": "nm-216",
+  "notes": [
+   59,
+   63,
+   66,
+   69
+  ],
+  "key": null,
+  "expect_top": "B7"
+ },
+ {
+  "id": "nm-217",
+  "notes": [
+   48,
+   51,
+   55,
+   58
+  ],
+  "key": null,
+  "expect_top": "Cm7"
+ },
+ {
+  "id": "nm-218",
+  "notes": [
+   49,
+   52,
+   56,
+   59
+  ],
+  "key": null,
+  "expect_top": "C#m7"
+ },
+ {
+  "id": "nm-219",
+  "notes": [
+   50,
+   53,
+   57,
+   60
+  ],
+  "key": null,
+  "expect_top": "Dm7"
+ },
+ {
+  "id": "nm-220",
+  "notes": [
+   51,
+   54,
+   58,
+   61
+  ],
+  "key": null,
+  "expect_top": "Ebm7"
+ },
+ {
+  "id": "nm-221",
+  "notes": [
+   52,
+   55,
+   59,
+   62
+  ],
+  "key": null,
+  "expect_top": "Em7"
+ },
+ {
+  "id": "nm-222",
+  "notes": [
+   53,
+   56,
+   60,
+   63
+  ],
+  "key": null,
+  "expect_top": "Fm7"
+ },
+ {
+  "id": "nm-223",
+  "notes": [
+   54,
+   57,
+   61,
+   64
+  ],
+  "key": null,
+  "expect_top": "F#m7"
+ },
+ {
+  "id": "nm-224",
+  "notes": [
+   55,
+   58,
+   62,
+   65
+  ],
+  "key": null,
+  "expect_top": "Gm7"
+ },
+ {
+  "id": "nm-225",
+  "notes": [
+   56,
+   59,
+   63,
+   66
+  ],
+  "key": null,
+  "expect_top": "G#m7"
+ },
+ {
+  "id": "nm-226",
+  "notes": [
+   57,
+   60,
+   64,
+   67
+  ],
+  "key": null,
+  "expect_top": "Am7"
+ },
+ {
+  "id": "nm-227",
+  "notes": [
+   58,
+   61,
+   65,
+   68
+  ],
+  "key": null,
+  "expect_top": "Bbm7"
+ },
+ {
+  "id": "nm-228",
+  "notes": [
+   59,
+   62,
+   66,
+   69
+  ],
+  "key": null,
+  "expect_top": "Bm7"
+ },
+ {
+  "id": "nm-229",
+  "notes": [
+   48,
+   52,
+   55,
+   59
+  ],
+  "key": null,
+  "expect_top": "Cmaj7"
+ },
+ {
+  "id": "nm-230",
+  "notes": [
+   49,
+   53,
+   56,
+   60
+  ],
+  "key": null,
+  "expect_top": "Dbmaj7"
+ },
+ {
+  "id": "nm-231",
+  "notes": [
+   50,
+   54,
+   57,
+   61
+  ],
+  "key": null,
+  "expect_top": "Dmaj7"
+ },
+ {
+  "id": "nm-232",
+  "notes": [
+   51,
+   55,
+   58,
+   62
+  ],
+  "key": null,
+  "expect_top": "Ebmaj7"
+ },
+ {
+  "id": "nm-233",
+  "notes": [
+   52,
+   56,
+   59,
+   63
+  ],
+  "key": null,
+  "expect_top": "Emaj7"
+ },
+ {
+  "id": "nm-234",
+  "notes": [
+   53,
+   57,
+   60,
+   64
+  ],
+  "key": null,
+  "expect_top": "Fmaj7"
+ },
+ {
+  "id": "nm-235",
+  "notes": [
+   54,
+   58,
+   61,
+   65
+  ],
+  "key": null,
+  "expect_top": "F#maj7"
+ },
+ {
+  "id": "nm-236",
+  "notes": [
+   55,
+   59,
+   62,
+   66
+  ],
+  "key": null,
+  "expect_top": "Gmaj7"
+ },
+ {
+  "id": "nm-237",
+  "notes": [
+   56,
+   60,
+   63,
+   67
+  ],
+  "key": null,
+  "expect_top": "Abmaj7"
+ },
+ {
+  "id": "nm-238",
+  "notes": [
+   57,
+   61,
+   64,
+   68
+  ],
+  "key": null,
+  "expect_top": "Amaj7"
+ },
+ {
+  "id": "nm-239",
+  "notes": [
+   58,
+   62,
+   65,
+   69
+  ],
+  "key": null,
+  "expect_top": "Bbmaj7"
+ },
+ {
+  "id": "nm-240",
+  "notes": [
+   59,
+   63,
+   66,
+   70
+  ],
+  "key": null,
+  "expect_top": "Bmaj7"
+ },
+ {
+  "id": "nm-241",
+  "notes": [
+   48,
+   52,
+   58
+  ],
+  "key": null,
+  "expect_top": "C7(no5)"
+ },
+ {
+  "id": "nm-242",
+  "notes": [
+   53,
+   57,
+   63
+  ],
+  "key": null,
+  "expect_top": "F7(no5)"
+ },
+ {
+  "id": "nm-243",
+  "notes": [
+   48,
+   52,
+   59
+  ],
+  "key": null,
+  "expect_top": "Cmaj7(no5)"
+ },
+ {
+  "id": "nm-244",
+  "notes": [
+   53,
+   57,
+   64
+  ],
+  "key": null,
+  "expect_top": "Fmaj7(no5)"
+ },
+ {
+  "id": "nm-245",
+  "notes": [
+   48,
+   51,
+   58
+  ],
+  "key": null,
+  "expect_top": "Cm7(no5)"
+ },
+ {
+  "id": "nm-246",
+  "notes": [
+   53,
+   56,
+   63
+  ],
+  "key": null,
+  "expect_top": "Fm7(no5)"
+ },
+ {
+  "id": "nm-247",
+  "notes": [
+   48,
+   52,
+   58,
+   62
+  ],
+  "key": null,
+  "expect_top": "C9(no5)"
+ },
+ {
+  "id": "nm-248",
+  "notes": [
+   53,
+   57,
+   63,
+   67
+  ],
+  "key": null,
+  "expect_top": "F9(no5)"
+ },
+ {
+  "id": "nm-249",
+  "notes": [
+   48,
+   52,
+   58,
+   62,
+   69
+  ],
+  "key": null,
+  "expect_top": "C13"
+ },
+ {
+  "id": "nm-250",
+  "notes": [
+   53,
+   57,
+   63,
+   67,
+   74
+  ],
+  "key": null,
+  "expect_top": "F13"
+ },
+ {
+  "id": "nm-251",
+  "notes": [
+   48,
+   51,
+   58,
+   62,
+   65
+  ],
+  "key": null,
+  "expect_top": "Cm11"
+ },
+ {
+  "id": "nm-252",
+  "notes": [
+   53,
+   56,
+   63,
+   67,
+   70
+  ],
+  "key": null,
+  "expect_top": "Fm11"
+ },
+ {
+  "id": "nm-253",
+  "notes": [
+   48,
+   52,
+   57,
+   62
+  ],
+  "key": null,
+  "expect_top": "C6/9"
+ },
+ {
+  "id": "nm-254",
+  "notes": [
+   53,
+   57,
+   62,
+   67
+  ],
+  "key": null,
+  "expect_top": "F6/9"
+ },
+ {
+  "id": "nm-255",
+  "notes": [
+   52,
+   60,
+   64,
+   67
+  ],
+  "key": null,
+  "expect_top": "C/E"
+ },
+ {
+  "id": "nm-256",
+  "notes": [
+   55,
+   60,
+   64,
+   67
+  ],
+  "key": null,
+  "expect_top": "C/G"
+ },
+ {
+  "id": "nm-257",
+  "notes": [
+   54,
+   62,
+   66,
+   69
+  ],
+  "key": null,
+  "expect_top": "D/F#"
+ },
+ {
+  "id": "nm-258",
+  "notes": [
+   57,
+   62,
+   66,
+   69
+  ],
+  "key": null,
+  "expect_top": "D/A"
+ },
+ {
+  "id": "nm-259",
+  "notes": [
+   59,
+   67,
+   71,
+   74
+  ],
+  "key": null,
+  "expect_top": "G/B"
+ },
+ {
+  "id": "nm-260",
+  "notes": [
+   50,
+   67,
+   71,
+   74
+  ],
+  "key": null,
+  "expect_top": "G/D"
+ },
+ {
+  "id": "nm-261",
+  "notes": [
+   51,
+   60,
+   63,
+   67
+  ],
+  "key": null,
+  "expect_top": "Eb6(no5)"
+ },
+ {
+  "id": "nm-262",
+  "notes": [
+   55,
+   60,
+   63,
+   67
+  ],
+  "key": null,
+  "expect_top": "Cm/G"
+ },
+ {
+  "id": "nm-263",
+  "notes": [
+   53,
+   62,
+   65,
+   69
+  ],
+  "key": null,
+  "expect_top": "F6(no5)"
+ },
+ {
+  "id": "nm-264",
+  "notes": [
+   57,
+   62,
+   65,
+   69
+  ],
+  "key": null,
+  "expect_top": "Dm/A"
+ },
+ {
+  "id": "nm-265",
+  "notes": [
+   58,
+   67,
+   70,
+   74
+  ],
+  "key": null,
+  "expect_top": "Bb6(no5)"
+ },
+ {
+  "id": "nm-266",
+  "notes": [
+   50,
+   67,
+   70,
+   74
+  ],
+  "key": null,
+  "expect_top": "Gm/D"
+ },
+ {
+  "id": "nm-267",
+  "notes": [
+   52,
+   60,
+   64,
+   67,
+   70
+  ],
+  "key": null,
+  "expect_top": "C7/E"
+ },
+ {
+  "id": "nm-268",
+  "notes": [
+   55,
+   60,
+   64,
+   67,
+   70
+  ],
+  "key": null,
+  "expect_top": "C7/G"
+ },
+ {
+  "id": "nm-269",
+  "notes": [
+   58,
+   60,
+   64,
+   67,
+   70
+  ],
+  "key": null,
+  "expect_top": "C7/Bb"
+ },
+ {
+  "id": "nm-270",
+  "notes": [
+   54,
+   62,
+   66,
+   69,
+   72
+  ],
+  "key": null,
+  "expect_top": "D7/F#"
+ },
+ {
+  "id": "nm-271",
+  "notes": [
+   57,
+   62,
+   66,
+   69,
+   72
+  ],
+  "key": null,
+  "expect_top": "D7/A"
+ },
+ {
+  "id": "nm-272",
+  "notes": [
+   48,
+   62,
+   66,
+   69,
+   72
+  ],
+  "key": null,
+  "expect_top": "D7/C"
+ },
+ {
+  "id": "nm-273",
+  "notes": [
+   59,
+   67,
+   71,
+   74,
+   77
+  ],
+  "key": null,
+  "expect_top": "G7/B"
+ },
+ {
+  "id": "nm-274",
+  "notes": [
+   50,
+   67,
+   71,
+   74,
+   77
+  ],
+  "key": null,
+  "expect_top": "G7/D"
+ },
+ {
+  "id": "nm-275",
+  "notes": [
+   53,
+   67,
+   71,
+   74,
+   77
+  ],
+  "key": null,
+  "expect_top": "G7/F"
+ },
+ {
+  "id": "nm-276",
+  "notes": [
+   51,
+   60,
+   63,
+   67,
+   70
+  ],
+  "key": null,
+  "expect_top": "Eb6"
+ },
+ {
+  "id": "nm-277",
+  "notes": [
+   55,
+   60,
+   63,
+   67,
+   70
+  ],
+  "key": null,
+  "expect_top": "Cm7/G"
+ },
+ {
+  "id": "nm-278",
+  "notes": [
+   58,
+   60,
+   63,
+   67,
+   70
+  ],
+  "key": null,
+  "expect_top": "Cm7/Bb"
+ },
+ {
+  "id": "nm-279",
+  "notes": [
+   53,
+   62,
+   65,
+   69,
+   72
+  ],
+  "key": null,
+  "expect_top": "F6"
+ },
+ {
+  "id": "nm-280",
+  "notes": [
+   57,
+   62,
+   65,
+   69,
+   72
+  ],
+  "key": null,
+  "expect_top": "Dm7/A"
+ },
+ {
+  "id": "nm-281",
+  "notes": [
+   48,
+   62,
+   65,
+   69,
+   72
+  ],
+  "key": null,
+  "expect_top": "Dm7/C"
+ },
+ {
+  "id": "nm-282",
+  "notes": [
+   58,
+   67,
+   70,
+   74,
+   77
+  ],
+  "key": null,
+  "expect_top": "Bb6"
+ },
+ {
+  "id": "nm-283",
+  "notes": [
+   50,
+   67,
+   70,
+   74,
+   77
+  ],
+  "key": null,
+  "expect_top": "Gm7/D"
+ },
+ {
+  "id": "nm-284",
+  "notes": [
+   53,
+   67,
+   70,
+   74,
+   77
+  ],
+  "key": null,
+  "expect_top": "Gm7/F"
+ },
+ {
+  "id": "nm-285",
+  "notes": [
+   52,
+   60,
+   64,
+   67,
+   71
+  ],
+  "key": null,
+  "expect_top": "Cmaj7/E"
+ },
+ {
+  "id": "nm-286",
+  "notes": [
+   55,
+   60,
+   64,
+   67,
+   71
+  ],
+  "key": null,
+  "expect_top": "Cmaj7/G"
+ },
+ {
+  "id": "nm-287",
+  "notes": [
+   59,
+   60,
+   64,
+   67,
+   71
+  ],
+  "key": null,
+  "expect_top": "Cmaj7/B"
+ },
+ {
+  "id": "nm-288",
+  "notes": [
+   54,
+   62,
+   66,
+   69,
+   73
+  ],
+  "key": null,
+  "expect_top": "Dmaj7/F#"
+ },
+ {
+  "id": "nm-289",
+  "notes": [
+   57,
+   62,
+   66,
+   69,
+   73
+  ],
+  "key": null,
+  "expect_top": "Dmaj7/A"
+ },
+ {
+  "id": "nm-290",
+  "notes": [
+   49,
+   62,
+   66,
+   69,
+   73
+  ],
+  "key": null,
+  "expect_top": "Dmaj7/C#"
+ },
+ {
+  "id": "nm-291",
+  "notes": [
+   59,
+   67,
+   71,
+   74,
+   78
+  ],
+  "key": null,
+  "expect_top": "Gmaj7/B"
+ },
+ {
+  "id": "nm-292",
+  "notes": [
+   50,
+   67,
+   71,
+   74,
+   78
+  ],
+  "key": null,
+  "expect_top": "Gmaj7/D"
+ },
+ {
+  "id": "nm-293",
+  "notes": [
+   54,
+   67,
+   71,
+   74,
+   78
+  ],
+  "key": null,
+  "expect_top": "Gmaj7/F#"
+ },
+ {
+  "id": "nm-294",
+  "notes": [
+   51,
+   60,
+   63,
+   66
+  ],
+  "key": null,
+  "expect_top": "Ebm6(no5)"
+ },
+ {
+  "id": "nm-295",
+  "notes": [
+   54,
+   60,
+   63,
+   66
+  ],
+  "key": null,
+  "expect_top": "Cdim/Gb"
+ },
+ {
+  "id": "nm-296",
+  "notes": [
+   53,
+   62,
+   65,
+   68
+  ],
+  "key": null,
+  "expect_top": "Fm6(no5)"
+ },
+ {
+  "id": "nm-297",
+  "notes": [
+   56,
+   62,
+   65,
+   68
+  ],
+  "key": null,
+  "expect_top": "Ddim/Ab"
+ },
+ {
+  "id": "nm-298",
+  "notes": [
+   58,
+   67,
+   70,
+   73
+  ],
+  "key": null,
+  "expect_top": "Bbm6(no5)"
+ },
+ {
+  "id": "nm-299",
+  "notes": [
+   49,
+   67,
+   70,
+   73
+  ],
+  "key": null,
+  "expect_top": "Gdim/Db"
+ },
+ {
+  "id": "nm-300",
+  "notes": [
+   50,
+   60,
+   64,
+   67
+  ],
+  "key": null,
+  "expect_top": "D9sus4",
+  "expect_alternates_include": [
+   "Cadd9/D",
+   "D11"
+  ],
+  "why": "bass-as-root 9sus4 outweighs add9 over a 9th bass; slash reading stays an alternate"
+ },
+ {
+  "id": "nm-301",
+  "notes": [
+   45,
+   48,
+   52,
+   58,
+   62
+  ],
+  "key": null,
+  "expect_top": "C13/A",
+  "why": "13th in bass: slash only, 5th absent silently"
+ },
+ {
+  "id": "nm-302",
+  "notes": [
+   48,
+   58,
+   62,
+   65
+  ],
+  "key": null,
+  "expect_top": "C9sus4",
+  "expect_alternates_include": [
+   "C11"
+  ],
+  "why": "same pc set: 9sus4 outweighs 11 (spec pc-set collision)"
+ },
+ {
+  "id": "nm-303",
+  "notes": [
+   60,
+   61
+  ],
+  "key": null,
+  "expect_top": "C·Db (m2)"
+ },
+ {
+  "id": "nm-304",
+  "notes": [
+   60,
+   62
+  ],
+  "key": null,
+  "expect_top": "C·D (M2)"
+ },
+ {
+  "id": "nm-305",
+  "notes": [
+   60,
+   63
+  ],
+  "key": null,
+  "expect_top": "C·Eb (m3)"
+ },
+ {
+  "id": "nm-306",
+  "notes": [
+   60,
+   64
+  ],
+  "key": null,
+  "expect_top": "C·E (M3)"
+ },
+ {
+  "id": "nm-307",
+  "notes": [
+   60,
+   65
+  ],
+  "key": null,
+  "expect_top": "C·F (P4)"
+ },
+ {
+  "id": "nm-308",
+  "notes": [
+   60,
+   66
+  ],
+  "key": null,
+  "expect_top": "C·F# (TT)"
+ },
+ {
+  "id": "nm-309",
+  "notes": [
+   60,
+   67
+  ],
+  "key": null,
+  "expect_top": "C5",
+  "expect_alternates_include": [
+   "C·G (P5)"
+  ]
+ },
+ {
+  "id": "nm-310",
+  "notes": [
+   60,
+   68
+  ],
+  "key": null,
+  "expect_top": "C·Ab (m6)"
+ },
+ {
+  "id": "nm-311",
+  "notes": [
+   60,
+   69
+  ],
+  "key": null,
+  "expect_top": "C·A (M6)"
+ },
+ {
+  "id": "nm-312",
+  "notes": [
+   60,
+   70
+  ],
+  "key": null,
+  "expect_top": "C·Bb (m7)"
+ },
+ {
+  "id": "nm-313",
+  "notes": [
+   60,
+   71
+  ],
+  "key": null,
+  "expect_top": "C·B (M7)"
+ },
+ {
+  "id": "nm-314",
+  "notes": [
+   60,
+   72
+  ],
+  "key": null,
+  "expect_top": "C·C (P8)"
+ },
+ {
+  "id": "nm-315",
+  "notes": [
+   60
+  ],
+  "key": null,
+  "expect_top": "C"
+ },
+ {
+  "id": "nm-316",
+  "notes": [
+   61
+  ],
+  "key": null,
+  "expect_top": "Db"
+ },
+ {
+  "id": "nm-317",
+  "notes": [
+   62
+  ],
+  "key": null,
+  "expect_top": "D"
+ },
+ {
+  "id": "nm-318",
+  "notes": [
+   63
+  ],
+  "key": null,
+  "expect_top": "Eb"
+ },
+ {
+  "id": "nm-319",
+  "notes": [
+   64
+  ],
+  "key": null,
+  "expect_top": "E"
+ },
+ {
+  "id": "nm-320",
+  "notes": [
+   65
+  ],
+  "key": null,
+  "expect_top": "F"
+ },
+ {
+  "id": "nm-321",
+  "notes": [
+   66
+  ],
+  "key": null,
+  "expect_top": "F#"
+ },
+ {
+  "id": "nm-322",
+  "notes": [
+   67
+  ],
+  "key": null,
+  "expect_top": "G"
+ },
+ {
+  "id": "nm-323",
+  "notes": [
+   68
+  ],
+  "key": null,
+  "expect_top": "Ab"
+ },
+ {
+  "id": "nm-324",
+  "notes": [
+   69
+  ],
+  "key": null,
+  "expect_top": "A"
+ },
+ {
+  "id": "nm-325",
+  "notes": [
+   70
+  ],
+  "key": null,
+  "expect_top": "Bb"
+ },
+ {
+  "id": "nm-326",
+  "notes": [
+   71
+  ],
+  "key": null,
+  "expect_top": "B"
+ },
+ {
+  "id": "nm-327",
+  "notes": [
+   61
+  ],
+  "key": null,
+  "expect_top": "C#",
+  "accidental_pref": "sharps"
+ },
+ {
+  "id": "nm-328",
+  "notes": [
+   63
+  ],
+  "key": null,
+  "expect_top": "Eb",
+  "accidental_pref": "flats"
+ },
+ {
+  "id": "nm-329",
+  "notes": [
+   48,
+   52,
+   55,
+   57
+  ],
+  "key": null,
+  "expect_top": "C6",
+  "expect_alternates_include": [
+   "Am7/C"
+  ],
+  "why": "6 vs relative m7: bass decides"
+ },
+ {
+  "id": "nm-330",
+  "notes": [
+   45,
+   48,
+   52,
+   55
+  ],
+  "key": null,
+  "expect_top": "Am7",
+  "expect_alternates_include": [
+   "C6/A"
+  ]
+ },
+ {
+  "id": "nm-331",
+  "notes": [
+   48,
+   51,
+   55,
+   57
+  ],
+  "key": null,
+  "expect_top": "Cm6",
+  "expect_alternates_include": [
+   "Am7b5/C"
+  ]
+ },
+ {
+  "id": "nm-332",
+  "notes": [
+   45,
+   48,
+   51,
+   55
+  ],
+  "key": null,
+  "expect_top": "Am7b5",
+  "expect_alternates_include": [
+   "Cm6/A"
+  ]
+ },
+ {
+  "id": "nm-333",
+  "notes": [
+   48,
+   50,
+   55
+  ],
+  "key": null,
+  "expect_top": "Csus2",
+  "expect_alternates_include": [
+   "Gsus4/C"
+  ]
+ },
+ {
+  "id": "nm-334",
+  "notes": [
+   43,
+   48,
+   50
+  ],
+  "key": null,
+  "expect_top": "Gsus4",
+  "expect_alternates_include": [
+   "Csus2/G"
+  ]
+ },
+ {
+  "id": "nm-335",
+  "notes": [
+   48,
+   52,
+   56
+  ],
+  "key": null,
+  "expect_top": "Caug",
+  "expect_alternates_include": [
+   "Eaug/B#",
+   "Abaug/C"
+  ],
+  "why": "symmetric aug: all three roots are alternates; Eaug spells its A5 as B# by interval rule"
+ },
+ {
+  "id": "nm-336",
+  "notes": [
+   48,
+   51,
+   54,
+   57
+  ],
+  "key": null,
+  "expect_top": "Cdim7",
+  "expect_alternates_include": [
+   "D#dim7/C",
+   "F#dim7/C",
+   "Adim7/C"
+  ]
+ },
+ {
+  "id": "nm-337",
+  "notes": [
+   48,
+   52,
+   55,
+   58,
+   63
+  ],
+  "key": null,
+  "expect_top": "C7(#9)",
+  "why": "Hendrix chord: #9 beats b3 reading (no m-template fits E natural)"
+ },
+ {
+  "id": "nm-338",
+  "notes": [
+   48,
+   52,
+   56,
+   58,
+   63
+  ],
+  "key": null,
+  "expect_top": "C7(#5#9)",
+  "expect_alternates_include": [
+   "C7(#5#9)"
+  ],
+  "why": "PLAN §3.2 flagship example"
+ },
+ {
+  "id": "nm-339",
+  "notes": [
+   36,
+   48,
+   52,
+   55,
+   58
+  ],
+  "key": null,
+  "expect_top": "C7",
+  "why": "doubled root collapses to one pc"
+ },
+ {
+  "id": "nm-340",
+  "notes": [
+   50,
+   53,
+   57,
+   60
+  ],
+  "key": "C",
+  "expect_top": "Dm7",
+  "why": "diatonic bonus keeps ii7 on top in C"
+ },
+ {
+  "id": "nm-341",
+  "notes": [
+   50,
+   55,
+   59,
+   65
+  ],
+  "key": "C",
+  "expect_top": "G7/D",
+  "why": "V7 second inversion in C"
+ },
+ {
+  "id": "nm-342",
+  "notes": [
+   48,
+   53,
+   56
+  ],
+  "key": "C",
+  "expect_top": "Fm/C",
+  "why": "borrowed iv in C, 2nd inv"
+ },
+ {
+  "id": "nm-343",
+  "notes": [
+   48,
+   52,
+   55,
+   66,
+   70,
+   73
+  ],
+  "key": null,
+  "expect_top": "F#|C",
+  "why": "Petrushka chord: disjoint triads, no tertian exact match -> polychord tops cluster"
+ },
+ {
+  "id": "nm-344",
+  "notes": [
+   48,
+   52,
+   55,
+   61,
+   65,
+   68
+  ],
+  "key": null,
+  "expect_top": "Db|C",
+  "why": "Petrushka-style clash: polychord is the only name"
+ },
+ {
+  "id": "nm-345",
+  "notes": [
+   48,
+   52,
+   55,
+   62,
+   66,
+   69
+  ],
+  "key": null,
+  "expect_top": "D11/C",
+  "expect_alternates_include": [
+   "D|C"
+  ],
+  "why": "triads a whole step apart also read as an 11 chord; polychord stays an alternate"
+ },
+ {
+  "id": "nm-346",
+  "notes": [
+   48,
+   53,
+   58
+  ],
+  "key": null,
+  "expect_top": "C7sus4(no5)",
+  "expect_alternates_include": [
+   "C quartal(3)"
+  ],
+  "why": "stack of two P4s also reads as 7sus4 no5"
+ },
+ {
+  "id": "nm-347",
+  "notes": [
+   48,
+   53,
+   58,
+   63
+  ],
+  "key": null,
+  "expect_top": "Cm11",
+  "expect_alternates_include": [
+   "C quartal(4)"
+  ],
+  "why": "three stacked P4s: quartal alternate must appear"
+ },
+ {
+  "id": "nm-348",
+  "notes": [
+   48,
+   49,
+   50
+  ],
+  "key": null,
+  "expect_top": "C·Db·D",
+  "why": "cluster fallback"
+ },
+ {
+  "id": "nm-349",
+  "notes": [
+   60,
+   61,
+   62,
+   63
+  ],
+  "key": null,
+  "expect_top": "C·Db·D·Eb"
+ },
+ {
+  "id": "nm-350",
+  "notes": [
+   48,
+   49,
+   50
+  ],
+  "key": "B",
+  "expect_top": "B#·C#·D",
+  "why": "cluster spelling follows the key rule (B major spells pc0 as B#, cf. sp-061)"
+ }
+]

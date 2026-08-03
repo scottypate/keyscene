@@ -1,0 +1,1622 @@
+[
+ {
+  "id": "rn-001",
+  "notes": [
+   48,
+   52,
+   55
+  ],
+  "key": "C",
+  "convention": "textbook",
+  "expect": "I"
+ },
+ {
+  "id": "rn-002",
+  "notes": [
+   48,
+   52,
+   55,
+   59
+  ],
+  "key": "C",
+  "convention": "textbook",
+  "expect": "Imaj7"
+ },
+ {
+  "id": "rn-003",
+  "notes": [
+   50,
+   53,
+   57
+  ],
+  "key": "C",
+  "convention": "textbook",
+  "expect": "ii"
+ },
+ {
+  "id": "rn-004",
+  "notes": [
+   50,
+   53,
+   57,
+   60
+  ],
+  "key": "C",
+  "convention": "textbook",
+  "expect": "ii7"
+ },
+ {
+  "id": "rn-005",
+  "notes": [
+   52,
+   55,
+   59
+  ],
+  "key": "C",
+  "convention": "textbook",
+  "expect": "iii"
+ },
+ {
+  "id": "rn-006",
+  "notes": [
+   52,
+   55,
+   59,
+   62
+  ],
+  "key": "C",
+  "convention": "textbook",
+  "expect": "iii7"
+ },
+ {
+  "id": "rn-007",
+  "notes": [
+   53,
+   57,
+   60
+  ],
+  "key": "C",
+  "convention": "textbook",
+  "expect": "IV"
+ },
+ {
+  "id": "rn-008",
+  "notes": [
+   53,
+   57,
+   60,
+   64
+  ],
+  "key": "C",
+  "convention": "textbook",
+  "expect": "IVmaj7"
+ },
+ {
+  "id": "rn-009",
+  "notes": [
+   55,
+   59,
+   62
+  ],
+  "key": "C",
+  "convention": "textbook",
+  "expect": "V"
+ },
+ {
+  "id": "rn-010",
+  "notes": [
+   55,
+   59,
+   62,
+   65
+  ],
+  "key": "C",
+  "convention": "textbook",
+  "expect": "V7"
+ },
+ {
+  "id": "rn-011",
+  "notes": [
+   57,
+   60,
+   64
+  ],
+  "key": "C",
+  "convention": "textbook",
+  "expect": "vi"
+ },
+ {
+  "id": "rn-012",
+  "notes": [
+   57,
+   60,
+   64,
+   67
+  ],
+  "key": "C",
+  "convention": "textbook",
+  "expect": "vi7"
+ },
+ {
+  "id": "rn-013",
+  "notes": [
+   59,
+   62,
+   65
+  ],
+  "key": "C",
+  "convention": "textbook",
+  "expect": "vii°"
+ },
+ {
+  "id": "rn-014",
+  "notes": [
+   59,
+   62,
+   65,
+   69
+  ],
+  "key": "C",
+  "convention": "textbook",
+  "expect": "viiø7"
+ },
+ {
+  "id": "rn-015",
+  "notes": [
+   55,
+   59,
+   62
+  ],
+  "key": "G",
+  "convention": "textbook",
+  "expect": "I"
+ },
+ {
+  "id": "rn-016",
+  "notes": [
+   55,
+   59,
+   62,
+   66
+  ],
+  "key": "G",
+  "convention": "textbook",
+  "expect": "Imaj7"
+ },
+ {
+  "id": "rn-017",
+  "notes": [
+   57,
+   60,
+   64
+  ],
+  "key": "G",
+  "convention": "textbook",
+  "expect": "ii"
+ },
+ {
+  "id": "rn-018",
+  "notes": [
+   57,
+   60,
+   64,
+   67
+  ],
+  "key": "G",
+  "convention": "textbook",
+  "expect": "ii7"
+ },
+ {
+  "id": "rn-019",
+  "notes": [
+   59,
+   62,
+   66
+  ],
+  "key": "G",
+  "convention": "textbook",
+  "expect": "iii"
+ },
+ {
+  "id": "rn-020",
+  "notes": [
+   59,
+   62,
+   66,
+   69
+  ],
+  "key": "G",
+  "convention": "textbook",
+  "expect": "iii7"
+ },
+ {
+  "id": "rn-021",
+  "notes": [
+   48,
+   52,
+   55
+  ],
+  "key": "G",
+  "convention": "textbook",
+  "expect": "IV"
+ },
+ {
+  "id": "rn-022",
+  "notes": [
+   48,
+   52,
+   55,
+   59
+  ],
+  "key": "G",
+  "convention": "textbook",
+  "expect": "IVmaj7"
+ },
+ {
+  "id": "rn-023",
+  "notes": [
+   50,
+   54,
+   57
+  ],
+  "key": "G",
+  "convention": "textbook",
+  "expect": "V"
+ },
+ {
+  "id": "rn-024",
+  "notes": [
+   50,
+   54,
+   57,
+   60
+  ],
+  "key": "G",
+  "convention": "textbook",
+  "expect": "V7"
+ },
+ {
+  "id": "rn-025",
+  "notes": [
+   52,
+   55,
+   59
+  ],
+  "key": "G",
+  "convention": "textbook",
+  "expect": "vi"
+ },
+ {
+  "id": "rn-026",
+  "notes": [
+   52,
+   55,
+   59,
+   62
+  ],
+  "key": "G",
+  "convention": "textbook",
+  "expect": "vi7"
+ },
+ {
+  "id": "rn-027",
+  "notes": [
+   54,
+   57,
+   60
+  ],
+  "key": "G",
+  "convention": "textbook",
+  "expect": "vii°"
+ },
+ {
+  "id": "rn-028",
+  "notes": [
+   54,
+   57,
+   60,
+   64
+  ],
+  "key": "G",
+  "convention": "textbook",
+  "expect": "viiø7"
+ },
+ {
+  "id": "rn-029",
+  "notes": [
+   51,
+   55,
+   58
+  ],
+  "key": "Eb",
+  "convention": "textbook",
+  "expect": "I"
+ },
+ {
+  "id": "rn-030",
+  "notes": [
+   51,
+   55,
+   58,
+   62
+  ],
+  "key": "Eb",
+  "convention": "textbook",
+  "expect": "Imaj7"
+ },
+ {
+  "id": "rn-031",
+  "notes": [
+   53,
+   56,
+   60
+  ],
+  "key": "Eb",
+  "convention": "textbook",
+  "expect": "ii"
+ },
+ {
+  "id": "rn-032",
+  "notes": [
+   53,
+   56,
+   60,
+   63
+  ],
+  "key": "Eb",
+  "convention": "textbook",
+  "expect": "ii7"
+ },
+ {
+  "id": "rn-033",
+  "notes": [
+   55,
+   58,
+   62
+  ],
+  "key": "Eb",
+  "convention": "textbook",
+  "expect": "iii"
+ },
+ {
+  "id": "rn-034",
+  "notes": [
+   55,
+   58,
+   62,
+   65
+  ],
+  "key": "Eb",
+  "convention": "textbook",
+  "expect": "iii7"
+ },
+ {
+  "id": "rn-035",
+  "notes": [
+   56,
+   60,
+   63
+  ],
+  "key": "Eb",
+  "convention": "textbook",
+  "expect": "IV"
+ },
+ {
+  "id": "rn-036",
+  "notes": [
+   56,
+   60,
+   63,
+   67
+  ],
+  "key": "Eb",
+  "convention": "textbook",
+  "expect": "IVmaj7"
+ },
+ {
+  "id": "rn-037",
+  "notes": [
+   58,
+   62,
+   65
+  ],
+  "key": "Eb",
+  "convention": "textbook",
+  "expect": "V"
+ },
+ {
+  "id": "rn-038",
+  "notes": [
+   58,
+   62,
+   65,
+   68
+  ],
+  "key": "Eb",
+  "convention": "textbook",
+  "expect": "V7"
+ },
+ {
+  "id": "rn-039",
+  "notes": [
+   48,
+   51,
+   55
+  ],
+  "key": "Eb",
+  "convention": "textbook",
+  "expect": "vi"
+ },
+ {
+  "id": "rn-040",
+  "notes": [
+   48,
+   51,
+   55,
+   58
+  ],
+  "key": "Eb",
+  "convention": "textbook",
+  "expect": "vi7"
+ },
+ {
+  "id": "rn-041",
+  "notes": [
+   50,
+   53,
+   56
+  ],
+  "key": "Eb",
+  "convention": "textbook",
+  "expect": "vii°"
+ },
+ {
+  "id": "rn-042",
+  "notes": [
+   50,
+   53,
+   56,
+   60
+  ],
+  "key": "Eb",
+  "convention": "textbook",
+  "expect": "viiø7"
+ },
+ {
+  "id": "rn-043",
+  "notes": [
+   59,
+   63,
+   66
+  ],
+  "key": "B",
+  "convention": "textbook",
+  "expect": "I"
+ },
+ {
+  "id": "rn-044",
+  "notes": [
+   59,
+   63,
+   66,
+   70
+  ],
+  "key": "B",
+  "convention": "textbook",
+  "expect": "Imaj7"
+ },
+ {
+  "id": "rn-045",
+  "notes": [
+   49,
+   52,
+   56
+  ],
+  "key": "B",
+  "convention": "textbook",
+  "expect": "ii"
+ },
+ {
+  "id": "rn-046",
+  "notes": [
+   49,
+   52,
+   56,
+   59
+  ],
+  "key": "B",
+  "convention": "textbook",
+  "expect": "ii7"
+ },
+ {
+  "id": "rn-047",
+  "notes": [
+   51,
+   54,
+   58
+  ],
+  "key": "B",
+  "convention": "textbook",
+  "expect": "iii"
+ },
+ {
+  "id": "rn-048",
+  "notes": [
+   51,
+   54,
+   58,
+   61
+  ],
+  "key": "B",
+  "convention": "textbook",
+  "expect": "iii7"
+ },
+ {
+  "id": "rn-049",
+  "notes": [
+   52,
+   56,
+   59
+  ],
+  "key": "B",
+  "convention": "textbook",
+  "expect": "IV"
+ },
+ {
+  "id": "rn-050",
+  "notes": [
+   52,
+   56,
+   59,
+   63
+  ],
+  "key": "B",
+  "convention": "textbook",
+  "expect": "IVmaj7"
+ },
+ {
+  "id": "rn-051",
+  "notes": [
+   54,
+   58,
+   61
+  ],
+  "key": "B",
+  "convention": "textbook",
+  "expect": "V"
+ },
+ {
+  "id": "rn-052",
+  "notes": [
+   54,
+   58,
+   61,
+   64
+  ],
+  "key": "B",
+  "convention": "textbook",
+  "expect": "V7"
+ },
+ {
+  "id": "rn-053",
+  "notes": [
+   56,
+   59,
+   63
+  ],
+  "key": "B",
+  "convention": "textbook",
+  "expect": "vi"
+ },
+ {
+  "id": "rn-054",
+  "notes": [
+   56,
+   59,
+   63,
+   66
+  ],
+  "key": "B",
+  "convention": "textbook",
+  "expect": "vi7"
+ },
+ {
+  "id": "rn-055",
+  "notes": [
+   58,
+   61,
+   64
+  ],
+  "key": "B",
+  "convention": "textbook",
+  "expect": "vii°"
+ },
+ {
+  "id": "rn-056",
+  "notes": [
+   58,
+   61,
+   64,
+   68
+  ],
+  "key": "B",
+  "convention": "textbook",
+  "expect": "viiø7"
+ },
+ {
+  "id": "rn-057",
+  "notes": [
+   48,
+   52,
+   55
+  ],
+  "key": "C",
+  "convention": "quality",
+  "expect": "I"
+ },
+ {
+  "id": "rn-058",
+  "notes": [
+   48,
+   52,
+   55,
+   59
+  ],
+  "key": "C",
+  "convention": "quality",
+  "expect": "Imaj7"
+ },
+ {
+  "id": "rn-059",
+  "notes": [
+   50,
+   53,
+   57
+  ],
+  "key": "C",
+  "convention": "quality",
+  "expect": "IIm"
+ },
+ {
+  "id": "rn-060",
+  "notes": [
+   50,
+   53,
+   57,
+   60
+  ],
+  "key": "C",
+  "convention": "quality",
+  "expect": "IIm7"
+ },
+ {
+  "id": "rn-061",
+  "notes": [
+   52,
+   55,
+   59
+  ],
+  "key": "C",
+  "convention": "quality",
+  "expect": "IIIm"
+ },
+ {
+  "id": "rn-062",
+  "notes": [
+   52,
+   55,
+   59,
+   62
+  ],
+  "key": "C",
+  "convention": "quality",
+  "expect": "IIIm7"
+ },
+ {
+  "id": "rn-063",
+  "notes": [
+   53,
+   57,
+   60
+  ],
+  "key": "C",
+  "convention": "quality",
+  "expect": "IV"
+ },
+ {
+  "id": "rn-064",
+  "notes": [
+   53,
+   57,
+   60,
+   64
+  ],
+  "key": "C",
+  "convention": "quality",
+  "expect": "IVmaj7"
+ },
+ {
+  "id": "rn-065",
+  "notes": [
+   55,
+   59,
+   62
+  ],
+  "key": "C",
+  "convention": "quality",
+  "expect": "V"
+ },
+ {
+  "id": "rn-066",
+  "notes": [
+   55,
+   59,
+   62,
+   65
+  ],
+  "key": "C",
+  "convention": "quality",
+  "expect": "V7"
+ },
+ {
+  "id": "rn-067",
+  "notes": [
+   57,
+   60,
+   64
+  ],
+  "key": "C",
+  "convention": "quality",
+  "expect": "VIm"
+ },
+ {
+  "id": "rn-068",
+  "notes": [
+   57,
+   60,
+   64,
+   67
+  ],
+  "key": "C",
+  "convention": "quality",
+  "expect": "VIm7"
+ },
+ {
+  "id": "rn-069",
+  "notes": [
+   59,
+   62,
+   65
+  ],
+  "key": "C",
+  "convention": "quality",
+  "expect": "VII°"
+ },
+ {
+  "id": "rn-070",
+  "notes": [
+   59,
+   62,
+   65,
+   69
+  ],
+  "key": "C",
+  "convention": "quality",
+  "expect": "VIIm7b5"
+ },
+ {
+  "id": "rn-071",
+  "notes": [
+   57,
+   60,
+   64
+  ],
+  "key": "Am",
+  "convention": "textbook",
+  "expect": "i"
+ },
+ {
+  "id": "rn-072",
+  "notes": [
+   59,
+   62,
+   65
+  ],
+  "key": "Am",
+  "convention": "textbook",
+  "expect": "ii°"
+ },
+ {
+  "id": "rn-073",
+  "notes": [
+   48,
+   52,
+   55
+  ],
+  "key": "Am",
+  "convention": "textbook",
+  "expect": "III"
+ },
+ {
+  "id": "rn-074",
+  "notes": [
+   50,
+   53,
+   57
+  ],
+  "key": "Am",
+  "convention": "textbook",
+  "expect": "iv"
+ },
+ {
+  "id": "rn-075",
+  "notes": [
+   52,
+   56,
+   59
+  ],
+  "key": "Am",
+  "convention": "textbook",
+  "expect": "V"
+ },
+ {
+  "id": "rn-076",
+  "notes": [
+   53,
+   57,
+   60
+  ],
+  "key": "Am",
+  "convention": "textbook",
+  "expect": "VI"
+ },
+ {
+  "id": "rn-077",
+  "notes": [
+   56,
+   59,
+   62
+  ],
+  "key": "Am",
+  "convention": "textbook",
+  "expect": "vii°"
+ },
+ {
+  "id": "rn-078",
+  "notes": [
+   48,
+   51,
+   55
+  ],
+  "key": "Cm",
+  "convention": "textbook",
+  "expect": "i"
+ },
+ {
+  "id": "rn-079",
+  "notes": [
+   50,
+   53,
+   56
+  ],
+  "key": "Cm",
+  "convention": "textbook",
+  "expect": "ii°"
+ },
+ {
+  "id": "rn-080",
+  "notes": [
+   51,
+   55,
+   58
+  ],
+  "key": "Cm",
+  "convention": "textbook",
+  "expect": "III"
+ },
+ {
+  "id": "rn-081",
+  "notes": [
+   53,
+   56,
+   60
+  ],
+  "key": "Cm",
+  "convention": "textbook",
+  "expect": "iv"
+ },
+ {
+  "id": "rn-082",
+  "notes": [
+   55,
+   59,
+   62
+  ],
+  "key": "Cm",
+  "convention": "textbook",
+  "expect": "V"
+ },
+ {
+  "id": "rn-083",
+  "notes": [
+   56,
+   60,
+   63
+  ],
+  "key": "Cm",
+  "convention": "textbook",
+  "expect": "VI"
+ },
+ {
+  "id": "rn-084",
+  "notes": [
+   59,
+   62,
+   65
+  ],
+  "key": "Cm",
+  "convention": "textbook",
+  "expect": "vii°"
+ },
+ {
+  "id": "rn-085",
+  "notes": [
+   54,
+   57,
+   61
+  ],
+  "key": "F#m",
+  "convention": "textbook",
+  "expect": "i"
+ },
+ {
+  "id": "rn-086",
+  "notes": [
+   56,
+   59,
+   62
+  ],
+  "key": "F#m",
+  "convention": "textbook",
+  "expect": "ii°"
+ },
+ {
+  "id": "rn-087",
+  "notes": [
+   57,
+   61,
+   64
+  ],
+  "key": "F#m",
+  "convention": "textbook",
+  "expect": "III"
+ },
+ {
+  "id": "rn-088",
+  "notes": [
+   59,
+   62,
+   66
+  ],
+  "key": "F#m",
+  "convention": "textbook",
+  "expect": "iv"
+ },
+ {
+  "id": "rn-089",
+  "notes": [
+   49,
+   53,
+   56
+  ],
+  "key": "F#m",
+  "convention": "textbook",
+  "expect": "V"
+ },
+ {
+  "id": "rn-090",
+  "notes": [
+   50,
+   54,
+   57
+  ],
+  "key": "F#m",
+  "convention": "textbook",
+  "expect": "VI"
+ },
+ {
+  "id": "rn-091",
+  "notes": [
+   53,
+   56,
+   59
+  ],
+  "key": "F#m",
+  "convention": "textbook",
+  "expect": "vii°"
+ },
+ {
+  "id": "rn-092",
+  "notes": [
+   57,
+   60,
+   64,
+   67
+  ],
+  "key": "Am",
+  "convention": "textbook",
+  "expect": "i7"
+ },
+ {
+  "id": "rn-093",
+  "notes": [
+   59,
+   62,
+   65,
+   69
+  ],
+  "key": "Am",
+  "convention": "textbook",
+  "expect": "iiø7"
+ },
+ {
+  "id": "rn-094",
+  "notes": [
+   48,
+   52,
+   55,
+   59
+  ],
+  "key": "Am",
+  "convention": "textbook",
+  "expect": "IIImaj7"
+ },
+ {
+  "id": "rn-095",
+  "notes": [
+   50,
+   53,
+   57,
+   60
+  ],
+  "key": "Am",
+  "convention": "textbook",
+  "expect": "iv7"
+ },
+ {
+  "id": "rn-096",
+  "notes": [
+   52,
+   56,
+   59,
+   62
+  ],
+  "key": "Am",
+  "convention": "textbook",
+  "expect": "V7"
+ },
+ {
+  "id": "rn-097",
+  "notes": [
+   53,
+   57,
+   60,
+   64
+  ],
+  "key": "Am",
+  "convention": "textbook",
+  "expect": "VImaj7"
+ },
+ {
+  "id": "rn-098",
+  "notes": [
+   56,
+   59,
+   62,
+   65
+  ],
+  "key": "Am",
+  "convention": "textbook",
+  "expect": "vii°7"
+ },
+ {
+  "id": "rn-099",
+  "notes": [
+   55,
+   59,
+   62
+  ],
+  "key": "Am",
+  "convention": "textbook",
+  "expect": "VII",
+  "why": "G major in Am: natural-minor subtonic degree, no prefix"
+ },
+ {
+  "id": "rn-100",
+  "notes": [
+   55,
+   59,
+   62,
+   65
+  ],
+  "key": "Am",
+  "convention": "textbook",
+  "expect": "VII7"
+ },
+ {
+  "id": "rn-101",
+  "notes": [
+   52,
+   60,
+   67
+  ],
+  "key": "C",
+  "convention": "textbook",
+  "expect": "I6"
+ },
+ {
+  "id": "rn-102",
+  "notes": [
+   55,
+   60,
+   64
+  ],
+  "key": "C",
+  "convention": "textbook",
+  "expect": "I64"
+ },
+ {
+  "id": "rn-103",
+  "notes": [
+   59,
+   62,
+   65,
+   67
+  ],
+  "key": "C",
+  "convention": "textbook",
+  "expect": "V65"
+ },
+ {
+  "id": "rn-104",
+  "notes": [
+   50,
+   55,
+   59,
+   65
+  ],
+  "key": "C",
+  "convention": "textbook",
+  "expect": "V43"
+ },
+ {
+  "id": "rn-105",
+  "notes": [
+   53,
+   55,
+   59,
+   62
+  ],
+  "key": "C",
+  "convention": "textbook",
+  "expect": "V42"
+ },
+ {
+  "id": "rn-106",
+  "notes": [
+   57,
+   60,
+   65
+  ],
+  "key": "C",
+  "convention": "textbook",
+  "expect": "IV6"
+ },
+ {
+  "id": "rn-107",
+  "notes": [
+   48,
+   50,
+   53,
+   57
+  ],
+  "key": "C",
+  "convention": "textbook",
+  "expect": "ii42"
+ },
+ {
+  "id": "rn-108",
+  "notes": [
+   52,
+   60,
+   67
+  ],
+  "key": "C",
+  "convention": "quality",
+  "expect": "I6"
+ },
+ {
+  "id": "rn-109",
+  "notes": [
+   59,
+   62,
+   65,
+   67
+  ],
+  "key": "C",
+  "convention": "quality",
+  "expect": "V65"
+ },
+ {
+  "id": "rn-110",
+  "notes": [
+   50,
+   54,
+   57,
+   60
+  ],
+  "key": "C",
+  "convention": "textbook",
+  "expect": "V7/V",
+  "why": "D7 in C, never II7"
+ },
+ {
+  "id": "rn-111",
+  "notes": [
+   50,
+   54,
+   57
+  ],
+  "key": "C",
+  "convention": "textbook",
+  "expect": "V/V"
+ },
+ {
+  "id": "rn-112",
+  "notes": [
+   57,
+   61,
+   64,
+   67
+  ],
+  "key": "C",
+  "convention": "textbook",
+  "expect": "V7/ii"
+ },
+ {
+  "id": "rn-113",
+  "notes": [
+   52,
+   56,
+   59,
+   62
+  ],
+  "key": "C",
+  "convention": "textbook",
+  "expect": "V7/vi"
+ },
+ {
+  "id": "rn-114",
+  "notes": [
+   59,
+   63,
+   66,
+   69
+  ],
+  "key": "C",
+  "convention": "textbook",
+  "expect": "V7/iii"
+ },
+ {
+  "id": "rn-115",
+  "notes": [
+   48,
+   52,
+   55,
+   58
+  ],
+  "key": "C",
+  "convention": "textbook",
+  "expect": "V7/IV",
+  "why": "C7 = I with m7 -> secondary wins over borrowed reading"
+ },
+ {
+  "id": "rn-116",
+  "notes": [
+   54,
+   60,
+   62,
+   69
+  ],
+  "key": "C",
+  "convention": "textbook",
+  "expect": "V65/V",
+  "why": "D7/F# in C"
+ },
+ {
+  "id": "rn-117",
+  "notes": [
+   54,
+   57,
+   60,
+   63
+  ],
+  "key": "C",
+  "convention": "textbook",
+  "expect": "vii°7/V"
+ },
+ {
+  "id": "rn-118",
+  "notes": [
+   49,
+   52,
+   55,
+   58
+  ],
+  "key": "C",
+  "convention": "textbook",
+  "expect": "vii°7/ii"
+ },
+ {
+  "id": "rn-119",
+  "notes": [
+   56,
+   59,
+   62,
+   65
+  ],
+  "key": "C",
+  "convention": "textbook",
+  "expect": "vii°7/vi"
+ },
+ {
+  "id": "rn-120",
+  "notes": [
+   54,
+   57,
+   60,
+   64
+  ],
+  "key": "C",
+  "convention": "textbook",
+  "expect": "viiø7/V"
+ },
+ {
+  "id": "rn-121",
+  "notes": [
+   50,
+   54,
+   57,
+   60
+  ],
+  "key": "C",
+  "convention": "quality",
+  "expect": "V7/V"
+ },
+ {
+  "id": "rn-122",
+  "notes": [
+   57,
+   61,
+   64,
+   67
+  ],
+  "key": "G",
+  "convention": "textbook",
+  "expect": "V7/V",
+  "why": "A7 in G"
+ },
+ {
+  "id": "rn-123",
+  "notes": [
+   55,
+   59,
+   62,
+   65
+  ],
+  "key": "F",
+  "convention": "textbook",
+  "expect": "V7/V",
+  "why": "G7 in F"
+ },
+ {
+  "id": "rn-124",
+  "notes": [
+   48,
+   52,
+   55,
+   58
+  ],
+  "key": "F",
+  "convention": "textbook",
+  "expect": "V7",
+  "why": "C7 in F is plain diatonic V7, not secondary"
+ },
+ {
+  "id": "rn-125",
+  "notes": [
+   53,
+   56,
+   60
+  ],
+  "key": "C",
+  "convention": "textbook",
+  "expect": "iv",
+  "why": "borrowed iv"
+ },
+ {
+  "id": "rn-126",
+  "notes": [
+   48,
+   51,
+   55
+  ],
+  "key": "C",
+  "convention": "textbook",
+  "expect": "i",
+  "why": "parallel-minor tonic"
+ },
+ {
+  "id": "rn-127",
+  "notes": [
+   56,
+   60,
+   63
+  ],
+  "key": "C",
+  "convention": "textbook",
+  "expect": "bVI"
+ },
+ {
+  "id": "rn-128",
+  "notes": [
+   58,
+   62,
+   65
+  ],
+  "key": "C",
+  "convention": "textbook",
+  "expect": "bVII"
+ },
+ {
+  "id": "rn-129",
+  "notes": [
+   51,
+   55,
+   58
+  ],
+  "key": "C",
+  "convention": "textbook",
+  "expect": "bIII"
+ },
+ {
+  "id": "rn-130",
+  "notes": [
+   58,
+   62,
+   65,
+   68
+  ],
+  "key": "C",
+  "convention": "textbook",
+  "expect": "bVII7"
+ },
+ {
+  "id": "rn-131",
+  "notes": [
+   56,
+   60,
+   63,
+   67
+  ],
+  "key": "C",
+  "convention": "textbook",
+  "expect": "bVImaj7"
+ },
+ {
+  "id": "rn-132",
+  "notes": [
+   53,
+   61,
+   65,
+   68
+  ],
+  "key": "C",
+  "convention": "textbook",
+  "expect": "bII6",
+  "why": "Neapolitan: Db/F"
+ },
+ {
+  "id": "rn-133",
+  "notes": [
+   49,
+   53,
+   56
+  ],
+  "key": "C",
+  "convention": "textbook",
+  "expect": "bII"
+ },
+ {
+  "id": "rn-134",
+  "notes": [
+   53,
+   56,
+   60
+  ],
+  "key": "C",
+  "convention": "quality",
+  "expect": "IVm"
+ },
+ {
+  "id": "rn-135",
+  "notes": [
+   58,
+   62,
+   65
+  ],
+  "key": "C",
+  "convention": "quality",
+  "expect": "bVII"
+ },
+ {
+  "id": "rn-136",
+  "notes": [
+   55,
+   59,
+   62,
+   65,
+   69
+  ],
+  "key": "C",
+  "convention": "textbook",
+  "expect": "V9",
+  "why": "extended keeps symbol tail"
+ },
+ {
+  "id": "rn-137",
+  "notes": [
+   50,
+   53,
+   57,
+   60,
+   64,
+   67
+  ],
+  "key": "C",
+  "convention": "textbook",
+  "expect": "ii11"
+ },
+ {
+  "id": "rn-138",
+  "notes": [
+   60,
+   64
+  ],
+  "key": "C",
+  "convention": "textbook",
+  "expect": null,
+  "why": "dyad: no RN"
+ },
+ {
+  "id": "rn-139",
+  "notes": [
+   60
+  ],
+  "key": "C",
+  "convention": "textbook",
+  "expect": null
+ },
+ {
+  "id": "rn-140",
+  "notes": [
+   60,
+   61,
+   62
+  ],
+  "key": "C",
+  "convention": "textbook",
+  "expect": null,
+  "why": "cluster: no RN"
+ }
+]
