@@ -201,8 +201,8 @@ impl NoteTracker {
                     }
                     // All Sound Off: silence everything immediately.
                     CC_ALL_SOUND_OFF => {
-                        let sounding = self.held.iter().any(|&c| c > 0)
-                            || self.sustained.iter().any(|&s| s);
+                        let sounding =
+                            self.held.iter().any(|&c| c > 0) || self.sustained.iter().any(|&s| s);
                         if !sounding {
                             return false;
                         }

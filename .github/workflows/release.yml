@@ -1,0 +1,49 @@
+name: Release
+
+# Installers are built only for version tags (v0.1.0, v1.2.3-rc1, ...).
+# Push a tag, review the draft release the workflow creates, publish it.
+on:
+  push:
+    tags: ["v*"]
+
+env:
+  CARGO_TERM_COLOR: always
+
+permissions:
+  contents: write
+
+jobs:
+  bundle:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [macos-latest, windows-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dtolnay/rust-toolchain@stable
+      - uses: Swatinem/rust-cache@v2
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: ui/package-lock.json
+      - name: UI install
+        run: npm ci
+        working-directory: ui
+      - name: Install Tauri CLI
+        run: npm install -g "@tauri-apps/cli@^2"
+      - name: Bundle
+        run: tauri build
+        working-directory: crates/keyscene-app
+      # Unsigned for now: signing env (APPLE_SIGNING_IDENTITY, APPLE_ID,
+      # APPLE_PASSWORD, APPLE_TEAM_ID / Windows cert) slots in here once
+      # certificates exist, as repository secrets.
+      - name: Attach installers to draft release
+        uses: softprops/action-gh-release@v2
+        with:
+          draft: true
+          files: |
+            target/release/bundle/dmg/*.dmg
+            target/release/bundle/msi/*.msi
+            target/release/bundle/nsis/*.exe

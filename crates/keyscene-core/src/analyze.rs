@@ -192,7 +192,14 @@ pub fn analyze(notes: &[MidiNote], key: Option<Key>, settings: &Settings) -> Ana
                     text.push('/');
                     text.push_str(&tones[&bass_pc].to_string());
                 }
-                named.push((c.score, c.root_pc, c.sort_symbol(), text, NameKind::Chord, false));
+                named.push((
+                    c.score,
+                    c.root_pc,
+                    c.sort_symbol(),
+                    text,
+                    NameKind::Chord,
+                    false,
+                ));
             }
             for c in &slash {
                 let root_sp = root_spelling(c, &upper_pcs, key, settings);
@@ -202,7 +209,14 @@ pub fn analyze(notes: &[MidiNote], key: Option<Key>, settings: &Settings) -> Ana
                     c.sort_symbol(),
                     context_spelling(bass_pc, key, settings)
                 );
-                named.push((c.score, c.root_pc, c.sort_symbol(), text, NameKind::Chord, true));
+                named.push((
+                    c.score,
+                    c.root_pc,
+                    c.sort_symbol(),
+                    text,
+                    NameKind::Chord,
+                    true,
+                ));
             }
             if let Some((upper, lower)) = polychord(&pcs, bass_pc) {
                 let fmt = |(root, minor): (u8, bool)| {
