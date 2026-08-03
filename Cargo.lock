@@ -1706,7 +1706,6 @@ version = "0.1.0"
 dependencies = [
  "keyscene-core",
  "keyscene-midi",
- "keyscene-server",
  "serde",
  "serde_json",
  "tauri",
@@ -1725,7 +1724,6 @@ dependencies = [
 name = "keyscene-midi"
 version = "0.1.0"
 dependencies = [
- "keyscene-core",
  "midir",
  "serde",
 ]
@@ -1735,7 +1733,6 @@ name = "keyscene-server"
 version = "0.1.0"
 dependencies = [
  "axum",
- "keyscene-core",
  "serde",
  "serde_json",
  "tokio",

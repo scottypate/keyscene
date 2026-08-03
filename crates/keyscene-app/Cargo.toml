@@ -12,7 +12,8 @@ tauri-build = { version = "2", features = [] }
 [dependencies]
 keyscene-core = { workspace = true }
 keyscene-midi = { workspace = true }
-keyscene-server = { workspace = true }
 serde = { workspace = true }
 serde_json = { workspace = true }
-tauri = { version = "2", features = [] }
+# macos-private-api: required for transparent webview windows (Spike C).
+# Bars Mac App Store distribution — accepted, MAS is not in the v1 plan.
+tauri = { version = "2", features = ["macos-private-api"] }

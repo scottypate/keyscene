@@ -46,6 +46,8 @@ pub fn parse(bytes: &[u8]) -> Option<MidiMsg> {
 pub const CC_SUSTAIN: u8 = 64;
 pub const CC_SOSTENUTO: u8 = 66;
 pub const CC_SOFT: u8 = 67;
+pub const CC_ALL_SOUND_OFF: u8 = 120;
+pub const CC_ALL_NOTES_OFF: u8 = 123;
 
 #[derive(Debug, Clone, Copy, PartialEq, Eq, Default, serde::Serialize)]
 #[serde(rename_all = "camelCase")]
@@ -196,6 +198,32 @@ impl NoteTracker {
                         }
                         self.pedals.soft = down;
                         true
+                    }
+                    // All Sound Off: silence everything immediately.
+                    CC_ALL_SOUND_OFF => {
+                        let sounding = self.held.iter().any(|&c| c > 0)
+                            || self.sustained.iter().any(|&s| s);
+                        if !sounding {
+                            return false;
+                        }
+                        self.held = [0; 128];
+                        self.sustained = [false; 128];
+                        true
+                    }
+                    // All Notes Off: release every held key as if a NoteOff
+                    // arrived — a down sustain pedal still keeps them ringing.
+                    CC_ALL_NOTES_OFF => {
+                        let mut changed = false;
+                        for n in 0..128 {
+                            if self.held[n] > 0 {
+                                self.held[n] = 0;
+                                if self.pedals.sustain || self.sostenuto_notes[n] {
+                                    self.sustained[n] = true;
+                                }
+                                changed = true;
+                            }
+                        }
+                        changed
                     }
                     _ => false,
                 }
@@ -395,5 +423,30 @@ mod tests {
     fn unmatched_noteoff_is_ignored() {
         let mut t = NoteTracker::new();
         assert!(!t.apply(off(0, 60)));
+    }
+
+    #[test]
+    fn all_sound_off_silences_everything() {
+        let mut t = NoteTracker::new();
+        t.apply(cc(0, CC_SUSTAIN, 127));
+        t.apply(on(0, 60));
+        t.apply(on(0, 64));
+        t.apply(off(0, 60)); // ringing under the pedal
+        assert!(t.apply(cc(0, CC_ALL_SOUND_OFF, 0)));
+        assert_eq!(t.sounding(true), Vec::<u8>::new());
+        assert!(!t.apply(cc(0, CC_ALL_SOUND_OFF, 0)), "already silent");
+        assert!(t.pedals().sustain, "pedal state itself is untouched");
+    }
+
+    #[test]
+    fn all_notes_off_respects_sustain() {
+        let mut t = NoteTracker::new();
+        t.apply(cc(0, CC_SUSTAIN, 127));
+        t.apply(on(0, 60));
+        assert!(t.apply(cc(0, CC_ALL_NOTES_OFF, 0)));
+        assert_eq!(t.held_notes(), Vec::<u8>::new());
+        assert_eq!(t.sustained_notes(), vec![60], "rings until pedal up");
+        t.apply(cc(0, CC_SUSTAIN, 0));
+        assert_eq!(t.sounding(true), Vec::<u8>::new());
     }
 }

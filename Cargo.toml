@@ -12,6 +12,10 @@ version = "0.1.0"
 edition = "2021"
 license = "LicenseRef-Proprietary"
 repository = "https://github.com/scalecraft/keyscene"
+authors = ["Scalecraft <scotty@scalecraft.dev>"]
+# Option::is_none_or requires 1.82.
+rust-version = "1.82"
+publish = false
 
 [workspace.dependencies]
 keyscene-core = { path = "crates/keyscene-core" }

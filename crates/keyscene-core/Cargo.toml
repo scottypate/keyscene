@@ -8,9 +8,4 @@ repository.workspace = true
 
 [dependencies]
 serde = { workspace = true }
-
-[dependencies.serde_json]
-workspace = true
-
-[dev-dependencies]
 serde_json = { workspace = true }

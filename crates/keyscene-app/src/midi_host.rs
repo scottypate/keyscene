@@ -1,13 +1,19 @@
 //! Owns the live MIDI connection: connect/disconnect, hot-plug reactions
 //! (§3.1 unplug/replug survival), and pushing state to the webview.
 
-use std::sync::{Arc, Mutex};
+use std::sync::{Arc, Mutex, MutexGuard, PoisonError};
 use std::time::Duration;
 
 use keyscene_midi::MidiInputConnection;
 use tauri::{AppHandle, Emitter};
 
-use crate::state::{DevicesPayload, Engine, MidiErrorPayload};
+use crate::state::{AppSettings, DevicesPayload, Engine, MidiErrorPayload};
+
+/// Recover the guard from a poisoned mutex: a panic elsewhere must not
+/// permanently kill the MIDI callback and every command.
+fn relock<T>(m: &Mutex<T>) -> MutexGuard<'_, T> {
+    m.lock().unwrap_or_else(PoisonError::into_inner)
+}
 
 pub struct MidiHost {
     pub engine: Mutex<Engine>,
@@ -28,8 +34,12 @@ impl MidiHost {
         })
     }
 
+    pub fn lock_engine(&self) -> MutexGuard<'_, Engine> {
+        relock(&self.engine)
+    }
+
     pub fn current_device(&self) -> Option<String> {
-        self.current_device.lock().unwrap().clone()
+        relock(&self.current_device).clone()
     }
 
     pub fn devices_payload(&self) -> DevicesPayload {
@@ -40,8 +50,25 @@ impl MidiHost {
     }
 
     pub fn emit_state(self: &Arc<Self>, app: &AppHandle) {
-        let payload = self.engine.lock().unwrap().payload();
+        let payload = self.lock_engine().payload();
         let _ = app.emit("state", payload);
+    }
+
+    /// Emit the current settings ("settings" event) — call after any
+    /// settings mutation. Never called from the per-note hot path.
+    pub fn emit_settings(self: &Arc<Self>, app: &AppHandle) {
+        let settings = self.lock_engine().settings.clone();
+        let _ = app.emit("settings", settings);
+    }
+
+    /// Persist settings without holding the engine lock during disk I/O
+    /// (the midir callback contends on that lock).
+    pub fn save_settings(self: &Arc<Self>) {
+        let (settings, path): (AppSettings, _) = {
+            let engine = self.lock_engine();
+            (engine.settings.clone(), engine.settings_path.clone())
+        };
+        settings.save(&path);
     }
 
     pub fn emit_devices(self: &Arc<Self>, app: &AppHandle) {
@@ -49,10 +76,10 @@ impl MidiHost {
     }
 
     pub fn disconnect(self: &Arc<Self>, app: &AppHandle) {
-        *self.conn.lock().unwrap() = None;
-        *self.current_device.lock().unwrap() = None;
+        *relock(&self.conn) = None;
+        *relock(&self.current_device) = None;
         // Release anything still sounding so no ghost chord lingers.
-        self.engine.lock().unwrap().tracker.all_off();
+        self.lock_engine().tracker.all_off();
         self.emit_state(app);
         self.emit_devices(app);
     }
@@ -76,13 +103,13 @@ impl MidiHost {
             })?;
 
         // Drop any existing connection before opening the next one.
-        *self.conn.lock().unwrap() = None;
+        *relock(&self.conn) = None;
 
         let host = self.clone();
         let app2 = app.clone();
         let conn = keyscene_midi::connect(index, move |_ts, bytes| {
             if let Some(msg) = keyscene_midi::parse(bytes) {
-                let changed = host.engine.lock().unwrap().tracker.apply(msg);
+                let changed = relock(&host.engine).tracker.apply(msg);
                 if changed {
                     host.emit_state(&app2);
                 }
@@ -90,25 +117,28 @@ impl MidiHost {
         })
         .map_err(|e| MidiErrorPayload::from_connect(&e, &name))?;
 
-        *self.conn.lock().unwrap() = Some(conn);
-        *self.current_device.lock().unwrap() = Some(name.clone());
+        *relock(&self.conn) = Some(conn);
+        *relock(&self.current_device) = Some(name.clone());
         {
-            let mut engine = self.engine.lock().unwrap();
+            let mut engine = self.lock_engine();
             engine.tracker.all_off();
             engine.settings.last_device = Some(name);
-            engine.save_settings();
         }
+        self.save_settings();
         self.emit_state(app);
+        self.emit_settings(app);
         self.emit_devices(app);
         Ok(())
     }
 
     /// Connect to the remembered device (tolerant match, ADR-002 §3), or —
-    /// first run — to the only device present. Failures are silent: the UI
-    /// just shows "no device", and explicit selection reports errors.
+    /// first run — to the only device present. A missing device stays
+    /// silent (the UI just shows "no device"), but a busy one surfaces the
+    /// ADR-002 loopMIDI guidance — that panel exists precisely for the
+    /// DAW-holds-the-port-at-startup case.
     pub fn auto_connect(self: &Arc<Self>, app: &AppHandle) {
         let devices = keyscene_midi::list_inputs().unwrap_or_default();
-        let saved = self.engine.lock().unwrap().settings.last_device.clone();
+        let saved = self.lock_engine().settings.last_device.clone();
         let index = match saved
             .as_deref()
             .and_then(|s| keyscene_midi::best_match(s, &devices))
@@ -118,7 +148,11 @@ impl MidiHost {
             None => None,
         };
         if let Some(i) = index {
-            let _ = self.connect(app, i);
+            if let Err(err) = self.connect(app, i) {
+                if err.kind == "deviceBusy" {
+                    let _ = app.emit("midi-error", err);
+                }
+            }
         }
     }
 
@@ -133,9 +167,9 @@ impl MidiHost {
                 if let Some(cur) = &current {
                     if !devices.iter().any(|d| &d.name == cur) {
                         // Device vanished under us.
-                        *host.conn.lock().unwrap() = None;
-                        *host.current_device.lock().unwrap() = None;
-                        host.engine.lock().unwrap().tracker.all_off();
+                        *relock(&host.conn) = None;
+                        *relock(&host.current_device) = None;
+                        host.lock_engine().tracker.all_off();
                         host.emit_state(&app2);
                     }
                 } else {
@@ -143,6 +177,6 @@ impl MidiHost {
                 }
                 host.emit_devices(&app2);
             });
-        *self.watcher.lock().unwrap() = Some(watcher);
+        *relock(&self.watcher) = Some(watcher);
     }
 }
