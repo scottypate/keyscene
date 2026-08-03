@@ -11,5 +11,6 @@
     "build": "npm run build -w studio",
     "check": "npm run check -w shared && npm run check -w studio",
     "test": "npm run test -w shared"
-  }
+  },
+  "license": "MIT"
 }

@@ -59,3 +59,7 @@ Surviving spike binaries:
 cargo run -p keyscene-midi --bin spike_a_latency loopback   # MIDI stack latency
 cargo run -p keyscene-server --bin spike_d_ws               # 60Hz overlay → http://127.0.0.1:43117/
 ```
+
+## License
+
+MIT — see [`LICENSE`](LICENSE).
