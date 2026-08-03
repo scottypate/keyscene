@@ -176,10 +176,13 @@ If any tone would need a triple accidental, respell the root enharmonically
 
 With a key: choose the spelling (≤1 accidental) minimizing LoF distance to
 the key's center: `LoF(tonic) + 2` for major, `LoF(tonic) − 1` for minor.
-Ties resolve flatwise (lower LoF). Exception: in minor keys the pc 11
-semitones above the tonic is always the raised 7th (G# in A minor). This
-yields the conventional mixed set in C major: C# Eb F# Ab Bb.
-Without a key: default tables (§5.3, note row).
+White-note enharmonics (Fb, Cb, E#, B#) add a penalty of 3 to their LoF
+distance, so chart-style naturals win near-ties — a bare pc 4 in Db is E,
+not Fb — while decisively-closer cases keep the enharmonic (Cb in Db,
+E# in F#, Fb in Gb). Ties resolve flatwise (lower LoF). Exception: in
+minor keys the pc 11 semitones above the tonic is always the raised 7th
+(G# in A minor). This yields the conventional mixed set in C major:
+C# Eb F# Ab Bb. Without a key: default tables (§5.3, note row).
 
 ### 5.3 Root and default spellings
 

@@ -94,17 +94,21 @@ class Key:
 
     def spell_pc(self, pc):
         """Spec §5.2: nearest-to-center spelling, <=1 accidental, ties flatwise.
-        Minor exception: leading tone is always the raised 7th."""
+        Minor exception: leading tone is always the raised 7th. White-note
+        enharmonics (Fb/Cb/E#/B#) carry a 3-fifths penalty so chart-style
+        naturals win the near-ties (bare pc 4 in Db is E, not Fb)."""
         if self.minor and pc == self.leading:
             seventh = self.degrees[6]
             return seventh[0], seventh[1] + 1
+        white = pc in NAT_PC.values()
         best = None
         for letter in LETTERS:
             for acc in (-1, 0, 1):
                 if sp_pc(letter, acc) != pc:
                     continue
                 lof = sp_lof(letter, acc)
-                cand = (abs(lof - self.center), lof)  # tie -> flatwise
+                penalty = 3 if acc != 0 and white else 0
+                cand = (abs(lof - self.center) + penalty, lof)  # tie -> flatwise
                 if best is None or cand < best[0]:
                     best = (cand, (letter, acc))
         return best[1]
@@ -503,8 +507,9 @@ add_nm([48, 53, 58, 63], alternates=["C quartal(4)"],
        why="three stacked P4s: quartal alternate must appear")
 add_nm([48, 49, 50], expect_top="C·Db·D", why="cluster fallback")
 add_nm([60, 61, 62, 63], expect_top="C·Db·D·Eb")
-add_nm([48, 49, 50], key="B", expect_top="B#·C#·D",
-       why="cluster spelling follows the key rule (B major spells pc0 as B#, cf. sp-061)")
+add_nm([48, 49, 50], key="B", expect_top="C·C#·D",
+       why="cluster spelling follows the key rule; the white-note-enharmonic "
+       "penalty keeps bare pc0 as C even in B major")
 
 # --- roman: diatonic triads + sevenths, four major keys
 MAJ_TRIADS = [("maj", "I"), ("min", "ii"), ("min", "iii"), ("maj", "IV"),

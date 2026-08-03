@@ -88,12 +88,16 @@ impl Key {
 
     /// Spec §5.2: non-chord-context spelling of a pc — nearest to the key
     /// center on the line of fifths, ≤1 accidental, ties flatwise; in minor
-    /// the leading tone is always the raised 7th.
+    /// the leading tone is always the raised 7th. White-note enharmonics
+    /// (Fb, Cb, E#, B#) carry a 3-fifths penalty: a bare pc 4 in Db is E,
+    /// not Fb — they only appear when decisively closer to the key
+    /// (Cb in Db, E# in F#) so chart-style naturals win the near-ties.
     pub fn spell_pc(&self, pc: u8) -> SpelledPc {
         if self.mode == Mode::Minor && pc == self.leading_pc() {
             let seventh = self.degrees()[6];
             return SpelledPc::new(seventh.letter, seventh.acc + 1);
         }
+        let is_white_pc = [0, 2, 4, 5, 7, 9, 11].contains(&pc);
         let mut best: Option<((i32, i32), SpelledPc)> = None;
         for letter in 0..LETTERS.len() as u8 {
             for acc in -1i8..=1 {
@@ -101,7 +105,8 @@ impl Key {
                 if sp.pc() != pc {
                     continue;
                 }
-                let cand = ((sp.lof() - self.center()).abs(), sp.lof());
+                let penalty = if acc != 0 && is_white_pc { 3 } else { 0 };
+                let cand = ((sp.lof() - self.center()).abs() + penalty, sp.lof());
                 if best.is_none_or(|(b, _)| cand < b) {
                     best = Some((cand, sp));
                 }

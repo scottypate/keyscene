@@ -4200,7 +4200,7 @@
    50
   ],
   "key": "B",
-  "expect_top": "B#·C#·D",
-  "why": "cluster spelling follows the key rule (B major spells pc0 as B#, cf. sp-061)"
+  "expect_top": "C·C#·D",
+  "why": "cluster spelling follows the key rule; the white-note-enharmonic penalty keeps bare pc0 as C even in B major"
  }
 ]
