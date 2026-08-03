@@ -94,7 +94,8 @@ same template under several roots — each root is one candidate).
 ### 3.3 Inversions and slash basses
 
 If `b != r` the name gains `/<bass spelling>` (`C/E`). Because matching is
-exact (§3.1), `b` is always a tone of the winning template. When the bass
+exact (§3.1), `b` is always a tone of the winning template — except for
+slash-bass fallback names (§3.4), where the bass is outside the template. When the bass
 interval is a core triad/7th degree (3rd, 5th, 6th, 7th), `inversion` =
 1/2/3 by that degree's position; when it is a tension (9/11/13),
 `inversion = None` (slash notation only, e.g. `Cadd9/D`). Bass spelling
@@ -108,13 +109,24 @@ follows the chord-tone rule (§5.1).
   normally if they match on their own.
 - **Quartal**: if the sorted input notes form ≥3 consecutive perfect
   fourths, emit an alternate `<bass spelling> quartal(n)` (score 30).
+- **Slash bass**: if `P \ {b}` has ≥3 pcs, additionally match `P \ {b}`
+  per §3.1–3.2 (the score formula runs on the reduced set, so the
+  bass-is-root bonus never fires) and subtract 25; name
+  `X/<bass spelling>` with the bass spelled per §5.2. A slash reading whose
+  (root, template) pair also matches `P` exactly is suppressed — the exact
+  reading accounts for the bass as a chord tone. The rest rank in the
+  common candidate pool — usually alternates (`Cm6/F` under `F9`), and the
+  primary name only when nothing matches `P` exactly (`C/Db`, `E/F`).
+  When one is on top, upper-structure tones dictate their spelling per
+  §5.1. No inversion number, no Roman numeral (§4).
 - **Cluster**: if nothing matches, `chord_names` = one entry, the spelled
   pcs joined with `·` (`C·Db·D`), score 0. Spelling per §5.2.
 
 ## 4. Roman numerals (key required)
 
 Computed for the top-ranked chord when its template's third+fifth family is
-classifiable (all templates in v1 are; clusters/dyads get `None`).
+classifiable (all templates in v1 are; clusters/dyads/slash-bass fallback
+names get `None`).
 
 - **Degree**: from the root's spelled letter distance to the tonic letter
   (0→I … 6→VII) with an accidental prefix when the root's LoF differs from

@@ -186,6 +186,31 @@ def candidates(pcs, bass, key=None):
     return out
 
 
+def slash_candidates(pcs, bass, key=None):
+    """Spec §3.4 slash-bass readings: match the >=3 pcs above the bass and
+    name X/<bass>; score runs on the reduced set (no bass-is-root bonus)
+    minus 25. Ranked in the common pool with exact matches."""
+    upper = pcs - {bass}
+    if len(upper) < 3:
+        return []
+    return [(s - 25, r, t, suf) for s, r, t, suf in candidates(upper, bass, key)]
+
+
+def ranked(pcs, bass, key=None):
+    """Exact + slash-bass candidates in one spec-ranked list; the trailing
+    flag marks slash-bass entries. Slash readings duplicating an exact
+    (root, template) pair are suppressed (the exact one reads the bass as
+    a chord tone)."""
+    exact = candidates(pcs, bass, key)
+    seen = {(r, t["id"]) for _, r, t, _ in exact}
+    out = [(s, r, t, suf, False) for s, r, t, suf in exact]
+    out += [(s, r, t, suf, True)
+            for s, r, t, suf in slash_candidates(pcs, bass, key)
+            if (r, t["id"]) not in seen]
+    out.sort(key=lambda c: (-c[0], c[1], c[2]["symbol"] + c[3]))
+    return out
+
+
 def chord_tone_spellings(root_sp, template, pcs, root_pc):
     """pc -> (letter, acc) for every input pc, via interval arithmetic."""
     m = {}
@@ -216,22 +241,30 @@ def key_root_spelling(kobj, root_pc, template, pcs):
     return best[1]
 
 
+def format_candidate(cand, pcs, bass, kobj, pref):
+    """(text, tone map) for one ranked() entry, exact or slash-bass."""
+    _, r, t, suffix, is_slash = cand
+    tone_pcs = (pcs - {bass}) if is_slash else pcs
+    root_sp = (key_root_spelling(kobj, r, t, tone_pcs) if kobj
+               else default_root(r, template_family(t), pref))
+    tones = chord_tone_spellings(root_sp, t, tone_pcs, r)
+    text = sp_str(*root_sp) + t["symbol"] + suffix
+    if is_slash:
+        bass_sp = kobj.spell_pc(bass) if kobj else default_root(bass, "note", pref)
+        text += "/" + sp_str(*bass_sp)
+    elif bass != r:
+        text += "/" + sp_str(*tones[bass])
+    return text, tones
+
+
 def top_name(notes, key=None, pref="auto"):
     """Formatted chord_names[0] + spelling map, replicating the engine."""
     pcs = {n % 12 for n in notes}
     bass = min(notes) % 12
-    cands = candidates(pcs, bass, key)
-    if not cands:
-        return None, None
-    _, r, t, suffix = cands[0]
     kobj = ALL_KEYS[key] if key else None
-    root_sp = (key_root_spelling(kobj, r, t, pcs) if kobj
-               else default_root(r, template_family(t), pref))
-    tones = chord_tone_spellings(root_sp, t, pcs, r)
-    text = sp_str(*root_sp) + t["symbol"] + suffix
-    if bass != r:
-        text += "/" + sp_str(*tones[bass])
-    return text, tones
+    for cand in ranked(pcs, bass, key)[:1]:
+        return format_candidate(cand, pcs, bass, kobj, pref)
+    return None, None
 
 
 def all_names(notes, key=None, pref="auto"):
@@ -239,13 +272,8 @@ def all_names(notes, key=None, pref="auto"):
     bass = min(notes) % 12
     seen, out = set(), []
     kobj = ALL_KEYS[key] if key else None
-    for _, r, t, suffix in candidates(pcs, bass, key):
-        root_sp = (key_root_spelling(kobj, r, t, pcs) if kobj
-                   else default_root(r, template_family(t), pref))
-        tones = chord_tone_spellings(root_sp, t, pcs, r)
-        text = sp_str(*root_sp) + t["symbol"] + suffix
-        if bass != r:
-            text += "/" + sp_str(*tones[bass])
+    for cand in ranked(pcs, bass, key):
+        text, _ = format_candidate(cand, pcs, bass, kobj, pref)
         if text not in seen:
             seen.add(text)
             out.append(text)
@@ -394,6 +422,29 @@ add_nm([45, 48, 52, 58, 62], expect_top="C13/A",
        why="13th in bass: slash only, 5th absent silently")
 add_nm([48, 58, 62, 65], expect_top="C9sus4", alternates=["C11"],
        why="same pc set: 9sus4 outweighs 11 (spec pc-set collision)")
+
+# --- naming: sus2/sus4 sevenths and the slash-bass fallback (§3.4)
+add_nm([54, 65, 68, 73], key="Db", expect_top="Gbmaj7sus2",
+       why="Gb F Ab Db: maj7sus2, not a cluster (user report)")
+add_nm(voice(0, T["7sus2"]), expect_top="C7sus2",
+       alternates=["Bb6/9/C"],
+       why="7sus2 with root in bass outweighs the rootless 6/9 rotation")
+add_nm(voice(0, T["maj7sus4"]), expect_top="Cmaj7sus4")
+add_nm([49, 60, 64, 67], expect_top="C/Db",
+       why="non-tone bass under a plain triad: slash-bass fallback, not cluster")
+add_nm([53, 64, 68, 71], expect_top="E/F",
+       why="classic E-over-F non-tone bass")
+add_nm([41, 48, 51, 55, 57, 60, 63], key="Db", expect_top="F9",
+       alternates=["Cm6/F", "Am7b5/F"],
+       why="slash-bass readings rank as alternates under the exact F9 match")
+add_nm([48, 55, 58], expect_top="C7(no3)",
+       why="root-5th-b7 shell voicing reads as a third-less dominant (user report)")
+add_nm([48, 55, 59], expect_top="Cmaj7(no3)",
+       why="root-5th-maj7 shell voicing")
+add_rn([49, 60, 64, 67], "C", None,
+       why="slash-bass fallback carries no RN (§3.4)")
+add_sp([49, 60, 64, 67],
+       why="slash-bass: upper tones by chord rule (§5.1), bass by default table")
 
 # --- naming: dyads and single notes (hand-formatted, spec §2)
 DYAD = {1: "m2", 2: "M2", 3: "m3", 4: "M3", 5: "P4", 6: "TT", 7: "P5",

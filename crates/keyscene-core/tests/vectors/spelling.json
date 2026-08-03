@@ -3695,5 +3695,22 @@
    "Ab3"
   ],
   "accidental_pref": "flats"
+ },
+ {
+  "id": "sp-278",
+  "notes": [
+   49,
+   60,
+   64,
+   67
+  ],
+  "key": null,
+  "expect": [
+   "Db3",
+   "C4",
+   "E4",
+   "G4"
+  ],
+  "why": "slash-bass: upper tones by chord rule (§5.1), bass by default table"
  }
 ]

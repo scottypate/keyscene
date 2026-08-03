@@ -735,6 +735,138 @@
   "id": "nm-069",
   "notes": [
    48,
+   50,
+   55,
+   58
+  ],
+  "key": null,
+  "expect_top": "C7sus2"
+ },
+ {
+  "id": "nm-070",
+  "notes": [
+   51,
+   53,
+   58,
+   61
+  ],
+  "key": null,
+  "expect_top": "Eb7sus2"
+ },
+ {
+  "id": "nm-071",
+  "notes": [
+   54,
+   56,
+   61,
+   64
+  ],
+  "key": null,
+  "expect_top": "F#7sus2"
+ },
+ {
+  "id": "nm-072",
+  "notes": [
+   57,
+   59,
+   64,
+   67
+  ],
+  "key": null,
+  "expect_top": "A7sus2"
+ },
+ {
+  "id": "nm-073",
+  "notes": [
+   48,
+   53,
+   55,
+   59
+  ],
+  "key": null,
+  "expect_top": "Cmaj7sus4"
+ },
+ {
+  "id": "nm-074",
+  "notes": [
+   51,
+   56,
+   58,
+   62
+  ],
+  "key": null,
+  "expect_top": "Ebmaj7sus4"
+ },
+ {
+  "id": "nm-075",
+  "notes": [
+   54,
+   59,
+   61,
+   65
+  ],
+  "key": null,
+  "expect_top": "F#maj7sus4"
+ },
+ {
+  "id": "nm-076",
+  "notes": [
+   57,
+   62,
+   64,
+   68
+  ],
+  "key": null,
+  "expect_top": "Amaj7sus4"
+ },
+ {
+  "id": "nm-077",
+  "notes": [
+   48,
+   50,
+   55,
+   59
+  ],
+  "key": null,
+  "expect_top": "Cmaj7sus2"
+ },
+ {
+  "id": "nm-078",
+  "notes": [
+   51,
+   53,
+   58,
+   62
+  ],
+  "key": null,
+  "expect_top": "Ebmaj7sus2"
+ },
+ {
+  "id": "nm-079",
+  "notes": [
+   54,
+   56,
+   61,
+   65
+  ],
+  "key": null,
+  "expect_top": "F#maj7sus2"
+ },
+ {
+  "id": "nm-080",
+  "notes": [
+   57,
+   59,
+   64,
+   68
+  ],
+  "key": null,
+  "expect_top": "Amaj7sus2"
+ },
+ {
+  "id": "nm-081",
+  "notes": [
+   48,
    52,
    56,
    58
@@ -743,7 +875,7 @@
   "expect_top": "C7(#5)"
  },
  {
-  "id": "nm-070",
+  "id": "nm-082",
   "notes": [
    51,
    55,
@@ -754,7 +886,7 @@
   "expect_top": "Eb7(#5)"
  },
  {
-  "id": "nm-071",
+  "id": "nm-083",
   "notes": [
    54,
    58,
@@ -765,7 +897,7 @@
   "expect_top": "F#7(#5)"
  },
  {
-  "id": "nm-072",
+  "id": "nm-084",
   "notes": [
    57,
    61,
@@ -776,7 +908,7 @@
   "expect_top": "A7(#5)"
  },
  {
-  "id": "nm-073",
+  "id": "nm-085",
   "notes": [
    48,
    52,
@@ -787,7 +919,7 @@
   "expect_top": "Cmaj7(#5)"
  },
  {
-  "id": "nm-074",
+  "id": "nm-086",
   "notes": [
    51,
    55,
@@ -798,7 +930,7 @@
   "expect_top": "Ebmaj7(#5)"
  },
  {
-  "id": "nm-075",
+  "id": "nm-087",
   "notes": [
    54,
    58,
@@ -809,7 +941,7 @@
   "expect_top": "F#maj7(#5)"
  },
  {
-  "id": "nm-076",
+  "id": "nm-088",
   "notes": [
    57,
    61,
@@ -820,7 +952,7 @@
   "expect_top": "Amaj7(#5)"
  },
  {
-  "id": "nm-077",
+  "id": "nm-089",
   "notes": [
    48,
    52,
@@ -831,7 +963,7 @@
   "expect_top": "C7(b5)"
  },
  {
-  "id": "nm-078",
+  "id": "nm-090",
   "notes": [
    51,
    55,
@@ -842,7 +974,7 @@
   "expect_top": "Eb7(b5)"
  },
  {
-  "id": "nm-079",
+  "id": "nm-091",
   "notes": [
    54,
    58,
@@ -853,7 +985,7 @@
   "expect_top": "F#7(b5)"
  },
  {
-  "id": "nm-080",
+  "id": "nm-092",
   "notes": [
    57,
    61,
@@ -864,7 +996,7 @@
   "expect_top": "A7(b5)"
  },
  {
-  "id": "nm-081",
+  "id": "nm-093",
   "notes": [
    48,
    52,
@@ -875,7 +1007,7 @@
   "expect_top": "Cmaj7(#11)"
  },
  {
-  "id": "nm-082",
+  "id": "nm-094",
   "notes": [
    51,
    55,
@@ -886,7 +1018,7 @@
   "expect_top": "Ebmaj7(#11)"
  },
  {
-  "id": "nm-083",
+  "id": "nm-095",
   "notes": [
    54,
    58,
@@ -897,7 +1029,7 @@
   "expect_top": "F#maj7(#11)"
  },
  {
-  "id": "nm-084",
+  "id": "nm-096",
   "notes": [
    57,
    61,
@@ -908,7 +1040,7 @@
   "expect_top": "Amaj7(#11)"
  },
  {
-  "id": "nm-085",
+  "id": "nm-097",
   "notes": [
    48,
    52,
@@ -920,7 +1052,7 @@
   "expect_top": "C9"
  },
  {
-  "id": "nm-086",
+  "id": "nm-098",
   "notes": [
    51,
    55,
@@ -932,7 +1064,7 @@
   "expect_top": "Eb9"
  },
  {
-  "id": "nm-087",
+  "id": "nm-099",
   "notes": [
    54,
    58,
@@ -944,7 +1076,7 @@
   "expect_top": "F#9"
  },
  {
-  "id": "nm-088",
+  "id": "nm-100",
   "notes": [
    57,
    61,
@@ -956,7 +1088,7 @@
   "expect_top": "A9"
  },
  {
-  "id": "nm-089",
+  "id": "nm-101",
   "notes": [
    48,
    52,
@@ -968,7 +1100,7 @@
   "expect_top": "Cmaj9"
  },
  {
-  "id": "nm-090",
+  "id": "nm-102",
   "notes": [
    51,
    55,
@@ -980,7 +1112,7 @@
   "expect_top": "Ebmaj9"
  },
  {
-  "id": "nm-091",
+  "id": "nm-103",
   "notes": [
    54,
    58,
@@ -992,7 +1124,7 @@
   "expect_top": "F#maj9"
  },
  {
-  "id": "nm-092",
+  "id": "nm-104",
   "notes": [
    57,
    61,
@@ -1004,7 +1136,7 @@
   "expect_top": "Amaj9"
  },
  {
-  "id": "nm-093",
+  "id": "nm-105",
   "notes": [
    48,
    51,
@@ -1016,7 +1148,7 @@
   "expect_top": "Cm9"
  },
  {
-  "id": "nm-094",
+  "id": "nm-106",
   "notes": [
    51,
    54,
@@ -1028,7 +1160,7 @@
   "expect_top": "Ebm9"
  },
  {
-  "id": "nm-095",
+  "id": "nm-107",
   "notes": [
    54,
    57,
@@ -1040,7 +1172,7 @@
   "expect_top": "F#m9"
  },
  {
-  "id": "nm-096",
+  "id": "nm-108",
   "notes": [
    57,
    60,
@@ -1052,7 +1184,7 @@
   "expect_top": "Am9"
  },
  {
-  "id": "nm-097",
+  "id": "nm-109",
   "notes": [
    48,
    51,
@@ -1064,7 +1196,7 @@
   "expect_top": "Cm(maj9)"
  },
  {
-  "id": "nm-098",
+  "id": "nm-110",
   "notes": [
    51,
    54,
@@ -1076,7 +1208,7 @@
   "expect_top": "Ebm(maj9)"
  },
  {
-  "id": "nm-099",
+  "id": "nm-111",
   "notes": [
    54,
    57,
@@ -1088,7 +1220,7 @@
   "expect_top": "F#m(maj9)"
  },
  {
-  "id": "nm-100",
+  "id": "nm-112",
   "notes": [
    57,
    60,
@@ -1100,7 +1232,7 @@
   "expect_top": "Am(maj9)"
  },
  {
-  "id": "nm-101",
+  "id": "nm-113",
   "notes": [
    48,
    52,
@@ -1111,7 +1243,7 @@
   "expect_top": "Cadd9"
  },
  {
-  "id": "nm-102",
+  "id": "nm-114",
   "notes": [
    51,
    55,
@@ -1122,7 +1254,7 @@
   "expect_top": "Ebadd9"
  },
  {
-  "id": "nm-103",
+  "id": "nm-115",
   "notes": [
    54,
    58,
@@ -1133,7 +1265,7 @@
   "expect_top": "F#add9"
  },
  {
-  "id": "nm-104",
+  "id": "nm-116",
   "notes": [
    57,
    61,
@@ -1144,7 +1276,7 @@
   "expect_top": "Aadd9"
  },
  {
-  "id": "nm-105",
+  "id": "nm-117",
   "notes": [
    48,
    51,
@@ -1155,7 +1287,7 @@
   "expect_top": "Cm(add9)"
  },
  {
-  "id": "nm-106",
+  "id": "nm-118",
   "notes": [
    51,
    54,
@@ -1166,7 +1298,7 @@
   "expect_top": "Ebm(add9)"
  },
  {
-  "id": "nm-107",
+  "id": "nm-119",
   "notes": [
    54,
    57,
@@ -1177,7 +1309,7 @@
   "expect_top": "F#m(add9)"
  },
  {
-  "id": "nm-108",
+  "id": "nm-120",
   "notes": [
    57,
    60,
@@ -1188,7 +1320,7 @@
   "expect_top": "Am(add9)"
  },
  {
-  "id": "nm-109",
+  "id": "nm-121",
   "notes": [
    48,
    53,
@@ -1200,7 +1332,7 @@
   "expect_top": "C9sus4"
  },
  {
-  "id": "nm-110",
+  "id": "nm-122",
   "notes": [
    51,
    56,
@@ -1212,7 +1344,7 @@
   "expect_top": "Eb9sus4"
  },
  {
-  "id": "nm-111",
+  "id": "nm-123",
   "notes": [
    54,
    59,
@@ -1224,7 +1356,7 @@
   "expect_top": "F#9sus4"
  },
  {
-  "id": "nm-112",
+  "id": "nm-124",
   "notes": [
    57,
    62,
@@ -1236,7 +1368,7 @@
   "expect_top": "A9sus4"
  },
  {
-  "id": "nm-113",
+  "id": "nm-125",
   "notes": [
    48,
    52,
@@ -1248,7 +1380,7 @@
   "expect_top": "C7(b9)"
  },
  {
-  "id": "nm-114",
+  "id": "nm-126",
   "notes": [
    51,
    55,
@@ -1260,7 +1392,7 @@
   "expect_top": "Eb7(b9)"
  },
  {
-  "id": "nm-115",
+  "id": "nm-127",
   "notes": [
    54,
    58,
@@ -1272,7 +1404,7 @@
   "expect_top": "F#7(b9)"
  },
  {
-  "id": "nm-116",
+  "id": "nm-128",
   "notes": [
    57,
    61,
@@ -1284,7 +1416,7 @@
   "expect_top": "A7(b9)"
  },
  {
-  "id": "nm-117",
+  "id": "nm-129",
   "notes": [
    48,
    52,
@@ -1296,7 +1428,7 @@
   "expect_top": "C7(#9)"
  },
  {
-  "id": "nm-118",
+  "id": "nm-130",
   "notes": [
    51,
    55,
@@ -1308,7 +1440,7 @@
   "expect_top": "Eb7(#9)"
  },
  {
-  "id": "nm-119",
+  "id": "nm-131",
   "notes": [
    54,
    58,
@@ -1320,7 +1452,7 @@
   "expect_top": "F#7(#9)"
  },
  {
-  "id": "nm-120",
+  "id": "nm-132",
   "notes": [
    57,
    61,
@@ -1332,7 +1464,7 @@
   "expect_top": "A7(#9)"
  },
  {
-  "id": "nm-121",
+  "id": "nm-133",
   "notes": [
    48,
    52,
@@ -1344,7 +1476,7 @@
   "expect_top": "C7(#5#9)"
  },
  {
-  "id": "nm-122",
+  "id": "nm-134",
   "notes": [
    51,
    55,
@@ -1356,7 +1488,7 @@
   "expect_top": "Eb7(#5#9)"
  },
  {
-  "id": "nm-123",
+  "id": "nm-135",
   "notes": [
    54,
    58,
@@ -1368,7 +1500,7 @@
   "expect_top": "F#7(#5#9)"
  },
  {
-  "id": "nm-124",
+  "id": "nm-136",
   "notes": [
    57,
    61,
@@ -1380,7 +1512,7 @@
   "expect_top": "A7(#5#9)"
  },
  {
-  "id": "nm-125",
+  "id": "nm-137",
   "notes": [
    48,
    52,
@@ -1392,7 +1524,7 @@
   "expect_top": "C7(#5b9)"
  },
  {
-  "id": "nm-126",
+  "id": "nm-138",
   "notes": [
    51,
    55,
@@ -1404,7 +1536,7 @@
   "expect_top": "Eb7(#5b9)"
  },
  {
-  "id": "nm-127",
+  "id": "nm-139",
   "notes": [
    54,
    58,
@@ -1416,7 +1548,7 @@
   "expect_top": "F#7(#5b9)"
  },
  {
-  "id": "nm-128",
+  "id": "nm-140",
   "notes": [
    57,
    61,
@@ -1428,7 +1560,7 @@
   "expect_top": "A7(#5b9)"
  },
  {
-  "id": "nm-129",
+  "id": "nm-141",
   "notes": [
    48,
    52,
@@ -1441,7 +1573,7 @@
   "expect_top": "C11"
  },
  {
-  "id": "nm-130",
+  "id": "nm-142",
   "notes": [
    51,
    55,
@@ -1454,7 +1586,7 @@
   "expect_top": "Eb11"
  },
  {
-  "id": "nm-131",
+  "id": "nm-143",
   "notes": [
    54,
    58,
@@ -1467,7 +1599,7 @@
   "expect_top": "F#11"
  },
  {
-  "id": "nm-132",
+  "id": "nm-144",
   "notes": [
    57,
    61,
@@ -1480,7 +1612,7 @@
   "expect_top": "A11"
  },
  {
-  "id": "nm-133",
+  "id": "nm-145",
   "notes": [
    48,
    51,
@@ -1493,7 +1625,7 @@
   "expect_top": "Cm11"
  },
  {
-  "id": "nm-134",
+  "id": "nm-146",
   "notes": [
    51,
    54,
@@ -1506,7 +1638,7 @@
   "expect_top": "Ebm11"
  },
  {
-  "id": "nm-135",
+  "id": "nm-147",
   "notes": [
    54,
    57,
@@ -1519,7 +1651,7 @@
   "expect_top": "F#m11"
  },
  {
-  "id": "nm-136",
+  "id": "nm-148",
   "notes": [
    57,
    60,
@@ -1532,7 +1664,7 @@
   "expect_top": "Am11"
  },
  {
-  "id": "nm-137",
+  "id": "nm-149",
   "notes": [
    48,
    52,
@@ -1545,7 +1677,7 @@
   "expect_top": "C7(#11)"
  },
  {
-  "id": "nm-138",
+  "id": "nm-150",
   "notes": [
    51,
    55,
@@ -1558,7 +1690,7 @@
   "expect_top": "Eb7(#11)"
  },
  {
-  "id": "nm-139",
+  "id": "nm-151",
   "notes": [
    54,
    58,
@@ -1571,7 +1703,7 @@
   "expect_top": "F#7(#11)"
  },
  {
-  "id": "nm-140",
+  "id": "nm-152",
   "notes": [
    57,
    61,
@@ -1584,7 +1716,7 @@
   "expect_top": "A7(#11)"
  },
  {
-  "id": "nm-141",
+  "id": "nm-153",
   "notes": [
    48,
    52,
@@ -1596,7 +1728,7 @@
   "expect_top": "Cmaj7(#11)"
  },
  {
-  "id": "nm-142",
+  "id": "nm-154",
   "notes": [
    51,
    55,
@@ -1608,7 +1740,7 @@
   "expect_top": "Ebmaj7(#11)"
  },
  {
-  "id": "nm-143",
+  "id": "nm-155",
   "notes": [
    54,
    58,
@@ -1620,7 +1752,7 @@
   "expect_top": "F#maj7(#11)"
  },
  {
-  "id": "nm-144",
+  "id": "nm-156",
   "notes": [
    57,
    61,
@@ -1632,7 +1764,7 @@
   "expect_top": "Amaj7(#11)"
  },
  {
-  "id": "nm-145",
+  "id": "nm-157",
   "notes": [
    48,
    52,
@@ -1645,7 +1777,7 @@
   "expect_top": "Cmaj9(#11)"
  },
  {
-  "id": "nm-146",
+  "id": "nm-158",
   "notes": [
    51,
    55,
@@ -1658,7 +1790,7 @@
   "expect_top": "Ebmaj9(#11)"
  },
  {
-  "id": "nm-147",
+  "id": "nm-159",
   "notes": [
    54,
    58,
@@ -1671,7 +1803,7 @@
   "expect_top": "F#maj9(#11)"
  },
  {
-  "id": "nm-148",
+  "id": "nm-160",
   "notes": [
    57,
    61,
@@ -1684,7 +1816,7 @@
   "expect_top": "Amaj9(#11)"
  },
  {
-  "id": "nm-149",
+  "id": "nm-161",
   "notes": [
    48,
    52,
@@ -1697,7 +1829,7 @@
   "expect_top": "C13"
  },
  {
-  "id": "nm-150",
+  "id": "nm-162",
   "notes": [
    51,
    55,
@@ -1710,7 +1842,7 @@
   "expect_top": "Eb13"
  },
  {
-  "id": "nm-151",
+  "id": "nm-163",
   "notes": [
    54,
    58,
@@ -1723,7 +1855,7 @@
   "expect_top": "F#13"
  },
  {
-  "id": "nm-152",
+  "id": "nm-164",
   "notes": [
    57,
    61,
@@ -1736,7 +1868,7 @@
   "expect_top": "A13"
  },
  {
-  "id": "nm-153",
+  "id": "nm-165",
   "notes": [
    48,
    51,
@@ -1750,7 +1882,7 @@
   "expect_top": "Cm13"
  },
  {
-  "id": "nm-154",
+  "id": "nm-166",
   "notes": [
    51,
    54,
@@ -1764,7 +1896,7 @@
   "expect_top": "Ebm13"
  },
  {
-  "id": "nm-155",
+  "id": "nm-167",
   "notes": [
    54,
    57,
@@ -1778,7 +1910,7 @@
   "expect_top": "F#m13"
  },
  {
-  "id": "nm-156",
+  "id": "nm-168",
   "notes": [
    57,
    60,
@@ -1792,7 +1924,7 @@
   "expect_top": "Am13"
  },
  {
-  "id": "nm-157",
+  "id": "nm-169",
   "notes": [
    48,
    52,
@@ -1805,7 +1937,7 @@
   "expect_top": "Cmaj13"
  },
  {
-  "id": "nm-158",
+  "id": "nm-170",
   "notes": [
    51,
    55,
@@ -1818,7 +1950,7 @@
   "expect_top": "Ebmaj13"
  },
  {
-  "id": "nm-159",
+  "id": "nm-171",
   "notes": [
    54,
    58,
@@ -1831,7 +1963,7 @@
   "expect_top": "F#maj13"
  },
  {
-  "id": "nm-160",
+  "id": "nm-172",
   "notes": [
    57,
    61,
@@ -1844,7 +1976,7 @@
   "expect_top": "Amaj13"
  },
  {
-  "id": "nm-161",
+  "id": "nm-173",
   "notes": [
    48,
    52,
@@ -1857,7 +1989,7 @@
   "expect_top": "C13(b9)"
  },
  {
-  "id": "nm-162",
+  "id": "nm-174",
   "notes": [
    51,
    55,
@@ -1870,7 +2002,7 @@
   "expect_top": "Eb13(b9)"
  },
  {
-  "id": "nm-163",
+  "id": "nm-175",
   "notes": [
    54,
    58,
@@ -1883,7 +2015,7 @@
   "expect_top": "F#13(b9)"
  },
  {
-  "id": "nm-164",
+  "id": "nm-176",
   "notes": [
    57,
    61,
@@ -1896,7 +2028,7 @@
   "expect_top": "A13(b9)"
  },
  {
-  "id": "nm-165",
+  "id": "nm-177",
   "notes": [
    48,
    52,
@@ -1910,7 +2042,7 @@
   "expect_top": "C13(#11)"
  },
  {
-  "id": "nm-166",
+  "id": "nm-178",
   "notes": [
    51,
    55,
@@ -1924,7 +2056,7 @@
   "expect_top": "Eb13(#11)"
  },
  {
-  "id": "nm-167",
+  "id": "nm-179",
   "notes": [
    54,
    58,
@@ -1938,7 +2070,7 @@
   "expect_top": "F#13(#11)"
  },
  {
-  "id": "nm-168",
+  "id": "nm-180",
   "notes": [
    57,
    61,
@@ -1952,7 +2084,7 @@
   "expect_top": "A13(#11)"
  },
  {
-  "id": "nm-169",
+  "id": "nm-181",
   "notes": [
    48,
    52,
@@ -1963,7 +2095,7 @@
   "expect_top": "C7(#5)"
  },
  {
-  "id": "nm-170",
+  "id": "nm-182",
   "notes": [
    51,
    55,
@@ -1974,7 +2106,7 @@
   "expect_top": "Eb7(#5)"
  },
  {
-  "id": "nm-171",
+  "id": "nm-183",
   "notes": [
    54,
    58,
@@ -1985,7 +2117,7 @@
   "expect_top": "F#7(#5)"
  },
  {
-  "id": "nm-172",
+  "id": "nm-184",
   "notes": [
    57,
    61,
@@ -1996,7 +2128,7 @@
   "expect_top": "A7(#5)"
  },
  {
-  "id": "nm-173",
+  "id": "nm-185",
   "notes": [
    48,
    52,
@@ -2008,7 +2140,7 @@
   "expect_top": "C7(#5#9)"
  },
  {
-  "id": "nm-174",
+  "id": "nm-186",
   "notes": [
    51,
    55,
@@ -2020,7 +2152,7 @@
   "expect_top": "Eb7(#5#9)"
  },
  {
-  "id": "nm-175",
+  "id": "nm-187",
   "notes": [
    54,
    58,
@@ -2032,7 +2164,7 @@
   "expect_top": "F#7(#5#9)"
  },
  {
-  "id": "nm-176",
+  "id": "nm-188",
   "notes": [
    57,
    61,
@@ -2044,7 +2176,7 @@
   "expect_top": "A7(#5#9)"
  },
  {
-  "id": "nm-177",
+  "id": "nm-189",
   "notes": [
    48,
    52,
@@ -2056,7 +2188,7 @@
   "expect_top": "C7(#5b9)"
  },
  {
-  "id": "nm-178",
+  "id": "nm-190",
   "notes": [
    51,
    55,
@@ -2068,7 +2200,7 @@
   "expect_top": "Eb7(#5b9)"
  },
  {
-  "id": "nm-179",
+  "id": "nm-191",
   "notes": [
    54,
    58,
@@ -2080,7 +2212,7 @@
   "expect_top": "F#7(#5b9)"
  },
  {
-  "id": "nm-180",
+  "id": "nm-192",
   "notes": [
    57,
    61,
@@ -2092,7 +2224,7 @@
   "expect_top": "A7(#5b9)"
  },
  {
-  "id": "nm-181",
+  "id": "nm-193",
   "notes": [
    48,
    52,
@@ -2102,7 +2234,7 @@
   "expect_top": "C"
  },
  {
-  "id": "nm-182",
+  "id": "nm-194",
   "notes": [
    49,
    53,
@@ -2112,7 +2244,7 @@
   "expect_top": "Db"
  },
  {
-  "id": "nm-183",
+  "id": "nm-195",
   "notes": [
    50,
    54,
@@ -2122,7 +2254,7 @@
   "expect_top": "D"
  },
  {
-  "id": "nm-184",
+  "id": "nm-196",
   "notes": [
    51,
    55,
@@ -2132,7 +2264,7 @@
   "expect_top": "Eb"
  },
  {
-  "id": "nm-185",
+  "id": "nm-197",
   "notes": [
    52,
    56,
@@ -2142,7 +2274,7 @@
   "expect_top": "E"
  },
  {
-  "id": "nm-186",
+  "id": "nm-198",
   "notes": [
    53,
    57,
@@ -2152,7 +2284,7 @@
   "expect_top": "F"
  },
  {
-  "id": "nm-187",
+  "id": "nm-199",
   "notes": [
    54,
    58,
@@ -2162,7 +2294,7 @@
   "expect_top": "F#"
  },
  {
-  "id": "nm-188",
+  "id": "nm-200",
   "notes": [
    55,
    59,
@@ -2172,7 +2304,7 @@
   "expect_top": "G"
  },
  {
-  "id": "nm-189",
+  "id": "nm-201",
   "notes": [
    56,
    60,
@@ -2182,7 +2314,7 @@
   "expect_top": "Ab"
  },
  {
-  "id": "nm-190",
+  "id": "nm-202",
   "notes": [
    57,
    61,
@@ -2192,7 +2324,7 @@
   "expect_top": "A"
  },
  {
-  "id": "nm-191",
+  "id": "nm-203",
   "notes": [
    58,
    62,
@@ -2202,7 +2334,7 @@
   "expect_top": "Bb"
  },
  {
-  "id": "nm-192",
+  "id": "nm-204",
   "notes": [
    59,
    63,
@@ -2212,7 +2344,7 @@
   "expect_top": "B"
  },
  {
-  "id": "nm-193",
+  "id": "nm-205",
   "notes": [
    48,
    51,
@@ -2222,7 +2354,7 @@
   "expect_top": "Cm"
  },
  {
-  "id": "nm-194",
+  "id": "nm-206",
   "notes": [
    49,
    52,
@@ -2232,7 +2364,7 @@
   "expect_top": "C#m"
  },
  {
-  "id": "nm-195",
+  "id": "nm-207",
   "notes": [
    50,
    53,
@@ -2242,7 +2374,7 @@
   "expect_top": "Dm"
  },
  {
-  "id": "nm-196",
+  "id": "nm-208",
   "notes": [
    51,
    54,
@@ -2252,7 +2384,7 @@
   "expect_top": "Ebm"
  },
  {
-  "id": "nm-197",
+  "id": "nm-209",
   "notes": [
    52,
    55,
@@ -2262,7 +2394,7 @@
   "expect_top": "Em"
  },
  {
-  "id": "nm-198",
+  "id": "nm-210",
   "notes": [
    53,
    56,
@@ -2272,7 +2404,7 @@
   "expect_top": "Fm"
  },
  {
-  "id": "nm-199",
+  "id": "nm-211",
   "notes": [
    54,
    57,
@@ -2282,7 +2414,7 @@
   "expect_top": "F#m"
  },
  {
-  "id": "nm-200",
+  "id": "nm-212",
   "notes": [
    55,
    58,
@@ -2292,7 +2424,7 @@
   "expect_top": "Gm"
  },
  {
-  "id": "nm-201",
+  "id": "nm-213",
   "notes": [
    56,
    59,
@@ -2302,7 +2434,7 @@
   "expect_top": "G#m"
  },
  {
-  "id": "nm-202",
+  "id": "nm-214",
   "notes": [
    57,
    60,
@@ -2312,7 +2444,7 @@
   "expect_top": "Am"
  },
  {
-  "id": "nm-203",
+  "id": "nm-215",
   "notes": [
    58,
    61,
@@ -2322,7 +2454,7 @@
   "expect_top": "Bbm"
  },
  {
-  "id": "nm-204",
+  "id": "nm-216",
   "notes": [
    59,
    62,
@@ -2332,7 +2464,7 @@
   "expect_top": "Bm"
  },
  {
-  "id": "nm-205",
+  "id": "nm-217",
   "notes": [
    48,
    52,
@@ -2343,7 +2475,7 @@
   "expect_top": "C7"
  },
  {
-  "id": "nm-206",
+  "id": "nm-218",
   "notes": [
    49,
    53,
@@ -2354,7 +2486,7 @@
   "expect_top": "Db7"
  },
  {
-  "id": "nm-207",
+  "id": "nm-219",
   "notes": [
    50,
    54,
@@ -2365,7 +2497,7 @@
   "expect_top": "D7"
  },
  {
-  "id": "nm-208",
+  "id": "nm-220",
   "notes": [
    51,
    55,
@@ -2376,7 +2508,7 @@
   "expect_top": "Eb7"
  },
  {
-  "id": "nm-209",
+  "id": "nm-221",
   "notes": [
    52,
    56,
@@ -2387,7 +2519,7 @@
   "expect_top": "E7"
  },
  {
-  "id": "nm-210",
+  "id": "nm-222",
   "notes": [
    53,
    57,
@@ -2398,7 +2530,7 @@
   "expect_top": "F7"
  },
  {
-  "id": "nm-211",
+  "id": "nm-223",
   "notes": [
    54,
    58,
@@ -2409,7 +2541,7 @@
   "expect_top": "F#7"
  },
  {
-  "id": "nm-212",
+  "id": "nm-224",
   "notes": [
    55,
    59,
@@ -2420,7 +2552,7 @@
   "expect_top": "G7"
  },
  {
-  "id": "nm-213",
+  "id": "nm-225",
   "notes": [
    56,
    60,
@@ -2431,7 +2563,7 @@
   "expect_top": "Ab7"
  },
  {
-  "id": "nm-214",
+  "id": "nm-226",
   "notes": [
    57,
    61,
@@ -2442,7 +2574,7 @@
   "expect_top": "A7"
  },
  {
-  "id": "nm-215",
+  "id": "nm-227",
   "notes": [
    58,
    62,
@@ -2453,7 +2585,7 @@
   "expect_top": "Bb7"
  },
  {
-  "id": "nm-216",
+  "id": "nm-228",
   "notes": [
    59,
    63,
@@ -2464,7 +2596,7 @@
   "expect_top": "B7"
  },
  {
-  "id": "nm-217",
+  "id": "nm-229",
   "notes": [
    48,
    51,
@@ -2475,7 +2607,7 @@
   "expect_top": "Cm7"
  },
  {
-  "id": "nm-218",
+  "id": "nm-230",
   "notes": [
    49,
    52,
@@ -2486,7 +2618,7 @@
   "expect_top": "C#m7"
  },
  {
-  "id": "nm-219",
+  "id": "nm-231",
   "notes": [
    50,
    53,
@@ -2497,7 +2629,7 @@
   "expect_top": "Dm7"
  },
  {
-  "id": "nm-220",
+  "id": "nm-232",
   "notes": [
    51,
    54,
@@ -2508,7 +2640,7 @@
   "expect_top": "Ebm7"
  },
  {
-  "id": "nm-221",
+  "id": "nm-233",
   "notes": [
    52,
    55,
@@ -2519,7 +2651,7 @@
   "expect_top": "Em7"
  },
  {
-  "id": "nm-222",
+  "id": "nm-234",
   "notes": [
    53,
    56,
@@ -2530,7 +2662,7 @@
   "expect_top": "Fm7"
  },
  {
-  "id": "nm-223",
+  "id": "nm-235",
   "notes": [
    54,
    57,
@@ -2541,7 +2673,7 @@
   "expect_top": "F#m7"
  },
  {
-  "id": "nm-224",
+  "id": "nm-236",
   "notes": [
    55,
    58,
@@ -2552,7 +2684,7 @@
   "expect_top": "Gm7"
  },
  {
-  "id": "nm-225",
+  "id": "nm-237",
   "notes": [
    56,
    59,
@@ -2563,7 +2695,7 @@
   "expect_top": "G#m7"
  },
  {
-  "id": "nm-226",
+  "id": "nm-238",
   "notes": [
    57,
    60,
@@ -2574,7 +2706,7 @@
   "expect_top": "Am7"
  },
  {
-  "id": "nm-227",
+  "id": "nm-239",
   "notes": [
    58,
    61,
@@ -2585,7 +2717,7 @@
   "expect_top": "Bbm7"
  },
  {
-  "id": "nm-228",
+  "id": "nm-240",
   "notes": [
    59,
    62,
@@ -2596,7 +2728,7 @@
   "expect_top": "Bm7"
  },
  {
-  "id": "nm-229",
+  "id": "nm-241",
   "notes": [
    48,
    52,
@@ -2607,7 +2739,7 @@
   "expect_top": "Cmaj7"
  },
  {
-  "id": "nm-230",
+  "id": "nm-242",
   "notes": [
    49,
    53,
@@ -2618,7 +2750,7 @@
   "expect_top": "Dbmaj7"
  },
  {
-  "id": "nm-231",
+  "id": "nm-243",
   "notes": [
    50,
    54,
@@ -2629,7 +2761,7 @@
   "expect_top": "Dmaj7"
  },
  {
-  "id": "nm-232",
+  "id": "nm-244",
   "notes": [
    51,
    55,
@@ -2640,7 +2772,7 @@
   "expect_top": "Ebmaj7"
  },
  {
-  "id": "nm-233",
+  "id": "nm-245",
   "notes": [
    52,
    56,
@@ -2651,7 +2783,7 @@
   "expect_top": "Emaj7"
  },
  {
-  "id": "nm-234",
+  "id": "nm-246",
   "notes": [
    53,
    57,
@@ -2662,7 +2794,7 @@
   "expect_top": "Fmaj7"
  },
  {
-  "id": "nm-235",
+  "id": "nm-247",
   "notes": [
    54,
    58,
@@ -2673,7 +2805,7 @@
   "expect_top": "F#maj7"
  },
  {
-  "id": "nm-236",
+  "id": "nm-248",
   "notes": [
    55,
    59,
@@ -2684,7 +2816,7 @@
   "expect_top": "Gmaj7"
  },
  {
-  "id": "nm-237",
+  "id": "nm-249",
   "notes": [
    56,
    60,
@@ -2695,7 +2827,7 @@
   "expect_top": "Abmaj7"
  },
  {
-  "id": "nm-238",
+  "id": "nm-250",
   "notes": [
    57,
    61,
@@ -2706,7 +2838,7 @@
   "expect_top": "Amaj7"
  },
  {
-  "id": "nm-239",
+  "id": "nm-251",
   "notes": [
    58,
    62,
@@ -2717,7 +2849,7 @@
   "expect_top": "Bbmaj7"
  },
  {
-  "id": "nm-240",
+  "id": "nm-252",
   "notes": [
    59,
    63,
@@ -2728,7 +2860,7 @@
   "expect_top": "Bmaj7"
  },
  {
-  "id": "nm-241",
+  "id": "nm-253",
   "notes": [
    48,
    52,
@@ -2738,7 +2870,7 @@
   "expect_top": "C7(no5)"
  },
  {
-  "id": "nm-242",
+  "id": "nm-254",
   "notes": [
    53,
    57,
@@ -2748,7 +2880,7 @@
   "expect_top": "F7(no5)"
  },
  {
-  "id": "nm-243",
+  "id": "nm-255",
   "notes": [
    48,
    52,
@@ -2758,7 +2890,7 @@
   "expect_top": "Cmaj7(no5)"
  },
  {
-  "id": "nm-244",
+  "id": "nm-256",
   "notes": [
    53,
    57,
@@ -2768,7 +2900,7 @@
   "expect_top": "Fmaj7(no5)"
  },
  {
-  "id": "nm-245",
+  "id": "nm-257",
   "notes": [
    48,
    51,
@@ -2778,7 +2910,7 @@
   "expect_top": "Cm7(no5)"
  },
  {
-  "id": "nm-246",
+  "id": "nm-258",
   "notes": [
    53,
    56,
@@ -2788,7 +2920,7 @@
   "expect_top": "Fm7(no5)"
  },
  {
-  "id": "nm-247",
+  "id": "nm-259",
   "notes": [
    48,
    52,
@@ -2799,7 +2931,7 @@
   "expect_top": "C9(no5)"
  },
  {
-  "id": "nm-248",
+  "id": "nm-260",
   "notes": [
    53,
    57,
@@ -2810,7 +2942,7 @@
   "expect_top": "F9(no5)"
  },
  {
-  "id": "nm-249",
+  "id": "nm-261",
   "notes": [
    48,
    52,
@@ -2822,7 +2954,7 @@
   "expect_top": "C13"
  },
  {
-  "id": "nm-250",
+  "id": "nm-262",
   "notes": [
    53,
    57,
@@ -2834,7 +2966,7 @@
   "expect_top": "F13"
  },
  {
-  "id": "nm-251",
+  "id": "nm-263",
   "notes": [
    48,
    51,
@@ -2846,7 +2978,7 @@
   "expect_top": "Cm11"
  },
  {
-  "id": "nm-252",
+  "id": "nm-264",
   "notes": [
    53,
    56,
@@ -2858,7 +2990,7 @@
   "expect_top": "Fm11"
  },
  {
-  "id": "nm-253",
+  "id": "nm-265",
   "notes": [
    48,
    52,
@@ -2869,7 +3001,7 @@
   "expect_top": "C6/9"
  },
  {
-  "id": "nm-254",
+  "id": "nm-266",
   "notes": [
    53,
    57,
@@ -2880,7 +3012,7 @@
   "expect_top": "F6/9"
  },
  {
-  "id": "nm-255",
+  "id": "nm-267",
   "notes": [
    52,
    60,
@@ -2891,7 +3023,7 @@
   "expect_top": "C/E"
  },
  {
-  "id": "nm-256",
+  "id": "nm-268",
   "notes": [
    55,
    60,
@@ -2902,7 +3034,7 @@
   "expect_top": "C/G"
  },
  {
-  "id": "nm-257",
+  "id": "nm-269",
   "notes": [
    54,
    62,
@@ -2913,7 +3045,7 @@
   "expect_top": "D/F#"
  },
  {
-  "id": "nm-258",
+  "id": "nm-270",
   "notes": [
    57,
    62,
@@ -2924,7 +3056,7 @@
   "expect_top": "D/A"
  },
  {
-  "id": "nm-259",
+  "id": "nm-271",
   "notes": [
    59,
    67,
@@ -2935,7 +3067,7 @@
   "expect_top": "G/B"
  },
  {
-  "id": "nm-260",
+  "id": "nm-272",
   "notes": [
    50,
    67,
@@ -2946,7 +3078,7 @@
   "expect_top": "G/D"
  },
  {
-  "id": "nm-261",
+  "id": "nm-273",
   "notes": [
    51,
    60,
@@ -2957,7 +3089,7 @@
   "expect_top": "Eb6(no5)"
  },
  {
-  "id": "nm-262",
+  "id": "nm-274",
   "notes": [
    55,
    60,
@@ -2968,7 +3100,7 @@
   "expect_top": "Cm/G"
  },
  {
-  "id": "nm-263",
+  "id": "nm-275",
   "notes": [
    53,
    62,
@@ -2979,7 +3111,7 @@
   "expect_top": "F6(no5)"
  },
  {
-  "id": "nm-264",
+  "id": "nm-276",
   "notes": [
    57,
    62,
@@ -2990,7 +3122,7 @@
   "expect_top": "Dm/A"
  },
  {
-  "id": "nm-265",
+  "id": "nm-277",
   "notes": [
    58,
    67,
@@ -3001,7 +3133,7 @@
   "expect_top": "Bb6(no5)"
  },
  {
-  "id": "nm-266",
+  "id": "nm-278",
   "notes": [
    50,
    67,
@@ -3012,7 +3144,7 @@
   "expect_top": "Gm/D"
  },
  {
-  "id": "nm-267",
+  "id": "nm-279",
   "notes": [
    52,
    60,
@@ -3024,7 +3156,7 @@
   "expect_top": "C7/E"
  },
  {
-  "id": "nm-268",
+  "id": "nm-280",
   "notes": [
    55,
    60,
@@ -3036,7 +3168,7 @@
   "expect_top": "C7/G"
  },
  {
-  "id": "nm-269",
+  "id": "nm-281",
   "notes": [
    58,
    60,
@@ -3048,7 +3180,7 @@
   "expect_top": "C7/Bb"
  },
  {
-  "id": "nm-270",
+  "id": "nm-282",
   "notes": [
    54,
    62,
@@ -3060,7 +3192,7 @@
   "expect_top": "D7/F#"
  },
  {
-  "id": "nm-271",
+  "id": "nm-283",
   "notes": [
    57,
    62,
@@ -3072,7 +3204,7 @@
   "expect_top": "D7/A"
  },
  {
-  "id": "nm-272",
+  "id": "nm-284",
   "notes": [
    48,
    62,
@@ -3084,7 +3216,7 @@
   "expect_top": "D7/C"
  },
  {
-  "id": "nm-273",
+  "id": "nm-285",
   "notes": [
    59,
    67,
@@ -3096,7 +3228,7 @@
   "expect_top": "G7/B"
  },
  {
-  "id": "nm-274",
+  "id": "nm-286",
   "notes": [
    50,
    67,
@@ -3108,7 +3240,7 @@
   "expect_top": "G7/D"
  },
  {
-  "id": "nm-275",
+  "id": "nm-287",
   "notes": [
    53,
    67,
@@ -3120,7 +3252,7 @@
   "expect_top": "G7/F"
  },
  {
-  "id": "nm-276",
+  "id": "nm-288",
   "notes": [
    51,
    60,
@@ -3132,7 +3264,7 @@
   "expect_top": "Eb6"
  },
  {
-  "id": "nm-277",
+  "id": "nm-289",
   "notes": [
    55,
    60,
@@ -3144,7 +3276,7 @@
   "expect_top": "Cm7/G"
  },
  {
-  "id": "nm-278",
+  "id": "nm-290",
   "notes": [
    58,
    60,
@@ -3156,7 +3288,7 @@
   "expect_top": "Cm7/Bb"
  },
  {
-  "id": "nm-279",
+  "id": "nm-291",
   "notes": [
    53,
    62,
@@ -3168,7 +3300,7 @@
   "expect_top": "F6"
  },
  {
-  "id": "nm-280",
+  "id": "nm-292",
   "notes": [
    57,
    62,
@@ -3180,7 +3312,7 @@
   "expect_top": "Dm7/A"
  },
  {
-  "id": "nm-281",
+  "id": "nm-293",
   "notes": [
    48,
    62,
@@ -3192,7 +3324,7 @@
   "expect_top": "Dm7/C"
  },
  {
-  "id": "nm-282",
+  "id": "nm-294",
   "notes": [
    58,
    67,
@@ -3204,7 +3336,7 @@
   "expect_top": "Bb6"
  },
  {
-  "id": "nm-283",
+  "id": "nm-295",
   "notes": [
    50,
    67,
@@ -3216,7 +3348,7 @@
   "expect_top": "Gm7/D"
  },
  {
-  "id": "nm-284",
+  "id": "nm-296",
   "notes": [
    53,
    67,
@@ -3228,7 +3360,7 @@
   "expect_top": "Gm7/F"
  },
  {
-  "id": "nm-285",
+  "id": "nm-297",
   "notes": [
    52,
    60,
@@ -3240,7 +3372,7 @@
   "expect_top": "Cmaj7/E"
  },
  {
-  "id": "nm-286",
+  "id": "nm-298",
   "notes": [
    55,
    60,
@@ -3252,7 +3384,7 @@
   "expect_top": "Cmaj7/G"
  },
  {
-  "id": "nm-287",
+  "id": "nm-299",
   "notes": [
    59,
    60,
@@ -3264,7 +3396,7 @@
   "expect_top": "Cmaj7/B"
  },
  {
-  "id": "nm-288",
+  "id": "nm-300",
   "notes": [
    54,
    62,
@@ -3276,7 +3408,7 @@
   "expect_top": "Dmaj7/F#"
  },
  {
-  "id": "nm-289",
+  "id": "nm-301",
   "notes": [
    57,
    62,
@@ -3288,7 +3420,7 @@
   "expect_top": "Dmaj7/A"
  },
  {
-  "id": "nm-290",
+  "id": "nm-302",
   "notes": [
    49,
    62,
@@ -3300,7 +3432,7 @@
   "expect_top": "Dmaj7/C#"
  },
  {
-  "id": "nm-291",
+  "id": "nm-303",
   "notes": [
    59,
    67,
@@ -3312,7 +3444,7 @@
   "expect_top": "Gmaj7/B"
  },
  {
-  "id": "nm-292",
+  "id": "nm-304",
   "notes": [
    50,
    67,
@@ -3324,7 +3456,7 @@
   "expect_top": "Gmaj7/D"
  },
  {
-  "id": "nm-293",
+  "id": "nm-305",
   "notes": [
    54,
    67,
@@ -3336,7 +3468,7 @@
   "expect_top": "Gmaj7/F#"
  },
  {
-  "id": "nm-294",
+  "id": "nm-306",
   "notes": [
    51,
    60,
@@ -3347,7 +3479,7 @@
   "expect_top": "Ebm6(no5)"
  },
  {
-  "id": "nm-295",
+  "id": "nm-307",
   "notes": [
    54,
    60,
@@ -3358,7 +3490,7 @@
   "expect_top": "Cdim/Gb"
  },
  {
-  "id": "nm-296",
+  "id": "nm-308",
   "notes": [
    53,
    62,
@@ -3369,7 +3501,7 @@
   "expect_top": "Fm6(no5)"
  },
  {
-  "id": "nm-297",
+  "id": "nm-309",
   "notes": [
    56,
    62,
@@ -3380,7 +3512,7 @@
   "expect_top": "Ddim/Ab"
  },
  {
-  "id": "nm-298",
+  "id": "nm-310",
   "notes": [
    58,
    67,
@@ -3391,7 +3523,7 @@
   "expect_top": "Bbm6(no5)"
  },
  {
-  "id": "nm-299",
+  "id": "nm-311",
   "notes": [
    49,
    67,
@@ -3402,7 +3534,7 @@
   "expect_top": "Gdim/Db"
  },
  {
-  "id": "nm-300",
+  "id": "nm-312",
   "notes": [
    50,
    60,
@@ -3418,7 +3550,7 @@
   "why": "bass-as-root 9sus4 outweighs add9 over a 9th bass; slash reading stays an alternate"
  },
  {
-  "id": "nm-301",
+  "id": "nm-313",
   "notes": [
    45,
    48,
@@ -3431,7 +3563,7 @@
   "why": "13th in bass: slash only, 5th absent silently"
  },
  {
-  "id": "nm-302",
+  "id": "nm-314",
   "notes": [
    48,
    58,
@@ -3446,7 +3578,110 @@
   "why": "same pc set: 9sus4 outweighs 11 (spec pc-set collision)"
  },
  {
-  "id": "nm-303",
+  "id": "nm-315",
+  "notes": [
+   54,
+   65,
+   68,
+   73
+  ],
+  "key": "Db",
+  "expect_top": "Gbmaj7sus2",
+  "why": "Gb F Ab Db: maj7sus2, not a cluster (user report)"
+ },
+ {
+  "id": "nm-316",
+  "notes": [
+   48,
+   50,
+   55,
+   58
+  ],
+  "key": null,
+  "expect_top": "C7sus2",
+  "expect_alternates_include": [
+   "Bb6/9/C"
+  ],
+  "why": "7sus2 with root in bass outweighs the rootless 6/9 rotation"
+ },
+ {
+  "id": "nm-317",
+  "notes": [
+   48,
+   53,
+   55,
+   59
+  ],
+  "key": null,
+  "expect_top": "Cmaj7sus4"
+ },
+ {
+  "id": "nm-318",
+  "notes": [
+   49,
+   60,
+   64,
+   67
+  ],
+  "key": null,
+  "expect_top": "C/Db",
+  "why": "non-tone bass under a plain triad: slash-bass fallback, not cluster"
+ },
+ {
+  "id": "nm-319",
+  "notes": [
+   53,
+   64,
+   68,
+   71
+  ],
+  "key": null,
+  "expect_top": "E/F",
+  "why": "classic E-over-F non-tone bass"
+ },
+ {
+  "id": "nm-320",
+  "notes": [
+   41,
+   48,
+   51,
+   55,
+   57,
+   60,
+   63
+  ],
+  "key": "Db",
+  "expect_top": "F9",
+  "expect_alternates_include": [
+   "Cm6/F",
+   "Am7b5/F"
+  ],
+  "why": "slash-bass readings rank as alternates under the exact F9 match"
+ },
+ {
+  "id": "nm-321",
+  "notes": [
+   48,
+   55,
+   58
+  ],
+  "key": null,
+  "expect_top": "C7(no3)",
+  "why": "root-5th-b7 shell voicing reads as a third-less dominant (user report)"
+ },
+ {
+  "id": "nm-322",
+  "notes": [
+   48,
+   55,
+   59
+  ],
+  "key": null,
+  "expect_top": "Cmaj7(no3)",
+  "why": "root-5th-maj7 shell voicing"
+ },
+ {
+  "id": "nm-323",
   "notes": [
    60,
    61
@@ -3455,7 +3690,7 @@
   "expect_top": "C·Db (m2)"
  },
  {
-  "id": "nm-304",
+  "id": "nm-324",
   "notes": [
    60,
    62
@@ -3464,7 +3699,7 @@
   "expect_top": "C·D (M2)"
  },
  {
-  "id": "nm-305",
+  "id": "nm-325",
   "notes": [
    60,
    63
@@ -3473,7 +3708,7 @@
   "expect_top": "C·Eb (m3)"
  },
  {
-  "id": "nm-306",
+  "id": "nm-326",
   "notes": [
    60,
    64
@@ -3482,7 +3717,7 @@
   "expect_top": "C·E (M3)"
  },
  {
-  "id": "nm-307",
+  "id": "nm-327",
   "notes": [
    60,
    65
@@ -3491,7 +3726,7 @@
   "expect_top": "C·F (P4)"
  },
  {
-  "id": "nm-308",
+  "id": "nm-328",
   "notes": [
    60,
    66
@@ -3500,7 +3735,7 @@
   "expect_top": "C·F# (TT)"
  },
  {
-  "id": "nm-309",
+  "id": "nm-329",
   "notes": [
    60,
    67
@@ -3512,7 +3747,7 @@
   ]
  },
  {
-  "id": "nm-310",
+  "id": "nm-330",
   "notes": [
    60,
    68
@@ -3521,7 +3756,7 @@
   "expect_top": "C·Ab (m6)"
  },
  {
-  "id": "nm-311",
+  "id": "nm-331",
   "notes": [
    60,
    69
@@ -3530,7 +3765,7 @@
   "expect_top": "C·A (M6)"
  },
  {
-  "id": "nm-312",
+  "id": "nm-332",
   "notes": [
    60,
    70
@@ -3539,7 +3774,7 @@
   "expect_top": "C·Bb (m7)"
  },
  {
-  "id": "nm-313",
+  "id": "nm-333",
   "notes": [
    60,
    71
@@ -3548,7 +3783,7 @@
   "expect_top": "C·B (M7)"
  },
  {
-  "id": "nm-314",
+  "id": "nm-334",
   "notes": [
    60,
    72
@@ -3557,7 +3792,7 @@
   "expect_top": "C·C (P8)"
  },
  {
-  "id": "nm-315",
+  "id": "nm-335",
   "notes": [
    60
   ],
@@ -3565,7 +3800,7 @@
   "expect_top": "C"
  },
  {
-  "id": "nm-316",
+  "id": "nm-336",
   "notes": [
    61
   ],
@@ -3573,7 +3808,7 @@
   "expect_top": "Db"
  },
  {
-  "id": "nm-317",
+  "id": "nm-337",
   "notes": [
    62
   ],
@@ -3581,7 +3816,7 @@
   "expect_top": "D"
  },
  {
-  "id": "nm-318",
+  "id": "nm-338",
   "notes": [
    63
   ],
@@ -3589,7 +3824,7 @@
   "expect_top": "Eb"
  },
  {
-  "id": "nm-319",
+  "id": "nm-339",
   "notes": [
    64
   ],
@@ -3597,7 +3832,7 @@
   "expect_top": "E"
  },
  {
-  "id": "nm-320",
+  "id": "nm-340",
   "notes": [
    65
   ],
@@ -3605,7 +3840,7 @@
   "expect_top": "F"
  },
  {
-  "id": "nm-321",
+  "id": "nm-341",
   "notes": [
    66
   ],
@@ -3613,7 +3848,7 @@
   "expect_top": "F#"
  },
  {
-  "id": "nm-322",
+  "id": "nm-342",
   "notes": [
    67
   ],
@@ -3621,7 +3856,7 @@
   "expect_top": "G"
  },
  {
-  "id": "nm-323",
+  "id": "nm-343",
   "notes": [
    68
   ],
@@ -3629,7 +3864,7 @@
   "expect_top": "Ab"
  },
  {
-  "id": "nm-324",
+  "id": "nm-344",
   "notes": [
    69
   ],
@@ -3637,7 +3872,7 @@
   "expect_top": "A"
  },
  {
-  "id": "nm-325",
+  "id": "nm-345",
   "notes": [
    70
   ],
@@ -3645,7 +3880,7 @@
   "expect_top": "Bb"
  },
  {
-  "id": "nm-326",
+  "id": "nm-346",
   "notes": [
    71
   ],
@@ -3653,7 +3888,7 @@
   "expect_top": "B"
  },
  {
-  "id": "nm-327",
+  "id": "nm-347",
   "notes": [
    61
   ],
@@ -3662,7 +3897,7 @@
   "accidental_pref": "sharps"
  },
  {
-  "id": "nm-328",
+  "id": "nm-348",
   "notes": [
    63
   ],
@@ -3671,7 +3906,7 @@
   "accidental_pref": "flats"
  },
  {
-  "id": "nm-329",
+  "id": "nm-349",
   "notes": [
    48,
    52,
@@ -3686,7 +3921,7 @@
   "why": "6 vs relative m7: bass decides"
  },
  {
-  "id": "nm-330",
+  "id": "nm-350",
   "notes": [
    45,
    48,
@@ -3700,7 +3935,7 @@
   ]
  },
  {
-  "id": "nm-331",
+  "id": "nm-351",
   "notes": [
    48,
    51,
@@ -3714,7 +3949,7 @@
   ]
  },
  {
-  "id": "nm-332",
+  "id": "nm-352",
   "notes": [
    45,
    48,
@@ -3728,7 +3963,7 @@
   ]
  },
  {
-  "id": "nm-333",
+  "id": "nm-353",
   "notes": [
    48,
    50,
@@ -3741,7 +3976,7 @@
   ]
  },
  {
-  "id": "nm-334",
+  "id": "nm-354",
   "notes": [
    43,
    48,
@@ -3754,7 +3989,7 @@
   ]
  },
  {
-  "id": "nm-335",
+  "id": "nm-355",
   "notes": [
    48,
    52,
@@ -3769,7 +4004,7 @@
   "why": "symmetric aug: all three roots are alternates; Eaug spells its A5 as B# by interval rule"
  },
  {
-  "id": "nm-336",
+  "id": "nm-356",
   "notes": [
    48,
    51,
@@ -3785,7 +4020,7 @@
   ]
  },
  {
-  "id": "nm-337",
+  "id": "nm-357",
   "notes": [
    48,
    52,
@@ -3798,7 +4033,7 @@
   "why": "Hendrix chord: #9 beats b3 reading (no m-template fits E natural)"
  },
  {
-  "id": "nm-338",
+  "id": "nm-358",
   "notes": [
    48,
    52,
@@ -3814,7 +4049,7 @@
   "why": "PLAN §3.2 flagship example"
  },
  {
-  "id": "nm-339",
+  "id": "nm-359",
   "notes": [
    36,
    48,
@@ -3827,7 +4062,7 @@
   "why": "doubled root collapses to one pc"
  },
  {
-  "id": "nm-340",
+  "id": "nm-360",
   "notes": [
    50,
    53,
@@ -3839,7 +4074,7 @@
   "why": "diatonic bonus keeps ii7 on top in C"
  },
  {
-  "id": "nm-341",
+  "id": "nm-361",
   "notes": [
    50,
    55,
@@ -3851,7 +4086,7 @@
   "why": "V7 second inversion in C"
  },
  {
-  "id": "nm-342",
+  "id": "nm-362",
   "notes": [
    48,
    53,
@@ -3862,7 +4097,7 @@
   "why": "borrowed iv in C, 2nd inv"
  },
  {
-  "id": "nm-343",
+  "id": "nm-363",
   "notes": [
    48,
    52,
@@ -3876,7 +4111,7 @@
   "why": "Petrushka chord: disjoint triads, no tertian exact match -> polychord tops cluster"
  },
  {
-  "id": "nm-344",
+  "id": "nm-364",
   "notes": [
    48,
    52,
@@ -3890,7 +4125,7 @@
   "why": "Petrushka-style clash: polychord is the only name"
  },
  {
-  "id": "nm-345",
+  "id": "nm-365",
   "notes": [
    48,
    52,
@@ -3907,7 +4142,7 @@
   "why": "triads a whole step apart also read as an 11 chord; polychord stays an alternate"
  },
  {
-  "id": "nm-346",
+  "id": "nm-366",
   "notes": [
    48,
    53,
@@ -3921,7 +4156,7 @@
   "why": "stack of two P4s also reads as 7sus4 no5"
  },
  {
-  "id": "nm-347",
+  "id": "nm-367",
   "notes": [
    48,
    53,
@@ -3936,7 +4171,7 @@
   "why": "three stacked P4s: quartal alternate must appear"
  },
  {
-  "id": "nm-348",
+  "id": "nm-368",
   "notes": [
    48,
    49,
@@ -3947,7 +4182,7 @@
   "why": "cluster fallback"
  },
  {
-  "id": "nm-349",
+  "id": "nm-369",
   "notes": [
    60,
    61,
@@ -3958,7 +4193,7 @@
   "expect_top": "C·Db·D·Eb"
  },
  {
-  "id": "nm-350",
+  "id": "nm-370",
   "notes": [
    48,
    49,

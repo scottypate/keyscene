@@ -162,7 +162,28 @@ pub fn analyze(notes: &[MidiNote], key: Option<Key>, settings: &Settings) -> Ana
         }
         _ => {
             let cands = candidates(pc_mask, &pcs, bass_pc, key);
-            let mut named: Vec<(i32, u8, String, String, NameKind)> = Vec::new();
+            // Slash-bass readings (§3.4): the notes above the bass as a
+            // chord (`Cm6/F`, `C/Db`). Ranked in the common pool — usually
+            // alternates, the primary name only when nothing matches `P`.
+            let upper_pcs: Vec<u8> = pcs.iter().copied().filter(|&p| p != bass_pc).collect();
+            let upper_mask = pc_mask & !(1u16 << bass_pc);
+            let mut slash: Vec<Candidate> = Vec::new();
+            if upper_pcs.len() >= 3 {
+                slash = candidates(upper_mask, &upper_pcs, bass_pc, key);
+                // A same-root same-template exact match already reads the
+                // bass as a chord tone — the bass-less re-reading is the
+                // same chord and would only duplicate it.
+                slash.retain(|s| {
+                    !cands
+                        .iter()
+                        .any(|c| c.root_pc == s.root_pc && c.template.id == s.template.id)
+                });
+                for c in &mut slash {
+                    c.score -= 25;
+                }
+            }
+            // (score, root, sort symbol, text, kind, is slash-bass)
+            let mut named: Vec<(i32, u8, String, String, NameKind, bool)> = Vec::new();
             for c in &cands {
                 let root_sp = root_spelling(c, &pcs, key, settings);
                 let tones = tone_spellings(root_sp, c.template, pc_mask, c.root_pc);
@@ -171,7 +192,17 @@ pub fn analyze(notes: &[MidiNote], key: Option<Key>, settings: &Settings) -> Ana
                     text.push('/');
                     text.push_str(&tones[&bass_pc].to_string());
                 }
-                named.push((c.score, c.root_pc, c.sort_symbol(), text, NameKind::Chord));
+                named.push((c.score, c.root_pc, c.sort_symbol(), text, NameKind::Chord, false));
+            }
+            for c in &slash {
+                let root_sp = root_spelling(c, &upper_pcs, key, settings);
+                let text = format!(
+                    "{}{}/{}",
+                    root_sp,
+                    c.sort_symbol(),
+                    context_spelling(bass_pc, key, settings)
+                );
+                named.push((c.score, c.root_pc, c.sort_symbol(), text, NameKind::Chord, true));
             }
             if let Some((upper, lower)) = polychord(&pcs, bass_pc) {
                 let fmt = |(root, minor): (u8, bool)| {
@@ -185,6 +216,7 @@ pub fn analyze(notes: &[MidiNote], key: Option<Key>, settings: &Settings) -> Ana
                     String::new(),
                     format!("{}|{}", fmt(upper), fmt(lower)),
                     NameKind::Polychord,
+                    false,
                 ));
             }
             if sorted.len() >= 3 && sorted.windows(2).all(|w| w[1] - w[0] == 5) {
@@ -195,11 +227,12 @@ pub fn analyze(notes: &[MidiNote], key: Option<Key>, settings: &Settings) -> Ana
                     String::new(),
                     format!("{} quartal({})", sp, sorted.len()),
                     NameKind::Quartal,
+                    false,
                 ));
             }
             named.sort_by(|a, b| b.0.cmp(&a.0).then(a.1.cmp(&b.1)).then(a.2.cmp(&b.2)));
             let mut seen: Vec<&str> = Vec::new();
-            for (score, _, _, text, kind) in &named {
+            for (score, _, _, text, kind, _) in &named {
                 if seen.contains(&text.as_str()) {
                     continue;
                 }
@@ -211,24 +244,36 @@ pub fn analyze(notes: &[MidiNote], key: Option<Key>, settings: &Settings) -> Ana
                 });
             }
 
-            if let Some(top) = cands.first() {
-                if named.first().map(|n| n.4) == Some(NameKind::Chord) {
-                    // Top-ranked template interpretation dictates spelling (§5.1)
-                    // and drives the Roman numeral / inversion fields.
-                    let root_sp = root_spelling(top, &pcs, key, settings);
-                    spell = tone_spellings(root_sp, top.template, pc_mask, top.root_pc);
-                    analysis.inversion = inversion_of(top, bass_pc);
-                    if let Some(k) = key {
-                        analysis.roman_numeral = roman::roman(
-                            top,
-                            root_sp,
-                            &k,
-                            settings.rn_convention,
-                            pc_mask,
-                            analysis.inversion,
-                        );
+            match named.first() {
+                // Top-ranked template interpretation dictates spelling (§5.1)
+                // and drives the Roman numeral / inversion fields. The first
+                // exact entry in `named` is always `cands[0]` (same sort key).
+                Some((_, _, _, _, NameKind::Chord, false)) => {
+                    if let Some(top) = cands.first() {
+                        let root_sp = root_spelling(top, &pcs, key, settings);
+                        spell = tone_spellings(root_sp, top.template, pc_mask, top.root_pc);
+                        analysis.inversion = inversion_of(top, bass_pc);
+                        if let Some(k) = key {
+                            analysis.roman_numeral = roman::roman(
+                                top,
+                                root_sp,
+                                &k,
+                                settings.rn_convention,
+                                pc_mask,
+                                analysis.inversion,
+                            );
+                        }
                     }
                 }
+                // Slash-bass reading on top: upper tones spell per §5.1; the
+                // bass falls through to §5.2 below. No inversion, no RN.
+                Some((_, _, _, _, NameKind::Chord, true)) => {
+                    if let Some(top) = slash.first() {
+                        let root_sp = root_spelling(top, &upper_pcs, key, settings);
+                        spell = tone_spellings(root_sp, top.template, upper_mask, top.root_pc);
+                    }
+                }
+                _ => {}
             }
             if spell.is_empty() {
                 if let Some((upper, lower)) = polychord(&pcs, bass_pc) {
