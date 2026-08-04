@@ -1,0 +1,343 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Keyscene — see the chords you're playing</title>
+<meta name="description" content="Keyscene listens to your MIDI keyboard and shows the harmony in real time — chord names, Roman numerals, grand-staff notation, and an on-screen keyboard. Built for teaching, practice, and streaming.">
+<meta property="og:title" content="Keyscene — see the chords you're playing">
+<meta property="og:description" content="Real-time chord detection for your MIDI keyboard: theory-correct names, Roman numerals, notation, and an OBS-ready display mode. Free and open source for macOS and Windows.">
+<meta property="og:image" content="https://scottypate.github.io/keyscene/example.png">
+<meta property="og:url" content="https://scottypate.github.io/keyscene/">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🎹%3C/text%3E%3C/svg%3E">
+<style>
+  :root {
+    --bg: #0d1017;
+    --bg-raised: #151a24;
+    --border: #262d3d;
+    --text: #e8ebf2;
+    --text-dim: #9aa3b5;
+    --accent: #5b9dff;
+    --accent-soft: rgba(91, 157, 255, 0.12);
+    --green: #46c98c;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .wrap { max-width: 960px; margin: 0 auto; padding: 0 24px; }
+
+  header {
+    padding: 20px 0;
+    border-bottom: 1px solid var(--border);
+  }
+  header .wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .brand { font-weight: 700; font-size: 1.15rem; letter-spacing: -0.01em; color: var(--text); }
+  .brand:hover { text-decoration: none; }
+  nav a { color: var(--text-dim); margin-left: 22px; font-size: 0.95rem; }
+  nav a:hover { color: var(--text); text-decoration: none; }
+
+  .hero { text-align: center; padding: 72px 0 40px; }
+  .hero h1 {
+    font-size: clamp(2rem, 5.5vw, 3.2rem);
+    letter-spacing: -0.02em;
+    line-height: 1.15;
+    margin-bottom: 18px;
+  }
+  .hero h1 em { font-style: normal; color: var(--accent); }
+  .hero p.lede {
+    font-size: 1.15rem;
+    color: var(--text-dim);
+    max-width: 640px;
+    margin: 0 auto 36px;
+  }
+
+  .downloads {
+    display: flex;
+    gap: 14px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 12px;
+  }
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 13px 26px;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 1rem;
+    background: var(--accent);
+    color: #fff;
+    border: 1px solid transparent;
+    transition: filter 0.15s ease;
+  }
+  .btn:hover { filter: brightness(1.12); text-decoration: none; }
+  .btn.secondary {
+    background: var(--bg-raised);
+    border-color: var(--border);
+    color: var(--text);
+  }
+  .btn svg { width: 18px; height: 18px; fill: currentColor; flex-shrink: 0; }
+  .dl-meta { font-size: 0.85rem; color: var(--text-dim); }
+  .dl-meta a { color: var(--text-dim); text-decoration: underline; }
+
+  .shot { padding: 36px 0 8px; }
+  .shot img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.5);
+    display: block;
+  }
+  .shot figcaption {
+    text-align: center;
+    color: var(--text-dim);
+    font-size: 0.85rem;
+    margin-top: 14px;
+  }
+
+  section { padding: 56px 0; }
+  h2 {
+    font-size: 1.6rem;
+    letter-spacing: -0.01em;
+    margin-bottom: 26px;
+    text-align: center;
+  }
+  .features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 16px;
+  }
+  .card {
+    background: var(--bg-raised);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 22px;
+  }
+  .card h3 { font-size: 1.05rem; margin-bottom: 8px; }
+  .card p { color: var(--text-dim); font-size: 0.95rem; }
+  .card code {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: 0.85em;
+    background: var(--accent-soft);
+    border-radius: 4px;
+    padding: 1px 5px;
+    color: var(--text);
+  }
+
+  .obs { background: var(--bg-raised); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+  .obs .cols { display: grid; grid-template-columns: 1fr 1fr; gap: 36px; align-items: center; }
+  .obs h2 { text-align: left; }
+  .obs p { color: var(--text-dim); margin-bottom: 14px; }
+  .obs ul { list-style: none; }
+  .obs li { color: var(--text-dim); padding-left: 24px; position: relative; margin-bottom: 10px; }
+  .obs li::before { content: "✓"; color: var(--green); position: absolute; left: 0; font-weight: 700; }
+  .obs li strong { color: var(--text); }
+  @media (max-width: 720px) { .obs .cols { grid-template-columns: 1fr; } }
+
+  .install-notes { max-width: 640px; margin: 0 auto; }
+  .install-notes .card { margin-bottom: 14px; }
+  .install-notes p { color: var(--text-dim); font-size: 0.95rem; }
+  .install-notes strong { color: var(--text); }
+
+  footer {
+    border-top: 1px solid var(--border);
+    padding: 36px 0;
+    text-align: center;
+    color: var(--text-dim);
+    font-size: 0.9rem;
+  }
+  footer a { color: var(--text-dim); text-decoration: underline; }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <a class="brand" href="#">🎹 Keyscene</a>
+    <nav>
+      <a href="#features">Features</a>
+      <a href="#obs">For streamers</a>
+      <a href="#download">Download</a>
+      <a href="https://github.com/scottypate/keyscene">GitHub</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="hero wrap" id="download">
+    <h1>See the chords <em>you're playing</em>.</h1>
+    <p class="lede">
+      Keyscene listens to your MIDI keyboard and shows the harmony in real
+      time — the chord name with alternates and Roman numeral, grand-staff
+      notation, and an on-screen keyboard with every sounding note named.
+      Free and open source.
+    </p>
+    <div class="downloads">
+      <a class="btn" id="dl-mac" href="https://github.com/scottypate/keyscene/releases/latest">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+        <span id="dl-mac-label">Download for macOS</span>
+      </a>
+      <a class="btn" id="dl-win" href="https://github.com/scottypate/keyscene/releases/latest">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5.55 10.4 4.5v7.15H3zm0 12.9 7.4 1.05v-7.06H3zm8.2 1.16L21 21V12.4h-9.8zm0-15.22v7.26H21V3z"/></svg>
+        <span id="dl-win-label">Download for Windows</span>
+      </a>
+    </div>
+    <p class="dl-meta">
+      <span id="dl-version">macOS (Apple Silicon) · Windows (x64)</span> ·
+      <a href="https://github.com/scottypate/keyscene/releases">all releases</a>
+    </p>
+  </div>
+
+  <figure class="shot wrap">
+    <img src="example.png" width="1600" height="900"
+         alt="Keyscene showing an F9 chord in D♭ major: the chord name with V9/vi Roman numeral and alternate readings, grand-staff notation, and the played notes highlighted and named on an 88-key keyboard">
+    <figcaption>An F9 in D♭ major — name, Roman numeral, alternates, notation, and every note labeled on the keys.</figcaption>
+  </figure>
+
+  <section id="features">
+    <div class="wrap">
+      <h2>Harmony you can trust on camera</h2>
+      <div class="features">
+        <div class="card">
+          <h3>Theory-correct names</h3>
+          <p><code>G♭maj7sus2</code>, <code>Cm6/F</code>, <code>C7(no3)</code> —
+          every sounding note accounted for, never a guess that ignores
+          what you play.</p>
+        </div>
+        <div class="card">
+          <h3>Correct enharmonic spelling</h3>
+          <p>An E major triad in the key of C spells <code>E–G♯–B</code>,
+          never <code>A♭</code>. The name, the staff, and the key labels
+          always agree.</p>
+        </div>
+        <div class="card">
+          <h3>Key-aware analysis</h3>
+          <p>Pick a key and get Roman numerals — <code>ii7</code>,
+          <code>V65/V</code>, <code>♭VImaj7</code> — plus diatonic-aware
+          ranking and key-appropriate spelling.</p>
+        </div>
+        <div class="card">
+          <h3>Grand-staff notation</h3>
+          <p>What you play, engraved live on the staff and mirrored on an
+          88-key on-screen keyboard with every note named.</p>
+        </div>
+        <div class="card">
+          <h3>No MIDI keyboard? Type to play</h3>
+          <p>The computer keyboard works as an instrument — try chords and
+          voicings before you ever plug anything in.</p>
+        </div>
+        <div class="card">
+          <h3>Free &amp; open source</h3>
+          <p>MIT-licensed, built with Rust and Tauri.
+          <a href="https://github.com/scottypate/keyscene">Read the source
+          or file an issue on GitHub.</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="obs" id="obs">
+    <div class="wrap cols">
+      <div>
+        <h2>Made for OBS and screen sharing</h2>
+        <p>Press <strong>Ctrl/Cmd + D</strong> for Display mode: a
+        chrome-free window with just the elements, ready to drop into a
+        stream, lesson recording, or video call.</p>
+        <ul>
+          <li><strong>Movable, scalable elements</strong> — drag to
+          position, scroll to resize, sharp at any size.</li>
+          <li><strong>Transparent or chroma-key background</strong> —
+          green, magenta, or blue, ready to key out in OBS.</li>
+          <li><strong>Click-through &amp; always-on-top</strong> — keep it
+          above your DAW while clicks pass through to the apps
+          underneath.</li>
+          <li><strong>Layout presets</strong> — save your arrangement and
+          recall it per scene.</li>
+        </ul>
+      </div>
+      <div>
+        <div class="card">
+          <h3>Two-minute setup</h3>
+          <p style="margin-bottom:10px">1. Plug in your MIDI keyboard and
+          open Keyscene — it connects automatically.</p>
+          <p style="margin-bottom:10px">2. Play. The chord card, staff, and
+          keyboard track every note.</p>
+          <p style="margin-bottom:10px">3. Press <code>Ctrl/Cmd+D</code>,
+          pick a background, and add a Window Capture of “Keyscene
+          Display” in OBS.</p>
+          <p>4. Optionally pick a key in the toolbar for Roman numerals.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap install-notes">
+      <h2>Install notes</h2>
+      <div class="card">
+        <h3>macOS</h3>
+        <p>Open the <strong>.dmg</strong> and drag Keyscene to
+        Applications. Builds are signed and notarized by Apple — no
+        security warnings. Apple Silicon (M-series) Macs.</p>
+      </div>
+      <div class="card">
+        <h3>Windows</h3>
+        <p>Run the <strong>.msi</strong> installer (a
+        <strong>setup.exe</strong> is also available on the releases
+        page). Windows builds are not yet code-signed, so SmartScreen may
+        warn on first launch — choose <strong>More info → Run
+        anyway</strong>.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>Keyscene is MIT-licensed open source ·
+    <a href="https://github.com/scottypate/keyscene">GitHub</a> ·
+    <a href="https://github.com/scottypate/keyscene/releases">Releases</a> ·
+    <a href="https://github.com/scottypate/keyscene/issues">Report an issue</a></p>
+  </div>
+</footer>
+
+<script>
+  // Point the download buttons at the latest release's assets so links
+  // never go stale between releases. The buttons already link to the
+  // releases page, so this is purely progressive enhancement.
+  fetch("https://api.github.com/repos/scottypate/keyscene/releases/latest")
+    .then(function (r) { return r.ok ? r.json() : null; })
+    .then(function (rel) {
+      if (!rel || !rel.assets) return;
+      var dmg = rel.assets.find(function (a) { return a.name.endsWith(".dmg"); });
+      var msi = rel.assets.find(function (a) { return a.name.endsWith(".msi"); });
+      var exe = rel.assets.find(function (a) { return a.name.endsWith(".exe"); });
+      if (dmg) document.getElementById("dl-mac").href = dmg.browser_download_url;
+      var win = msi || exe;
+      if (win) document.getElementById("dl-win").href = win.browser_download_url;
+      var v = (rel.tag_name || "").replace(/^v/, "");
+      if (v) {
+        document.getElementById("dl-version").textContent =
+          "v" + v + " · macOS (Apple Silicon) · Windows (x64)";
+      }
+    })
+    .catch(function () { /* fall back to the releases-page links */ });
+</script>
+
+</body>
+</html>
