@@ -6,6 +6,8 @@ Roman numeral, grand-staff notation, and an on-screen keyboard with every
 sounding note named. Built for teaching, practice, and streaming: a
 chrome-free Display mode drops straight into OBS.
 
+![Keyscene showing an F9 chord in D♭ major: the chord name with V9/vi Roman numeral and alternate readings, grand-staff notation, and the played notes highlighted and named on an 88-key keyboard](docs/example.png)
+
 - **Theory-correct names** — `G♭maj7sus2`, `Cm6/F`, `C7(no3)`; every
   sounding note accounted for, never a guess that ignores what you play.
 - **Correct enharmonic spelling** — an E major triad in the key of C
