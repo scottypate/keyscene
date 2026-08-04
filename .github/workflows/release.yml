@@ -12,6 +12,12 @@ env:
 permissions:
   contents: write
 
+# The Makefile's recipes are POSIX sh; bash is the default shell on the
+# macOS runner already, this makes Windows match.
+defaults:
+  run:
+    shell: bash
+
 jobs:
   bundle:
     strategy:
@@ -28,17 +34,34 @@ jobs:
           node-version: 22
           cache: npm
           cache-dependency-path: ui/package-lock.json
-      - name: UI install
-        run: npm ci
-        working-directory: ui
-      - name: Install Tauri CLI
-        run: npm install -g "@tauri-apps/cli@^2"
+      # GNU Make is preinstalled on macOS/Linux runners but not Windows.
+      - name: Install make (Windows)
+        if: runner.os == 'Windows'
+        run: choco install -y make
+      # macOS signing + notarization (tauri reads the APPLE_* env vars).
+      # Only non-empty secrets are exported, so the build still works —
+      # unsigned — while any secret is missing. Windows signing slots in
+      # here the same way once a certificate exists.
+      - name: Export signing secrets
+        if: runner.os == 'macOS'
+        run: |
+          for v in APPLE_CERTIFICATE APPLE_CERTIFICATE_PASSWORD APPLE_SIGNING_IDENTITY APPLE_ID APPLE_PASSWORD APPLE_TEAM_ID; do
+            eval "val=\$SECRET_$v"
+            if [ -n "$val" ]; then
+              printf '%s<<KSEOF\n%s\nKSEOF\n' "$v" "$val" >> "$GITHUB_ENV"
+            fi
+          done
+        env:
+          SECRET_APPLE_CERTIFICATE: ${{ secrets.APPLE_CERTIFICATE }}
+          SECRET_APPLE_CERTIFICATE_PASSWORD: ${{ secrets.APPLE_CERTIFICATE_PASSWORD }}
+          SECRET_APPLE_SIGNING_IDENTITY: ${{ secrets.APPLE_SIGNING_IDENTITY }}
+          SECRET_APPLE_ID: ${{ secrets.APPLE_ID }}
+          SECRET_APPLE_PASSWORD: ${{ secrets.APPLE_PASSWORD }}
+          SECRET_APPLE_TEAM_ID: ${{ secrets.APPLE_TEAM_ID }}
+      # `make build` runs npm ci, builds the UI, and bundles via the
+      # lockfile-pinned @tauri-apps/cli — no global CLI install needed.
       - name: Bundle
-        run: tauri build
-        working-directory: crates/keyscene-app
-      # Unsigned for now: signing env (APPLE_SIGNING_IDENTITY, APPLE_ID,
-      # APPLE_PASSWORD, APPLE_TEAM_ID / Windows cert) slots in here once
-      # certificates exist, as repository secrets.
+        run: make build
       - name: Attach installers to draft release
         uses: softprops/action-gh-release@v2
         with:

@@ -88,6 +88,10 @@ The gear icon in the toolbar:
 The UI must be built first: the app embeds `ui/studio/dist` at compile
 time. Requires Rust (≥1.82) and Node 22.
 
+The common flows are wrapped in a Makefile: `make dev` (run the app
+locally, hot-reloading), `make test` (Rust + UI test harness),
+`make check`, `make build` (installers). The equivalent raw commands:
+
 ```sh
 cd ui && npm ci && npm run check && npm run build && cd ..
 cargo build --workspace

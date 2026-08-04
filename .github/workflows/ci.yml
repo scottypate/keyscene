@@ -8,6 +8,12 @@ on:
 env:
   CARGO_TERM_COLOR: always
 
+# The Makefile's recipes are POSIX sh; bash is the default shell on the
+# macOS/Linux runners already, this makes Windows match.
+defaults:
+  run:
+    shell: bash
+
 jobs:
   build:
     strategy:
@@ -26,28 +32,19 @@ jobs:
           node-version: 22
           cache: npm
           cache-dependency-path: ui/package-lock.json
-      # UI first: tauri::generate_context! embeds ui/studio/dist at compile
-      # time, so keyscene-app does not build without it.
-      - name: UI install
-        run: npm ci
-        working-directory: ui
-      - name: UI typecheck
-        run: npm run check
-        working-directory: ui
-      - name: UI tests
-        run: npm test
-        working-directory: ui
-      - name: UI build
-        run: npm run build
-        working-directory: ui
-      - name: Format
-        run: cargo fmt --all --check
-      - name: Clippy
-        run: cargo clippy --workspace --all-targets -- -D warnings
-      # No standalone build step: cargo test compiles the whole
-      # workspace anyway, and clippy --all-targets type-checks it.
+      # GNU Make is preinstalled on macOS/Linux runners but not Windows.
+      - name: Install make (Windows)
+        if: runner.os == 'Windows'
+        run: choco install -y make
+      # Build/test ordering lives in the Makefile: the Rust targets build
+      # ui/studio/dist first because tauri::generate_context! embeds it
+      # at compile time.
+      - name: UI typecheck + tests
+        run: make test-ui
+      - name: Lint
+        run: make lint
       - name: Test
-        run: cargo test --workspace
+        run: make test-rust
 
   # PLAN.md Phase 1 acceptance: the WASM build of keyscene-core passes the
   # identical engine test suite (vectors + properties + fuzz).
@@ -61,5 +58,4 @@ jobs:
       - uses: Swatinem/rust-cache@v2
       - uses: bytecodealliance/actions/wasmtime/setup@v1
       - name: Test on wasm32-wasip1
-        run: cargo test -p keyscene-core --target wasm32-wasip1
-
+        run: make test-wasm

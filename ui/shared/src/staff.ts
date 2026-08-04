@@ -27,9 +27,16 @@ import type { SpelledNote } from "./types";
 import type { Theme } from "./theme";
 
 const WIDTH = 420;
-const HEIGHT = 300;
+const HEIGHT = 250;
 const STAVE_X = 16;
 const STAVE_W = WIDTH - 32;
+// Stave y-origins. Lines start 40px below the origin, 10px apart (5px per
+// diatonic step), so BASS_Y = TREBLE_Y + 60 puts the bass top line (A3)
+// 4 steps below the treble bottom line (E4): the grand staff is pitch-
+// continuous — every pitch, middle C included, has one y regardless of
+// which staff draws it, and B3+C4 sit visually adjacent.
+const TREBLE_Y = 40;
+const BASS_Y = 100;
 
 /** Sharps/flats count per key name; positive = sharps, negative = flats. */
 const KEY_SIG_COUNT: Record<string, number> = {
@@ -57,6 +64,46 @@ function vexKeySpec(key: string): string {
 }
 
 const ACC_GLYPH: Record<number, string> = { [-2]: "bb", [-1]: "b", 0: "n", 1: "#", 2: "##" };
+
+// Diatonic staff positions (letter steps from C0) for the split search.
+// Staff line spans: treble E4–F5, bass G2–A3.
+const LETTER_STEP: Record<string, number> = { C: 0, D: 1, E: 2, F: 3, G: 4, A: 5, B: 6 };
+const TREBLE_SPAN = { bottom: 4 * 7 + 2, top: 5 * 7 + 3 };
+const BASS_SPAN = { bottom: 2 * 7 + 4, top: 3 * 7 + 5 };
+
+function ledgerLines(n: SpelledNote, span: { bottom: number; top: number }): number {
+  const pos = n.octave * 7 + LETTER_STEP[n.letter];
+  if (pos < span.bottom) return Math.floor((span.bottom - pos) / 2);
+  if (pos > span.top) return Math.floor((pos - span.top) / 2);
+  return 0;
+}
+
+/**
+ * Index splitting ascending `notes` into bass (before) and treble (from).
+ * A hard middle-C cut tears adjacent keys apart across the staff gap
+ * (B3+C4 would straddle the break); instead pick the split with the fewest
+ * ledger lines, penalizing cuts between notes closer than a fourth so
+ * near-neighbors stay on one staff. Ties prefer treble (middle C alone
+ * renders on the treble staff, per convention).
+ */
+export function splitIndex(notes: SpelledNote[]): number {
+  let best = 0;
+  let bestCost = Infinity;
+  for (let i = 0; i <= notes.length; i++) {
+    let cost = 0;
+    for (let j = 0; j < notes.length; j++) {
+      cost += ledgerLines(notes[j], j < i ? BASS_SPAN : TREBLE_SPAN);
+    }
+    if (i > 0 && i < notes.length) {
+      cost += Math.max(0, 6 - (notes[i].midi - notes[i - 1].midi));
+    }
+    if (cost < bestCost) {
+      bestCost = cost;
+      best = i;
+    }
+  }
+  return best;
+}
 
 export class Staff {
   private container: HTMLElement;
@@ -99,8 +146,8 @@ export class Staff {
     const ctx = renderer.getContext();
     const ink = { fillStyle: this.theme.ink, strokeStyle: this.theme.ink };
 
-    const treble = new Stave(STAVE_X, 40, STAVE_W).addClef("treble");
-    const bass = new Stave(STAVE_X, 150, STAVE_W).addClef("bass");
+    const treble = new Stave(STAVE_X, TREBLE_Y, STAVE_W).addClef("treble");
+    const bass = new Stave(STAVE_X, BASS_Y, STAVE_W).addClef("bass");
     for (const stave of [treble, bass]) {
       if (this.key) stave.addKeySignature(vexKeySpec(this.key));
       stave.setBegBarType(Barline.type.NONE);
@@ -126,8 +173,9 @@ export class Staff {
     });
 
     const sig = keySigMap(this.key);
-    const trebleNotes = deduped.filter((n) => n.midi >= 60);
-    const bassNotes = deduped.filter((n) => n.midi < 60);
+    const split = splitIndex(deduped);
+    const bassNotes = deduped.slice(0, split);
+    const trebleNotes = deduped.slice(split);
 
     const build = (group: SpelledNote[], clef: string): StaveNote | null => {
       if (group.length === 0) return null;
