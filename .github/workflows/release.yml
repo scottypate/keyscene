@@ -25,8 +25,22 @@ jobs:
       matrix:
         os: [macos-latest, windows-latest]
     runs-on: ${{ matrix.os }}
+    # Notarization (`notarytool submit --wait`) polls Apple with no output;
+    # a first submission can take an hour+. Cap it well below the 6h
+    # default so a wedged submission doesn't burn macOS runner minutes.
+    timeout-minutes: 120
     steps:
       - uses: actions/checkout@v4
+      # Installer filenames come from the app version, not the tag. Fail
+      # fast if they disagree so a release never ships misnamed artifacts.
+      - name: Check tag matches app version
+        run: |
+          tag="${GITHUB_REF_NAME#v}"
+          version="$(node -p 'require("./crates/keyscene-app/tauri.conf.json").version')"
+          if [ "$tag" != "$version" ]; then
+            echo "Tag v$tag does not match tauri.conf.json version $version" >&2
+            exit 1
+          fi
       - uses: dtolnay/rust-toolchain@stable
       - uses: Swatinem/rust-cache@v2
       - uses: actions/setup-node@v4
